@@ -73,8 +73,8 @@
                   symbolName = "-[PostDetails getPostDetails]"
                   moduleName = "Varial"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/Nithi/Project/Varial/Phase-4/Code/VarialiOS/Varial/Modules/HomeTab/Feeds/PostDetails.m"
-                  timestampString = "547652839.543687"
+                  urlString = "file:///Users/user/Desktop/Testing/Varial/Varial/Modules/HomeTab/Feeds/PostDetails.m"
+                  timestampString = "547727975.645067"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "480"
@@ -88,8 +88,8 @@
                   symbolName = "__29-[PostDetails getPostDetails]_block_invoke"
                   moduleName = "Varial"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/Nithi/Project/Varial/Phase-4/Code/VarialiOS/Varial/Modules/HomeTab/Feeds/PostDetails.m"
-                  timestampString = "547652839.547111"
+                  urlString = "file:///Users/user/Desktop/Testing/Varial/Varial/Modules/HomeTab/Feeds/PostDetails.m"
+                  timestampString = "547727975.64788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "481"
@@ -103,8 +103,8 @@
                   symbolName = "__destroy_helper_block_.374"
                   moduleName = "Varial"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/Nithi/Project/Varial/Phase-4/Code/VarialiOS/Varial/Modules/HomeTab/Feeds/PostDetails.m"
-                  timestampString = "547652839.550368"
+                  urlString = "file:///Users/user/Desktop/Testing/Varial/Varial/Modules/HomeTab/Feeds/PostDetails.m"
+                  timestampString = "547727975.650727"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "480"
@@ -121,59 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Varial/Modules/HomeTab/Feeds/Search/FeedSearchViewController.m"
-            timestampString = "547644605.200421"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "792"
-            endingLineNumber = "792"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Varial/Modules/HomeTab/Feeds/Search/FeedSearchViewController.m"
-            timestampString = "547644605.201111"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "712"
-            endingLineNumber = "712"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Varial/Modules/HomeTab/Feeds/Search/FeedSearchViewController.m"
             timestampString = "547644605.201478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "702"
             endingLineNumber = "702"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Varial/Modules/HomeTab/Feeds/Search/FeedSearchViewController.m"
-            timestampString = "547644711.413102"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "668"
-            endingLineNumber = "668"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
