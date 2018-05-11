@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="AddPostLibraryCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eov-hD-OWp">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OvF-wo-ZZ6">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OvF-wo-ZZ6" secondAttribute="bottom" id="8zL-8h-OLL"/>
+                            <constraint firstAttribute="trailing" secondItem="OvF-wo-ZZ6" secondAttribute="trailing" id="CWa-pf-qRg"/>
+                            <constraint firstItem="OvF-wo-ZZ6" firstAttribute="leading" secondItem="eov-hD-OWp" secondAttribute="leading" id="Ovk-g0-n2d"/>
+                            <constraint firstItem="OvF-wo-ZZ6" firstAttribute="top" secondItem="eov-hD-OWp" secondAttribute="top" id="oRu-k5-wp0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eov-hD-OWp" secondAttribute="bottom" id="8XT-v6-HvV"/>
+                <constraint firstAttribute="trailing" secondItem="eov-hD-OWp" secondAttribute="trailing" id="Mvy-yO-0SJ"/>
+                <constraint firstItem="eov-hD-OWp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QqW-Z7-7ev"/>
+                <constraint firstItem="eov-hD-OWp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="y8g-ks-Nez"/>
+            </constraints>
+            <size key="customSize" width="50" height="104"/>
+            <connections>
+                <outlet property="imgView" destination="OvF-wo-ZZ6" id="j2O-gt-fJQ"/>
+                <outlet property="viewContainer" destination="eov-hD-OWp" id="Irk-tW-glX"/>
+            </connections>
+            <point key="canvasLocation" x="-160" y="-1"/>
+        </collectionViewCell>
+    </objects>
+</document>

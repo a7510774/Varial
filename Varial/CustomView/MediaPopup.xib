@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaPopup">
+            <connections>
+                <outlet property="CameraView" destination="2z5-dY-Zhh" id="Bno-mf-JHf"/>
+                <outlet property="MyconstraintContainerHeight" destination="5M5-ub-NdN" id="E6X-1k-4jI"/>
+                <outlet property="cameraButton" destination="bRA-XN-OVE" id="saa-o4-W2w"/>
+                <outlet property="galleryButton" destination="kMk-bW-sC1" id="Qtz-5P-1az"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="qbr-Ps-pBb"/>
+                <outlet property="myBtnProfileUpdate" destination="Lyg-Ge-sCc" id="xh3-Mj-ZNL"/>
+                <outlet property="okButton" destination="w9g-9j-Eix" id="5hZ-Ok-zaf"/>
+                <outlet property="profileUpdateView" destination="NLK-Wf-j1b" id="mM0-ZB-wQj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9be-Yd-ufC">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAE-j3-kIA">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-XN-OVE">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                    <state key="normal" title="Camera">
+                                        <color key="titleColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doCamera:" destination="-1" eventType="touchUpInside" id="cX2-ol-KUK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="M8S-P0-d4Z"/>
+                                <constraint firstItem="bRA-XN-OVE" firstAttribute="top" secondItem="CAE-j3-kIA" secondAttribute="top" id="TgC-Jg-VmJ"/>
+                                <constraint firstAttribute="trailing" secondItem="bRA-XN-OVE" secondAttribute="trailing" id="dpM-y6-x0L"/>
+                                <constraint firstAttribute="bottom" secondItem="bRA-XN-OVE" secondAttribute="bottom" id="ska-AW-gux"/>
+                                <constraint firstItem="bRA-XN-OVE" firstAttribute="leading" secondItem="CAE-j3-kIA" secondAttribute="leading" id="yE1-te-DuF"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2z5-dY-Zhh">
+                            <rect key="frame" x="0.0" y="53" width="300" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-bW-sC1">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                    <state key="normal" title="Gallery">
+                                        <color key="titleColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doGallery:" destination="-1" eventType="touchUpInside" id="Vqm-3d-Gei"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="kMk-bW-sC1" firstAttribute="top" secondItem="2z5-dY-Zhh" secondAttribute="top" id="A42-CR-2g9"/>
+                                <constraint firstItem="kMk-bW-sC1" firstAttribute="leading" secondItem="2z5-dY-Zhh" secondAttribute="leading" id="IBO-El-njO"/>
+                                <constraint firstAttribute="trailing" secondItem="kMk-bW-sC1" secondAttribute="trailing" id="c3N-Ci-GIZ"/>
+                                <constraint firstAttribute="height" constant="50" id="hTi-U5-pEY"/>
+                                <constraint firstAttribute="bottom" secondItem="kMk-bW-sC1" secondAttribute="bottom" id="xdg-Oh-vc5"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLK-Wf-j1b">
+                            <rect key="frame" x="0.0" y="106" width="300" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-Ge-sCc">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                    <state key="normal" title="Image  List">
+                                        <color key="titleColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="myBtnDoProfileUpdate:" destination="-1" eventType="touchUpInside" id="TLe-r1-fA5"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Lyg-Ge-sCc" secondAttribute="bottom" id="K7n-3t-bAT"/>
+                                <constraint firstItem="Lyg-Ge-sCc" firstAttribute="leading" secondItem="NLK-Wf-j1b" secondAttribute="leading" id="Xy4-1b-lK3"/>
+                                <constraint firstItem="Lyg-Ge-sCc" firstAttribute="top" secondItem="NLK-Wf-j1b" secondAttribute="top" id="hNc-fj-cq0"/>
+                                <constraint firstAttribute="trailing" secondItem="Lyg-Ge-sCc" secondAttribute="trailing" id="ipc-QW-XQX"/>
+                                <constraint firstAttribute="height" constant="50" id="ytu-O5-y8n"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-Xq-2kW">
+                            <rect key="frame" x="0.0" y="160" width="300" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9g-9j-Eix">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doOk:" destination="-1" eventType="touchUpInside" id="enx-SI-RPF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="w9g-9j-Eix" secondAttribute="trailing" id="01f-Ck-zyc"/>
+                                <constraint firstAttribute="height" constant="45" id="83V-7X-n7J"/>
+                                <constraint firstItem="w9g-9j-Eix" firstAttribute="top" secondItem="yEy-Xq-2kW" secondAttribute="top" id="FxN-x3-qcv"/>
+                                <constraint firstItem="w9g-9j-Eix" firstAttribute="leading" secondItem="yEy-Xq-2kW" secondAttribute="leading" id="qkl-d5-9MW"/>
+                                <constraint firstAttribute="bottom" secondItem="w9g-9j-Eix" secondAttribute="bottom" id="z3m-Rk-AeD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="yEy-Xq-2kW" firstAttribute="leading" secondItem="9be-Yd-ufC" secondAttribute="leading" id="3Y7-cC-sNx"/>
+                        <constraint firstAttribute="trailing" secondItem="NLK-Wf-j1b" secondAttribute="trailing" id="3wZ-rf-glL"/>
+                        <constraint firstAttribute="height" constant="210" id="5M5-ub-NdN"/>
+                        <constraint firstAttribute="trailing" secondItem="yEy-Xq-2kW" secondAttribute="trailing" id="7Na-dQ-wdf"/>
+                        <constraint firstItem="CAE-j3-kIA" firstAttribute="leading" secondItem="9be-Yd-ufC" secondAttribute="leading" id="84P-aV-SyP"/>
+                        <constraint firstItem="NLK-Wf-j1b" firstAttribute="top" secondItem="2z5-dY-Zhh" secondAttribute="bottom" constant="3" id="AOv-7j-L5L"/>
+                        <constraint firstAttribute="trailing" secondItem="CAE-j3-kIA" secondAttribute="trailing" id="Dms-fi-SFP"/>
+                        <constraint firstItem="NLK-Wf-j1b" firstAttribute="leading" secondItem="9be-Yd-ufC" secondAttribute="leading" id="HJy-Tc-j4J"/>
+                        <constraint firstItem="CAE-j3-kIA" firstAttribute="top" secondItem="9be-Yd-ufC" secondAttribute="top" id="IG4-WT-PGO"/>
+                        <constraint firstItem="2z5-dY-Zhh" firstAttribute="leading" secondItem="9be-Yd-ufC" secondAttribute="leading" id="Le3-ak-j2U"/>
+                        <constraint firstAttribute="bottom" secondItem="yEy-Xq-2kW" secondAttribute="bottom" constant="5" id="TO5-Vd-Hwm"/>
+                        <constraint firstItem="2z5-dY-Zhh" firstAttribute="top" secondItem="CAE-j3-kIA" secondAttribute="bottom" constant="3" id="c6c-r1-y2d"/>
+                        <constraint firstAttribute="width" constant="300" id="jpW-Qo-hpd"/>
+                        <constraint firstAttribute="trailing" secondItem="2z5-dY-Zhh" secondAttribute="trailing" id="oix-sk-l4q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9be-Yd-ufC" secondAttribute="bottom" id="1Q5-vL-c59"/>
+                <constraint firstItem="9be-Yd-ufC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eyz-aV-oEI"/>
+                <constraint firstAttribute="trailing" secondItem="9be-Yd-ufC" secondAttribute="trailing" id="hxd-xj-utc"/>
+                <constraint firstItem="9be-Yd-ufC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zDv-g5-Bfc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="265" y="19"/>
+        </view>
+    </objects>
+</document>

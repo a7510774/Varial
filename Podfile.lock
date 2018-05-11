@@ -1,0 +1,52 @@
+PODS:
+  - CircularSpinner (1.2.0)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - DGActivityIndicatorView (2.1.1)
+  - Fabric (1.7.5)
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.6.0):
+    - GoogleMaps (= 2.6.0)
+    - GooglePlaces (= 2.6.0)
+  - GooglePlaces (2.6.0):
+    - GoogleMaps/Base (= 2.6.0)
+  - MIBadgeButton (0.0.7)
+  - ResponsiveLabel (1.0.11)
+  - SDWebImage (4.3.0):
+    - SDWebImage/Core (= 4.3.0)
+  - SDWebImage/Core (4.3.0)
+  - TRMosaicLayout (0.2.0)
+
+DEPENDENCIES:
+  - CircularSpinner (~> 1.2.0)
+  - Crashlytics
+  - DGActivityIndicatorView
+  - Fabric
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - MIBadgeButton
+  - ResponsiveLabel (~> 1.0.11)
+  - SDWebImage (~> 4.0)
+  - TRMosaicLayout
+
+SPEC CHECKSUMS:
+  CircularSpinner: 80b8ee3eda59b66d20631d4ca7c7c83720931739
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
+  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
+  GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
+  MIBadgeButton: 7c34f180a194d152bb3817c05443eab3a01433cd
+  ResponsiveLabel: 9e31c425ed082481faf2360689243bb0ec8f8b22
+  SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
+  TRMosaicLayout: 2f1af0d457377ebc135912b658a65040be9e1651
+
+PODFILE CHECKSUM: 4be8aee8a3906fde367c1d27244f7e70d4b212cc
+
+COCOAPODS: 1.4.0

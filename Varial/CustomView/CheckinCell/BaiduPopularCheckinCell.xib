@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BaiduPopularCheckinCell" rowHeight="90" id="KGk-i7-Jjw" customClass="BaiduPopularCheckinCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkin.png" translatesAutoresizingMaskIntoConstraints="NO" id="oda-V5-DC5">
+                        <rect key="frame" x="15" y="13" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="VSJ-hW-1xa"/>
+                            <constraint firstAttribute="height" constant="55" id="WKm-KT-FaG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYW-hF-5qB">
+                        <rect key="frame" x="78" y="13" width="227" height="27"/>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-ia-cfe">
+                        <rect key="frame" x="78" y="49" width="227" height="26"/>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="qYW-hF-5qB" secondAttribute="trailing" constant="7" id="HZJ-oR-siM"/>
+                    <constraint firstItem="qYW-hF-5qB" firstAttribute="leading" secondItem="oda-V5-DC5" secondAttribute="trailing" constant="8" id="P9l-uU-Pwb"/>
+                    <constraint firstItem="5ne-ia-cfe" firstAttribute="top" secondItem="qYW-hF-5qB" secondAttribute="bottom" constant="9" id="Tdq-1F-EV4"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="oda-V5-DC5" secondAttribute="bottom" constant="5" id="abC-Yd-Sjz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5ne-ia-cfe" secondAttribute="trailing" constant="7" id="b0R-pJ-U1N"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5ne-ia-cfe" secondAttribute="bottom" constant="-2" id="e7y-m4-PTJ"/>
+                    <constraint firstItem="5ne-ia-cfe" firstAttribute="leading" secondItem="oda-V5-DC5" secondAttribute="trailing" constant="8" id="jP8-ah-oSV"/>
+                    <constraint firstItem="oda-V5-DC5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="lgg-vb-U2s"/>
+                    <constraint firstItem="qYW-hF-5qB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="yLp-kq-zHa"/>
+                    <constraint firstItem="oda-V5-DC5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="zAy-7t-wTt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="address" destination="5ne-ia-cfe" id="tbf-0T-Am9"/>
+                <outlet property="title" destination="qYW-hF-5qB" id="kzN-RL-5H0"/>
+            </connections>
+            <point key="canvasLocation" x="449" y="344"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkin.png" width="64" height="64"/>
+    </resources>
+</document>

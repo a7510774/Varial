@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapMarkerWindow">
+            <connections>
+                <outlet property="arrowView" destination="hye-Q1-c4g" id="8KV-x8-vRq"/>
+                <outlet property="containerView" destination="cVt-jP-XgY" id="qc3-TR-kEp"/>
+                <outlet property="imageView" destination="u8j-wI-NVL" id="UoW-WZ-5pE"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="Bjq-jm-sn7"/>
+                <outlet property="playIcon" destination="xyg-o3-bAR" id="wDe-cv-PyZ"/>
+                <outlet property="snippet" destination="qud-Qf-63G" id="5aR-8z-kyB"/>
+                <outlet property="title" destination="EnD-pr-qmP" id="u96-C6-7Rx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hye-Q1-c4g">
+                    <rect key="frame" x="140" y="68" width="20" height="20"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="4A5-JZ-emu"/>
+                        <constraint firstAttribute="height" constant="20" id="HGO-j7-tP8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-jP-XgY">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_skatting_logo" translatesAutoresizingMaskIntoConstraints="NO" id="u8j-wI-NVL">
+                            <rect key="frame" x="10" y="10" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="v6k-NG-j9k"/>
+                                <constraint firstAttribute="height" constant="60" id="zwf-ge-UM8"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnD-pr-qmP">
+                            <rect key="frame" x="80" y="10" width="210" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="rqy-dP-cPg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qud-Qf-63G">
+                            <rect key="frame" x="80" y="40" width="210" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="dTl-PU-yol"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-o3-bAR">
+                            <rect key="frame" x="25" y="25" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="e78-bn-P9m"/>
+                                <constraint firstAttribute="height" constant="30" id="l5G-DD-oTe"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="u8j-wI-NVL" firstAttribute="top" secondItem="EnD-pr-qmP" secondAttribute="top" id="2YU-YC-iHn"/>
+                        <constraint firstAttribute="bottom" secondItem="u8j-wI-NVL" secondAttribute="bottom" constant="10" id="KvE-VB-APF"/>
+                        <constraint firstItem="u8j-wI-NVL" firstAttribute="top" secondItem="cVt-jP-XgY" secondAttribute="top" constant="10" id="MUY-nU-ssi"/>
+                        <constraint firstItem="EnD-pr-qmP" firstAttribute="leading" secondItem="u8j-wI-NVL" secondAttribute="trailing" constant="10" id="P5Y-1W-YhT"/>
+                        <constraint firstAttribute="height" constant="80" id="RtH-ep-FZi"/>
+                        <constraint firstItem="qud-Qf-63G" firstAttribute="leading" secondItem="u8j-wI-NVL" secondAttribute="trailing" constant="10" id="buW-AL-5Jx"/>
+                        <constraint firstItem="qud-Qf-63G" firstAttribute="top" secondItem="EnD-pr-qmP" secondAttribute="bottom" id="dnX-6e-X7S"/>
+                        <constraint firstAttribute="width" constant="300" id="fK6-8i-TTO"/>
+                        <constraint firstItem="u8j-wI-NVL" firstAttribute="centerX" secondItem="xyg-o3-bAR" secondAttribute="centerX" id="fov-BY-2k0"/>
+                        <constraint firstItem="u8j-wI-NVL" firstAttribute="leading" secondItem="cVt-jP-XgY" secondAttribute="leading" constant="10" id="kP3-NS-PPg"/>
+                        <constraint firstItem="u8j-wI-NVL" firstAttribute="centerY" secondItem="xyg-o3-bAR" secondAttribute="centerY" id="lh8-pl-cog"/>
+                        <constraint firstAttribute="trailing" secondItem="qud-Qf-63G" secondAttribute="trailing" constant="10" id="ycz-tr-5QQ"/>
+                        <constraint firstAttribute="trailing" secondItem="EnD-pr-qmP" secondAttribute="trailing" constant="10" id="yqw-hs-csV"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="KvE-VB-APF"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hye-Q1-c4g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nuo-wO-Nj1"/>
+                <constraint firstAttribute="trailing" secondItem="cVt-jP-XgY" secondAttribute="trailing" id="PJP-jE-X8G"/>
+                <constraint firstItem="cVt-jP-XgY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X8F-ly-oOQ"/>
+                <constraint firstAttribute="bottom" secondItem="cVt-jP-XgY" secondAttribute="bottom" constant="10" id="YO8-1E-CnA"/>
+                <constraint firstAttribute="bottom" secondItem="hye-Q1-c4g" secondAttribute="bottom" constant="2" id="cOy-MJ-ymc"/>
+                <constraint firstItem="cVt-jP-XgY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hOR-xR-6fc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-205" y="29"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_skatting_logo" width="30" height="30"/>
+        <image name="videoWhite.png" width="41" height="41"/>
+    </resources>
+</document>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/MyCheckins.m"
+            timestampString = "539071662.349328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1002"
+            endingLineNumber = "1002"
+            landmarkName = "-getVisiblePopularCheckin"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MyCheckins getVisiblePopularCheckin]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leochelliah/Desktop/Varail%20App%20Update/VarialiOS/Varial/Modules/MyCheckin/MyCheckins.m"
+                  timestampString = "540844527.4510421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1002"
+                  endingLineNumber = "1002"
+                  offsetFromSymbolStart = "1088">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[MyCheckins getVisiblePopularCheckin]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leochelliah/Desktop/Varail%20App%20Update/VarialiOS/Varial/Modules/MyCheckin/MyCheckins.m"
+                  timestampString = "540844527.455911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1003"
+                  endingLineNumber = "1003"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/BaiduPopularCheckin.m"
+            timestampString = "539071664.693121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "671"
+            endingLineNumber = "671"
+            landmarkName = "-getVisiblePopularCheckins:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BaiduPopularCheckin getVisiblePopularCheckins:]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leochelliah/Desktop/Varail%20App%20Update/VarialiOS/Varial/Modules/MyCheckin/BaiduPopularCheckin.m"
+                  timestampString = "540844527.466327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "671"
+                  endingLineNumber = "671"
+                  offsetFromSymbolStart = "884">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[BaiduPopularCheckin getVisiblePopularCheckins:]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leochelliah/Desktop/Varail%20App%20Update/VarialiOS/Varial/Modules/MyCheckin/BaiduPopularCheckin.m"
+                  timestampString = "540844527.471231"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "672"
+                  endingLineNumber = "672"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/Util/Util.m"
+            timestampString = "539861994.4089119"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "594"
+            endingLineNumber = "594"
+            landmarkName = "-sendHTTPPostRequestWithImage:withRequestUrl:withImage:withFileName:withCallBack:onProgressView:withExtension:ofType:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Util sendHTTPPostRequestWithImage:withRequestUrl:withImage:withFileName:withCallBack:onProgressView:withExtension:ofType:]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leochelliah/Desktop/Varail%20App%20Update/VarialiOS/Varial/Modules/Util/Util.m"
+                  timestampString = "540844527.481015"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "594"
+                  endingLineNumber = "594"
+                  offsetFromSymbolStart = "844">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__124-[Util sendHTTPPostRequestWithImage:withRequestUrl:withImage:withFileName:withCallBack:onProgressView:withExtension:ofType:]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leochelliah/Desktop/Varail%20App%20Update/VarialiOS/Varial/Modules/Util/Util.m"
+                  timestampString = "540844527.48593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "594"
+                  endingLineNumber = "594"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/Map/Baidu/MyPaopaoView.m"
+            timestampString = "539875127.774469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/MyCheckins.m"
+            timestampString = "539875227.5194401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/Settings/SearchHistory/SearchHistoryViewController.m"
+            timestampString = "539880802.2200561"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-clearSearchHistory"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/HomeTab/Feeds/FeedsDesign.m"
+            timestampString = "540844527.306507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-addBookmark:fromArray:forControl:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/HomeTab/Feeds/Add Post/AddPostViewController.m"
+            timestampString = "540844527.306597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "527"
+            endingLineNumber = "527"
+            landmarkName = "-switchFlash:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,6 @@
+
+/* Class = "UITextField"; placeholder = "Search Location"; ObjectID = "07I-Uj-Ztn"; */
+"07I-Uj-Ztn.placeholder" = "搜索位置";
+
+/* Class = "UIButton"; normalTitle = "Nearby Popular Check In"; ObjectID = "n81-Z2-MqZ"; */
+"n81-Z2-MqZ.normalTitle" = "附近热门签到";

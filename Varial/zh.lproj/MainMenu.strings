@@ -1,0 +1,507 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "081-LH-ShO"; */
+"081-LH-ShO.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "View In Map"; ObjectID = "0Db-vC-qtn"; */
+"0Db-vC-qtn.normalTitle" = "在地图中查看";
+
+/* Class = "UITextField"; placeholder = "Search Location"; ObjectID = "0OZ-RH-dLU"; */
+"0OZ-RH-dLU.placeholder" = "搜索位置";
+
+/* Class = "UILabel"; text = "shop"; ObjectID = "0cP-VL-pqu"; */
+"0cP-VL-pqu.text" = "shop";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "0vj-09-fAj"; */
+"0vj-09-fAj.text" = "NAme";
+
+/* Class = "UITextField"; placeholder = "Search Club  Promotions"; ObjectID = "139-3T-aEo"; */
+"139-3T-aEo.placeholder" = "搜索俱乐部优惠";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "15c-n8-67i"; */
+"15c-n8-67i.text" = "Label";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "1aJ-qq-ClQ"; */
+"1aJ-qq-ClQ.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1kL-3O-zOX"; */
+"1kL-3O-zOX.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2bm-7w-wVK"; */
+"2bm-7w-wVK.text" = "Label";
+
+/* Class = "UILabel"; text = "fdghdfghdfgh fghdfg"; ObjectID = "2ul-tU-A9s"; */
+"2ul-tU-A9s.text" = "fdghdfghdfgh fghdfg";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2zv-cc-ESl"; */
+"2zv-cc-ESl.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3Rn-fR-Ndt"; */
+"3Rn-fR-Ndt.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4NI-jH-klR"; */
+"4NI-jH-klR.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "All Buzzard Run"; ObjectID = "4sa-tf-3Im"; */
+"4sa-tf-3Im.title" = "所有Buzzard Run";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "4yi-iX-o7x"; */
+"4yi-iX-o7x.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5WJ-Kw-aCg"; */
+"5WJ-Kw-aCg.text" = "Label";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "5fy-5L-oHx"; */
+"5fy-5L-oHx.text" = "排名: ";
+
+/* Class = "UILabel"; text = "addr"; ObjectID = "5uF-ZS-zvK"; */
+"5uF-ZS-zvK.text" = "addr";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "5zf-fC-o2G"; */
+"5zf-fC-o2G.text" = "date";
+
+/* Class = "UILabel"; text = "addr"; ObjectID = "6eG-Gu-t3Z"; */
+"6eG-Gu-t3Z.text" = "addr";
+
+/* Class = "UILabel"; text = "Information"; ObjectID = "6fQ-Hk-Yrj"; */
+"6fQ-Hk-Yrj.text" = "信息";
+
+/* Class = "UILabel"; text = "Top Scorers"; ObjectID = "6u1-KN-0qG"; */
+"6u1-KN-0qG.text" = "排行榜";
+
+/* Class = "UILabel"; text = "My Profile"; ObjectID = "7RT-1x-ZH7"; */
+"7RT-1x-ZH7.text" = "我的主页";
+
+/* Class = "UIButton"; normalTitle = "View In Map"; ObjectID = "7Ue-Ir-72g"; */
+"7Ue-Ir-72g.normalTitle" = "在地图中查看";
+
+/* Class = "UITextField"; placeholder = "Enter City"; ObjectID = "7ju-tr-Mob"; */
+"7ju-tr-Mob.placeholder" = "Enter City";
+
+/* Class = "UILabel"; text = "FAQ"; ObjectID = "8ZQ-bT-W2A"; */
+"8ZQ-bT-W2A.text" = "应用介绍";
+
+/* Class = "UIButton"; normalTitle = "Enable GPS"; ObjectID = "9Bq-ls-Dtt"; */
+"9Bq-ls-Dtt.normalTitle" = "启用GPS";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "A1M-WJ-eds"; */
+"A1M-WJ-eds.text" = "积分";
+
+/* Class = "UILabel"; text = "Instructions:"; ObjectID = "A8o-R4-VCV"; */
+"A8o-R4-VCV.text" = "说明:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ABK-Ru-CH5"; */
+"ABK-Ru-CH5.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Search by Player Name"; ObjectID = "AKy-I4-Ml7"; */
+"AKy-I4-Ml7.placeholder" = "按玩家姓名搜索";
+
+/* Class = "UILabel"; text = "Buzzard Run"; ObjectID = "As7-cW-AY7"; */
+"As7-cW-AY7.text" = "搜索Buzzard Run;
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BBD-FE-qUE"; */
+"BBD-FE-qUE.text" = "Label";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "BMx-2k-7Kq"; */
+"BMx-2k-7Kq.text" = "排名: ";
+
+/* Class = "UILabel"; text = "shop"; ObjectID = "BWl-GS-5WN"; */
+"BWl-GS-5WN.text" = "shop";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "BXJ-6l-ANb"; */
+"BXJ-6l-ANb.text" = "5";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ba7-uM-LPR"; */
+"Ba7-uM-LPR.text" = "Label";
+
+/* Class = "UILabel"; text = "Top Scorers"; ObjectID = "Bfy-zN-hj4"; */
+"Bfy-zN-hj4.text" = "排行榜";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CdQ-CM-AaA"; */
+"CdQ-CM-AaA.text" = "Label";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "CjR-P2-b8z"; */
+"CjR-P2-b8z.text" = "date";
+
+/* Class = "UIButton"; normalTitle = "My Club Promotions"; ObjectID = "Dde-D4-7NH"; */
+"Dde-D4-7NH.normalTitle" = "我的俱乐部优惠";
+
+/* Class = "UILabel"; text = "Team"; ObjectID = "Dil-Da-Ffv"; */
+"Dil-Da-Ffv.text" = "团队";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "ET5-58-4Yh"; */
+"ET5-58-4Yh.text" = "date";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "EVw-Xq-Aqc"; */
+"EVw-Xq-Aqc.text" = "NAme";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FXZ-CM-XaZ"; */
+"FXZ-CM-XaZ.text" = "Label";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "Fuh-qj-kjt"; */
+"Fuh-qj-kjt.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "G3b-lY-7hx"; */
+"G3b-lY-7hx.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "H7Q-ms-Q6u"; */
+"H7Q-ms-Q6u.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "H9T-8Q-mVd"; */
+"H9T-8Q-mVd.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ifp-am-aip"; */
+"Ifp-am-aip.text" = "Label";
+
+/* Class = "UILabel"; text = "Information"; ObjectID = "Im3-16-NPF"; */
+"Im3-16-NPF.text" = "信息";
+
+/* Class = "UITabBarItem"; title = "Popular check in"; ObjectID = "IqQ-Ef-v1b"; */
+"IqQ-Ef-v1b.title" = "热门签到;
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IrK-5o-KmX"; */
+"IrK-5o-KmX.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = " General"; ObjectID = "JOQ-MQ-bQ8"; */
+"JOQ-MQ-bQ8.normalTitle" = " 概览";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "JbH-TP-EYY"; */
+"JbH-TP-EYY.text" = "100";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "Ku9-WJ-Euv"; */
+"Ku9-WJ-Euv.text" = "date";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "L0R-d8-eFE"; */
+"L0R-d8-eFE.text" = "date";
+
+/* Class = "UILabel"; text = "Rank"; ObjectID = "L7h-2L-EZN"; */
+"L7h-2L-EZN.text" = "排名";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MSr-I2-Yps"; */
+"MSr-I2-Yps.text" = "Label";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "Muk-b8-yjm"; */
+"Muk-b8-yjm.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "nam"; ObjectID = "NXg-pY-d3V"; */
+"NXg-pY-d3V.text" = "nam";
+
+/* Class = "UILabel"; text = "Co-Captain"; ObjectID = "NZ0-2N-coo"; */
+"NZ0-2N-coo.text" = "副队长";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "OF1-iD-MHs"; */
+"OF1-iD-MHs.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "15000"; ObjectID = "OXG-q2-W9Y"; */
+"OXG-q2-W9Y.text" = "15000";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "Oly-4Y-rdp"; */
+"Oly-4Y-rdp.text" = "date";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "PBH-Ja-HFo"; */
+"PBH-Ja-HFo.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PX6-NP-r4Z"; */
+"PX6-NP-r4Z.text" = "Label";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "PrV-ft-nbJ"; */
+"PrV-ft-nbJ.text" = "NAme";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "QRJ-Gw-Y2e"; */
+"QRJ-Gw-Y2e.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "R8b-ch-GCI"; */
+"R8b-ch-GCI.text" = "Label";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "RSh-12-XOX"; */
+"RSh-12-XOX.text" = "date";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "SGS-Uj-o7r"; */
+"SGS-Uj-o7r.text" = "注册";
+
+/* Class = "UITextField"; placeholder = "Search Location"; ObjectID = "TVj-oh-Q1R"; */
+"TVj-oh-Q1R.placeholder" = "搜索位置";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "V9h-b9-mG3"; */
+"V9h-b9-mG3.text" = "注册";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VTR-ks-sW0"; */
+"VTR-ks-sW0.text" = "Label";
+
+/* Class = "UILabel"; text = "Friends"; ObjectID = "VWE-4k-Yte"; */
+"VWE-4k-Yte.text" = "朋友";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "VZv-Yd-M7X"; */
+"VZv-Yd-M7X.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "Freebies"; ObjectID = "Vgx-VI-SSn"; */
+"Vgx-VI-SSn.text" = "免费赠品";
+
+/* Class = "UIButton"; normalTitle = "Create it here"; ObjectID = "Vsc-eb-ZyN"; */
+"Vsc-eb-ZyN.normalTitle" = "创建团队";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "Vuy-Gx-D6o"; */
+"Vuy-Gx-D6o.text" = "date";
+
+/* Class = "UIButton"; normalTitle = "Player"; ObjectID = "WG1-wz-44j"; */
+"WG1-wz-44j.normalTitle" = "个人";
+
+/* Class = "UILabel"; text = "Club Promotions"; ObjectID = "WKr-le-Lwv"; */
+"WKr-le-Lwv.text" = "我的俱乐部优惠";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "WP1-Ko-cEI"; */
+"WP1-Ko-cEI.text" = "date";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "Wyt-16-Gyv"; */
+"Wyt-16-Gyv.text" = "date";
+
+/* Class = "UILabel"; text = "Check In"; ObjectID = "X4z-HY-xle"; */
+"X4z-HY-xle.text" = "签到";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xjl-8k-QzU"; */
+"Xjl-8k-QzU.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Completed"; ObjectID = "YEW-zr-wh8"; */
+"YEW-zr-wh8.normalTitle" = "已完成";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "YvT-z9-ybq"; */
+"YvT-z9-ybq.text" = "积分";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "ZBk-Ti-zXt"; */
+"ZBk-Ti-zXt.text" = "date";
+
+/* Class = "UIButton"; normalTitle = "View In Map"; ObjectID = "ZTa-YJ-T6M"; */
+"ZTa-YJ-T6M.normalTitle" = "在地图中查看";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "ZVO-Ko-rcm"; */
+"ZVO-Ko-rcm.text" = "有效期至";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ze2-Of-42E"; */
+"Ze2-Of-42E.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZnI-E7-f3A"; */
+"ZnI-E7-f3A.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Enable GPS"; ObjectID = "ZzT-a2-efQ"; */
+"ZzT-a2-efQ.normalTitle" = "启用GPS";
+
+/* Class = "UIButton"; normalTitle = "View In Map"; ObjectID = "aBp-Nf-ujV"; */
+"aBp-Nf-ujV.normalTitle" = "在地图中查看";
+
+/* Class = "UIButton"; normalTitle = "Completed"; ObjectID = "aIU-1H-k9V"; */
+"aIU-1H-k9V.normalTitle" = "已完成";
+
+/* Class = "UITabBarItem"; title = "My check in"; ObjectID = "aaq-WD-2C1"; */
+"aaq-WD-2C1.title" = "My 签到";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "ath-Mb-GeT"; */
+"ath-Mb-GeT.text" = "有效期至";
+
+/* Class = "UIButton"; normalTitle = "View In Map"; ObjectID = "b30-ha-xCh"; */
+"b30-ha-xCh.normalTitle" = "在地图中查看";
+
+/* Class = "UILabel"; text = "Leader Board"; ObjectID = "bZ6-3X-ral"; */
+"bZ6-3X-ral.text" = "排行榜";
+
+/* Class = "UITabBarItem"; title = "Nearby"; ObjectID = "bvR-QY-cFz"; */
+"bvR-QY-cFz.title" = "附近";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cjm-eH-tJ6"; */
+"cjm-eH-tJ6.text" = "Label";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "dfV-cI-nrK"; */
+"dfV-cI-nrK.text" = "NAme";
+
+/* Class = "UILabel"; text = "View In Map"; ObjectID = "duF-Td-nDm"; */
+"duF-Td-nDm.text" = "在地图中查看";
+
+/* Class = "UIButton"; normalTitle = "Enable GPS"; ObjectID = "e0S-4W-z9G"; */
+"e0S-4W-z9G.normalTitle" = "启用GPS";
+
+/* Class = "UITabBarItem"; title = "Nearby Offers"; ObjectID = "eKk-WE-8dh"; */
+"eKk-WE-8dh.title" = "附近折扣";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "f77-xC-gIB"; */
+"f77-xC-gIB.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fKH-kS-tEc"; */
+"fKH-kS-tEc.text" = "Label";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "fNR-Dm-64e"; */
+"fNR-Dm-64e.text" = "date";
+
+/* Class = "UIButton"; normalTitle = "Completed"; ObjectID = "fWd-SY-cHk"; */
+"fWd-SY-cHk.normalTitle" = "已完成";
+
+/* Class = "UILabel"; text = "Games"; ObjectID = "fi8-a4-fDn"; */
+"fi8-a4-fDn.text" = "游戏";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "fkC-s7-tsx"; */
+"fkC-s7-tsx.text" = "有效期至";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fpz-Nm-ykR"; */
+"fpz-Nm-ykR.text" = "Label";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "gMI-df-x3u"; */
+"gMI-df-x3u.text" = "积分";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "gSz-w7-nyO"; */
+"gSz-w7-nyO.text" = "date";
+
+/* Class = "UILabel"; text = "Rank"; ObjectID = "gTg-97-1jB"; */
+"gTg-97-1jB.text" = "排名";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gw2-jh-aC9"; */
+"gw2-jh-aC9.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Nearby"; ObjectID = "h1C-SR-Qsz"; */
+"h1C-SR-Qsz.title" = "附近;
+
+/* Class = "UITabBarItem"; title = "All Club Promotions"; ObjectID = "hV4-eK-bVu"; */
+"hV4-eK-bVu.title" = "全部俱乐部优惠";
+
+/* Class = "UILabel"; text = "View In Map"; ObjectID = "hdj-8A-NNs"; */
+"hdj-8A-NNs.text" = "在地图中查看";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "iEa-qF-3FL"; */
+"iEa-qF-3FL.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "iGD-Tx-pmb"; */
+"iGD-Tx-pmb.text" = "有效期至";
+
+/* Class = "UILabel"; text = "Hit List"; ObjectID = "iZh-vd-IdW"; */
+"iZh-vd-IdW.text" = "点击列表";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "iah-v5-hV4"; */
+"iah-v5-hV4.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "(05-05-2016)"; ObjectID = "ivd-Ng-IG3"; */
+"ivd-Ng-IG3.text" = "(05-05-2016)";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jnu-tP-S5m"; */
+"jnu-tP-S5m.text" = "Label";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "joN-0x-fyV"; */
+"joN-0x-fyV.text" = "date";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "kKo-47-pV1"; */
+"kKo-47-pV1.text" = "date";
+
+/* Class = "UILabel"; text = "1 on 1  Skate"; ObjectID = "ka9-0v-h5y"; */
+"ka9-0v-h5y.text" = "一对一滑板比赛";
+
+/* Class = "UILabel"; text = "Shopping"; ObjectID = "kvg-yt-P8d"; */
+"kvg-yt-P8d.text" = "购物";
+
+/* Class = "UIButton"; normalTitle = " Events"; ObjectID = "kzb-V1-kX4"; */
+"kzb-V1-kX4.normalTitle" = " 活动";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "lCB-RN-0bi"; */
+"lCB-RN-0bi.text" = "有效期至";
+
+/* Class = "UILabel"; text = "1000"; ObjectID = "m4c-Un-u9S"; */
+"m4c-Un-u9S.text" = "1000";
+
+/* Class = "UIButton"; normalTitle = "General"; ObjectID = "mAY-oe-A4W"; */
+"mAY-oe-A4W.normalTitle" = "概览";
+
+/* Class = "UIButton"; normalTitle = "My Buzzard Run"; ObjectID = "mBb-Sf-Dej"; */
+"mBb-Sf-Dej.normalTitle" = "我的Buzzard Run";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "mFM-uD-Doi"; */
+"mFM-uD-Doi.text" = "排名: ";
+
+/* Class = "UIButton"; normalTitle = "Nearby Popular Check In"; ObjectID = "n8V-9x-CC9"; */
+"n8V-9x-CC9.normalTitle" = "附近热门签到";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "nYK-Tn-veQ"; */
+"nYK-Tn-veQ.normalTitle" = "搜索";
+
+/* Class = "UIButton"; normalTitle = "Nearby Popular Check In"; ObjectID = "net-FD-Z3h"; */
+"net-FD-Z3h.normalTitle" = "附近热门签到";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oLe-ef-UEK"; */
+"oLe-ef-UEK.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ot0-1D-n27"; */
+"ot0-1D-n27.text" = "Label";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "q0s-bk-LKe"; */
+"q0s-bk-LKe.text" = "有效期至";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qoX-iV-Ifd"; */
+"qoX-iV-Ifd.text" = "Label";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "quF-AF-6kv"; */
+"quF-AF-6kv.text" = "date";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "rGJ-Am-8ZD"; */
+"rGJ-Am-8ZD.text" = "滑板人折扣";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rP7-0b-41B"; */
+"rP7-0b-41B.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rro-uJ-OvW"; */
+"rro-uJ-OvW.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sRA-YI-zGh"; */
+"sRA-YI-zGh.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tIP-cM-3LH"; */
+"tIP-cM-3LH.text" = "Label";
+
+/* Class = "UILabel"; text = "nam"; ObjectID = "tOg-IO-nuQ"; */
+"tOg-IO-nuQ.text" = "nam";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "tRi-w0-lyW"; */
+"tRi-w0-lyW.text" = "NAme";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "tWe-RV-5Oc"; */
+"tWe-RV-5Oc.text" = "姓名";
+
+/* Class = "UITextField"; placeholder = "Search Buzzard Run"; ObjectID = "tXJ-AX-eKV"; */
+"tXJ-AX-eKV.placeholder" = "搜索Buzzard Run";
+
+/* Class = "UIButton"; normalTitle = "Team"; ObjectID = "uFD-OP-ld0"; */
+"uFD-OP-ld0.normalTitle" = "团队";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "v5C-LN-VbB"; */
+"v5C-LN-VbB.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Categories"; ObjectID = "vJQ-oP-ROG"; */
+"vJQ-oP-ROG.placeholder" = "类别";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vTW-fH-wrF"; */
+"vTW-fH-wrF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vXe-vz-Acj"; */
+"vXe-vz-Acj.text" = "Label";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "vcu-0S-43e"; */
+"vcu-0S-43e.text" = "有效期至";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vyh-7O-d5V"; */
+"vyh-7O-d5V.text" = "Label";
+
+/* Class = "UILabel"; text = "Valid Upto"; ObjectID = "wfl-Xb-Rsa"; */
+"wfl-Xb-Rsa.text" = "有效期至";
+
+/* Class = "UITextField"; placeholder = "Search by Team Name"; ObjectID = "xF1-zH-ACw"; */
+"xF1-zH-ACw.placeholder" = "按团队名称搜索";
+
+/* Class = "UILabel"; text = "Not in a team"; ObjectID = "yOu-37-9oC"; */
+"yOu-37-9oC.text" = "非会员";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yRY-C7-vhC"; */
+"yRY-C7-vhC.text" = "Label";
+
+/* Class = "UISegmentedControl"; yhg-ae-njx.segmentTitles[0] = "Feeds"; ObjectID = "yhg-ae-njx"; */
+"yhg-ae-njx.segmentTitles[0]" = "订阅";
+
+/* Class = "UISegmentedControl"; yhg-ae-njx.segmentTitles[1] = "Members"; ObjectID = "yhg-ae-njx"; */
+"yhg-ae-njx.segmentTitles[1]" = "成员";
+
+/* Class = "UITabBarItem"; title = "From Shops"; ObjectID = "yn3-BD-IkH"; */
+"yn3-BD-IkH.title" = "从店铺";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "ynr-34-Aht"; */
+"ynr-34-Aht.text" = "date";

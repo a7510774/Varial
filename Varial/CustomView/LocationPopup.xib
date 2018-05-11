@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationPopup">
+            <connections>
+                <outlet property="header" destination="d5f-dv-NVo" id="7Po-j4-0Rn"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="wiR-o2-9Zf"/>
+                <outlet property="pinButton" destination="km5-Kp-6tf" id="GFu-7y-UZ1"/>
+                <outlet property="searchButton" destination="Uof-FG-C08" id="IOe-QP-jBo"/>
+                <outlet property="useLocationButton" destination="OU7-SJ-LUE" id="gkr-iK-Dwz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="192"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHI-ia-NfO">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="192"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66q-v6-sfg">
+                            <rect key="frame" x="0.0" y="40" width="300" height="2"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="4ZO-H5-yRP"/>
+                                <constraint firstAttribute="height" constant="2" id="msc-Lt-VOd"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uof-FG-C08">
+                            <rect key="frame" x="0.0" y="42" width="300" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="sm5-Et-kJn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Search Location">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="doSearchLocation:" destination="-1" eventType="touchUpInside" id="rRR-tV-XZn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km5-Kp-6tf">
+                            <rect key="frame" x="0.0" y="92" width="300" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="azI-bc-wRo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Pin Nearby Location">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="doPinNearByLocation:" destination="-1" eventType="touchUpInside" id="g2O-xM-dv4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU7-SJ-LUE">
+                            <rect key="frame" x="0.0" y="142" width="300" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="LfZ-Lj-LKx"/>
+                                <constraint firstAttribute="height" constant="50" id="tY3-vu-eBP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Use My Current Location">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="LfZ-Lj-LKx"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="doUseMyCurrentLocation:" destination="-1" eventType="touchUpInside" id="jQw-BA-Wfs"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-dv-NVo">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="6e8-o4-wEL"/>
+                                <constraint firstAttribute="height" constant="40" id="Jp9-5U-BtF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Jp9-5U-BtF"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="OU7-SJ-LUE" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="0rw-6h-MLa"/>
+                        <constraint firstAttribute="height" constant="192" id="2zX-pl-okJ"/>
+                        <constraint firstItem="OU7-SJ-LUE" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="3lx-qD-JgX"/>
+                        <constraint firstItem="d5f-dv-NVo" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="BXX-8E-417"/>
+                        <constraint firstItem="Uof-FG-C08" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="EXQ-cJ-4i2"/>
+                        <constraint firstAttribute="trailing" secondItem="d5f-dv-NVo" secondAttribute="trailing" id="FbH-5a-iZ4"/>
+                        <constraint firstItem="d5f-dv-NVo" firstAttribute="top" secondItem="gHI-ia-NfO" secondAttribute="top" id="G4O-v8-rdc"/>
+                        <constraint firstItem="km5-Kp-6tf" firstAttribute="top" secondItem="Uof-FG-C08" secondAttribute="bottom" id="H15-og-5K2"/>
+                        <constraint firstItem="d5f-dv-NVo" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="KTK-4T-29p"/>
+                        <constraint firstItem="Uof-FG-C08" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="KXq-7I-IZ4"/>
+                        <constraint firstItem="Uof-FG-C08" firstAttribute="top" secondItem="66q-v6-sfg" secondAttribute="bottom" id="Nye-hr-I8M"/>
+                        <constraint firstAttribute="trailing" secondItem="Uof-FG-C08" secondAttribute="trailing" id="Ou2-HA-s4n"/>
+                        <constraint firstItem="d5f-dv-NVo" firstAttribute="top" secondItem="gHI-ia-NfO" secondAttribute="top" id="PfS-hG-WLk"/>
+                        <constraint firstItem="Uof-FG-C08" firstAttribute="top" secondItem="gHI-ia-NfO" secondAttribute="top" id="Q50-pn-uzz"/>
+                        <constraint firstAttribute="trailing" secondItem="d5f-dv-NVo" secondAttribute="trailing" id="QLb-4Y-yvQ"/>
+                        <constraint firstAttribute="width" constant="300" id="QUg-IH-po8"/>
+                        <constraint firstAttribute="trailing" secondItem="OU7-SJ-LUE" secondAttribute="trailing" id="RdU-yy-8Jk"/>
+                        <constraint firstItem="km5-Kp-6tf" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="V2o-0U-zLu"/>
+                        <constraint firstAttribute="trailing" secondItem="Uof-FG-C08" secondAttribute="trailing" id="VuH-E4-mrP"/>
+                        <constraint firstAttribute="trailing" secondItem="OU7-SJ-LUE" secondAttribute="trailing" id="c9S-kY-T2t"/>
+                        <constraint firstAttribute="trailing" secondItem="km5-Kp-6tf" secondAttribute="trailing" id="fyi-m3-iZ9"/>
+                        <constraint firstItem="66q-v6-sfg" firstAttribute="leading" secondItem="gHI-ia-NfO" secondAttribute="leading" id="hdK-0O-8jc"/>
+                        <constraint firstItem="OU7-SJ-LUE" firstAttribute="top" secondItem="km5-Kp-6tf" secondAttribute="bottom" id="ktc-Yv-97f"/>
+                        <constraint firstItem="OU7-SJ-LUE" firstAttribute="top" secondItem="km5-Kp-6tf" secondAttribute="bottom" id="lCu-lp-W12"/>
+                        <constraint firstAttribute="bottom" secondItem="OU7-SJ-LUE" secondAttribute="bottom" id="tVI-BC-cDC"/>
+                        <constraint firstAttribute="trailing" secondItem="66q-v6-sfg" secondAttribute="trailing" id="vz0-Gd-Wqh"/>
+                        <constraint firstItem="66q-v6-sfg" firstAttribute="top" secondItem="d5f-dv-NVo" secondAttribute="bottom" id="wbQ-vf-QSe"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="BXX-8E-417"/>
+                            <exclude reference="PfS-hG-WLk"/>
+                            <exclude reference="QLb-4Y-yvQ"/>
+                            <exclude reference="EXQ-cJ-4i2"/>
+                            <exclude reference="Q50-pn-uzz"/>
+                            <exclude reference="VuH-E4-mrP"/>
+                            <exclude reference="0rw-6h-MLa"/>
+                            <exclude reference="c9S-kY-T2t"/>
+                            <exclude reference="lCu-lp-W12"/>
+                            <exclude reference="tVI-BC-cDC"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gHI-ia-NfO" secondAttribute="bottom" id="RWN-CN-7rQ"/>
+                <constraint firstAttribute="trailing" secondItem="gHI-ia-NfO" secondAttribute="trailing" id="hsj-a6-zdc"/>
+                <constraint firstItem="gHI-ia-NfO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mif-6A-T1e"/>
+                <constraint firstItem="gHI-ia-NfO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yus-VL-KSm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="426" y="322"/>
+        </view>
+    </objects>
+</document>

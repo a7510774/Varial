@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "label"; ObjectID = "10u-37-68L"; */
+"10u-37-68L.text" = "label";
+
+/* Class = "UIButton"; normalTitle = "Check In"; ObjectID = "1db-hO-F3r"; */
+"1db-hO-F3r.normalTitle" = "签到";
+
+/* Class = "UILabel"; text = "To:"; ObjectID = "GOf-Cd-cya"; */
+"GOf-Cd-cya.text" = "到:";
+
+/* Class = "UIButton"; normalTitle = "Video"; ObjectID = "dee-hs-Q7z"; */
+"dee-hs-Q7z.normalTitle" = "视频";
+
+/* Class = "UIButton"; normalTitle = "Post"; ObjectID = "kVj-PJ-RTK"; */
+"kVj-PJ-RTK.normalTitle" = "发布";
+
+/* Class = "UIButton"; normalTitle = "Image"; ObjectID = "nga-M4-3uR"; */
+"nga-M4-3uR.normalTitle" = "图片";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "si2-DM-S9f"; */
+"si2-DM-S9f.text" = "Label";
+
+/* Class = "UILabel"; text = "SELECT FEED TO POST"; ObjectID = "zzI-Bq-bG0"; */
+"zzI-Bq-bG0.text" = "选择要发布的圈子";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "E9a-Gy-6rg"; */
+"E9a-Gy-6rg.normalTitle" = "编辑";

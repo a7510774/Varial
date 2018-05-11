@@ -1,0 +1,71 @@
+//
+//  Varial.pch
+//  Varial
+//
+//  Created by jagan on 06/04/16.
+//  Copyright © 2016 Velan. All rights reserved.
+//
+
+
+#ifndef Varial_pch
+#define Varial_pch
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+
+//#import "Config.h"
+//#import "Util.h"
+//#import "AFNetworking.h"
+//#import "NetworkAlert.h"
+//#import "MBProgressHUD.h"
+//#import "AlertMessage.h"
+//#import "Reachability.h"
+//
+//#import "HeaderView.h"
+//#import "TTTAttributedLabel.h"
+//#import "ImageSlider.h"
+//#import "VideoPlayer.h"
+//#import "ZoomImage.h"
+//#import "UserMessages.h"
+//#import "KLCPopup.h"
+//#import "PlayerType.h"
+//#import "Notifications.h"
+//
+//#import <CoreData/CoreData.h>
+//#import <CoreLocation/CoreLocation.h>
+//#import <BaiduMapAPI_Map/BMKMapComponent.h>
+//#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+//#import "UIView+UpdateAutoLayoutConstraints.h"
+//#import "LocationManager.h"
+//#import "GoogleMap.h"
+//#import "BaiduMap.h"
+//#import "MyAnnotation.h"
+//
+//#import "Language.h"
+//#import "Login.h"
+//#import "NearClubPromotions.h"
+//#import "ClubPromotionsDetails.h"
+//#import "SVPullToRefresh.h"
+//#import "MyCheckins.h"
+//#import "MyCheckinDetails.h"
+//#import "CreatePostViewController.h"
+//#import "SetEmailPopup.h"
+//
+//#import "ViewNearBy.h"
+//#import "MyBuzzardRun.h"
+//#import "AllBuzzardRun.h"
+//#import "BuzzardRunDetails.h"
+//#import "PostBuzzardRun.h"
+//#import "BuzzardRunPostDetails.h"
+//#import "GetDirections.h"
+//
+//#import "OffersHome.h"
+//#import "OffersList.h"
+//#import "ShopDetails.h"
+
+#endif /* PrefixHeader_pch */
+

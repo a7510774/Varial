@@ -1,0 +1,406 @@
+/*
+ Localizable.strings
+ Varial
+ 
+ Created by jagan on 05/02/16.
+ Copyright © 2016 Velan. All rights reserved.
+ */
+"Change Email ID" = "更改电子邮件";
+"Set Phone Number" = "设置电话号码";
+"Settings" = "设置";
+"Login Options" = "登录选项";
+"Loading" = "加载";
+"Password" = "密码";
+"Done" = "做";
+"Enter a valid email address" = "请输入一个有效的电子邮件地址";
+
+
+//User Messages
+//Error messages
+"Password cannot be empty" = "密码不能为空";
+"Confirm Password cannot be empty" = "确认密码不能为空";
+"Passwords mismatch. Retry" = "密码不匹配。重试";
+//"Email should not be empty"
+"Enter password" = "输入密码";
+"Enter One Time Password" = "请输入动态密码";
+"Enter old password" = "输入原密码";
+"Select country" = "选择国家";
+"Select state" = "选择州";
+"Select city" = "选择城市";
+"Enter address" = "输入地址";
+"Enter invite code" = "输入邀请码";
+"Enter old phone number" = "输入原电话号码";
+"Enter a valid name" = "输入一个有效的姓名";
+"Enter a valid team name" = "输入一个有效的团队名称";
+"Name cannot be empty" = "姓名不能为空";
+"Phone number cannot be empty" = "电话号码不能为空";
+"Comment should not exceed %d characters" = "评论不应该超过%d个字符";
+"Status cannot be empty. Upload photos/ videos to your status" = "动态不能为空。向您的动态上传照片/视频";
+"New phone number cannot be empty" = "新电话号码不能为空";
+"Select privacy type to post" = "选择发布的隐私类型";
+"No Co-captain available" = "无可用的副队长";
+"Select your location to post" = "选择您的位置来发布";
+"Password should contain at least %d characters." = "密码应该包含至少%d个字符。";
+
+//Home tab/Feeds
+//comments
+"Please wait while the comment is being posted" = " 请稍候，正在发布评论";
+"Write a comment..." = "撰写评论...";
+"Do you want to delete this comment?" = "您想删除此评论吗？";
+"No comments" = "没有评论";
+"Posting..." = "发布中";
+
+//CreatePostController
+"Post Comment" = "发布评论";
+"Do you want to discard this post?" = "您要放弃发布此文章吗？";
+"Comments" = "评论";
+"Post Feed" = "发布反馈";
+"Media" = "媒体";
+"Discard" = "放弃";
+"Media size exceeded" = "超过容许的最多媒体文件数";
+"Maximum files allowed: %d" = "允许的最多文件数：%d";
+"Maximum upload file size: %d MB" = "上传文件的最大值：%d MB";
+
+//Post Details
+"Post Details" = "发布详情";
+"Do you want to delete this item?" = "您想删除此文件吗？";
+//"Do you want to delete this media along with post?" =
+"%@ Comments" = "%@ 评论";
+"Become a member to like and comment" = "成为会员来点赞和评论";
+"Image saved to gallery" = "图片已保存到图库";
+//"Image not captured properly, please try again"
+"Try again" = "再次尝试";
+
+//showCheckInMap
+"Check In" = "签到";
+
+//feeds
+"News Feed" = "新闻订阅";
+"Feeds" = "订阅";
+"Are you sure you want to delete?" = "您确定要删除吗？";
+"Are you sure you want to cancel?" = "您确定要取消吗？";
+"No News Feeds to display" = "没有可显示的新闻订阅";
+"No Private Feeds to display" = "没有可显示的隐私订阅";
+"No Team Feeds to display" = "没有可显示的团队订阅";
+"No Popular Public Feeds to display" = "没有可显示的公众订阅";
+"Delete" = " 删除";
+"Are you sure?" = "您确定吗？";
+"Post to public" = "向公众发布";
+"Post to friends" = "向朋友发布";
+
+//FriendNotification
+"No Notifications to display" = "没有可显示的通知";
+
+//Authenticate
+//PlayerType
+//"Sign Up As" =
+
+
+//Settings/Notification
+//notification
+"Notifications" = "通知";
+"Email ID not found" = "未找到电子邮件ID";
+"Provide an email address" = "提供一个电子邮件地址";
+"Waiting for confirmation" = "等待确认";
+
+//Settings/Privacy
+//BlockedUsers
+"Blocked Users" = "已拦截用户";
+"You have not blocked any user" = "您还没有拦截任何用户";
+
+//privacy
+"Privacy" = "隐私";
+
+//Settings/LoginOptions
+//LoginOptions
+"Login Options" = "登录选项";
+"Change Email ID" = "更改Email ID";
+"Email ID" = "Email ID";
+"Change Phone Number" = "更改电话号码";
+"Set Phone Number" = "设置电话号码";
+"New Phone Number" = "新的电话号码";
+"Phone Number" =  " 电话号码";
+
+//Settings
+//SettingsMenu
+"Settings" = "设置";
+"Password" = "密码";
+"Notifications" = "通知";
+"Provide registered email address to change password" = "请提供注册的电子邮件地址来修改密码";
+"Email" =  "Email";
+
+//Friends
+//MyProfile
+"No Boards are present" = "没有显示的滑板";
+"You have no friends" = " 您还没有朋友";
+"No Feeds" = "没有订阅";
+"View Profile" = "查看档案";
+
+//MyFriends
+"%@'s Friends" = "%@ 朋友";
+"My Friends" = "我的朋友";
+"No results found" = "没有找到结果";
+
+//InviteFriends
+"Invite Friend" = "邀请朋友";
+
+//FriendsProfile
+"Block this person" = "拦截此人";
+"Are you sure you want to block this person?" = "您确定要拦截此人吗？";
+"No friends" = "没有朋友";
+"%@'s Profile" = "%@ 档案";
+
+//PointsActivityLog
+"Points Activity Log" = "积分活动日志";
+"You don't have any Points Activities Log" = "您没有任何积分活动日志";
+
+//TeamViewController
+"Leave Team" = "离开团队";
+"Change Co-captain" = "更改副队长";
+"Remove Co-captain" = "删除副队长";
+"View Invitees" = "查看受邀者";
+"Team View" = "团队视图";
+"Team" = "团队";
+"Are you sure you want to remove the Co-captain?" = "您确定要移除副队长吗？";
+"Team Chat" = "团队聊天";
+"Select Captain before leaving" = "在离开前选择队长";
+"Are you sure want to leave team?" = "您确定要离开团队吗？";
+"Are you sure want to remove?" = "您确定要移除吗？";
+"No new Feeds to display" = "没有可显示的新订阅";
+
+//NonMemberViewController
+"No members" = "没有成员";
+
+//TeamMemberViewController
+"Team Members" = "团队成员";
+"No members present" = "目前没有成员";
+
+//TeamInvitiesViewController
+"Set Co-captain" = "设定副队长";
+"Add Member" = "添加成员";
+"Select Captain" = "选择队长";
+"Team Invite" = "团队邀请";
+"No members in your team" = "您的团队没有成员";
+"No members to invite" = "没有可邀请的成员";
+"No invited members" = "没有邀请的成员";
+"No members to select a captain" = "没有可选择为队长的成员";
+
+//CreateTeam
+"Create Team" = "创建团队";
+"Minimum %d points required to join" = "要求最低%d分才能加入";
+"Team picture  cannot be empty. Upload a photo" = "团队图片不能为空。上传照片";
+"Please Enter the minimum points" = "请输入最低分数";
+"Minimum %d points required" = "要求最低%d分";
+"You don't belong to any team." = "您不属于任何团队";
+
+//Map
+//GoogleMap
+"Current Location" = "当前位置";
+
+//CheckIn
+//CheckInViewController
+"Check In" = "签到";
+//"Please add a checkin" =
+
+//InAppPurchase
+//InAppPurchaseManager
+"Points" = "积分";
+"Points not found" = "未找到积分";
+
+//Points
+//BuyPointsViewController
+"Buy Points" = "购买积分";
+"No products availabe now" = "现在无可用的产品";
+
+//DonatePoints
+"Donate Points" = "赠送积分";
+"Search by team name" = "按团队名称搜索";
+"Search by Name, Email, or Phone Number" = "按照姓名、电子邮件或电话号码搜索";
+"No teams" = "没有团队";
+
+//DonateForm
+"Enter the points to donate" = "请输入要赠送的积分";
+"Points cannot be zero" = "积分不能为零";
+"Donate" = "赠送";
+"Are you sure want to donate?" = "您确定要赠送吗？";
+
+//LeaderBoard
+//LeaderBoard
+"Leader Board" = "排行榜";
+"Player List" = "玩家列表";
+"Team List" = "团队列表";
+"No players found" = "未找到玩家";
+"No team found" = "未找到团队";
+
+//TopScorers
+"Top Scorers" = "得分榜";
+"Points Information" = "积分信息";
+
+//NearByOffers
+//OffersList
+"Offers" = "折扣";
+"Nearby Offers" = "附近折扣";
+"No Nearby Offers found" = "未找到附近折扣";
+"You have no Offers" = " 您没有折扣";
+"No offers found in this shop" = "在此商铺中未找到折扣";
+
+//OffersList
+"Nearby Offers List" = "附近折扣列表";
+
+//ShopDetails
+"Shop Details" = "商店详情";
+//"You" =
+
+//BuzzardRun
+//BuzzardRunHome
+"Buzzard Run" = "Buzzard Run";
+"No Buzzard Runs are available" = "没有可用的Buzzard Run";
+"My current location" = "我的当前位置";
+
+//ViewNearBy
+"View Nearby" = "查看附近";
+"No Nearby Runs found" = "未找到附近活动";
+"My Buzzard Run" = "我的Buzzard Run";
+"You are not registered with any buzzard run" = "您没有注册任何Buzzard Run";
+
+//Buzzard runs from shops
+"Buzzard Runs" = "Buzzard Run";
+"No Nearby Buzzard Runs in this shop" = "此商店中没有附近Buzzard Runs";
+
+//BuzzardRunDetails
+"Buzzard Run Details" = "Buzzard Run详情";
+"Do you want to register?" = "您想注册吗？";
+"Activation Code" = "激活码";
+"No events are available" = "没有可查看事件";
+"New" = "新的";
+"Register" = "注册";
+"Approved" = "已批准";
+"In Progress" = "进行中";
+"Submitted" = "已提交";
+"Rewarded" = "已获得";
+"Expired" = "已过期";
+"Completed" = "已完成";
+"Show this activation code to the shop owner and activate Buzzard Run \n %@" = "向店主展示此激活码并激活Buzzard Run";
+
+
+//BuzzardRunPost
+//"%@ Event" =
+"Posting… Please wait!" = "发布中...请稍等！";
+"Register and verify with Shop Owner to make a post" = "注册并与店主验证来发布";
+
+//GetDirection
+"Direction" = "方位";
+
+//Shopping
+//ShoppingHome
+"Shopping" = "购物";
+"Product Details" = "产品详情";
+
+//ShopDetails
+"Valid Upto %@" = "有效期至";
+
+//MyCheckin
+//MyCheckins
+"My Check In" = "我的签到";
+//"No near by Check Ins" =
+"No new Check Ins" = "没有新的签到";
+
+//MyCheckinDetails
+"My Check In details" = "我的签到详情";
+
+
+//ClubPromotions
+//NearByClubPromotions
+//"No Nearby Club Promotions found" =
+//"No Club Promotions are available"
+//"Club Promotions"
+//"You are not registered with any club promotions"
+
+
+//MyClubPromotions
+"Registered" = "已注册";
+"Active" = "激活";
+"My Club Promotions" = "我的俱乐部优惠";
+
+//ClubPromotionDetails
+"Club Promotions" = "俱乐部优惠";
+"Club Promotion Details" = "俱乐部优惠详情";
+"Club Promotion" = "俱乐部优惠";
+//"Show this activation code to Club owner and activate the Club promotion \n" =
+"No Nearby Club Promotions are available" = "附近没有可用的俱乐部优惠";
+
+
+//Games
+"Games" = "游戏";
+
+
+//Util
+"Coming Soon" = "即将推出";
+"Loading" = "加载中";
+"Loading… Please wait!" = "加载中...请稍等！";
+//"Please wait while it's getting compressed" =
+"Rank: %@" = "排名: %@";
+"Crew" = "成员";
+"Media" = "媒体";
+"Just now" = "刚刚";
+"%d Seconds ago" = "%d几秒前";
+"A minute ago" = "一分钟前";
+"%d Minutes ago" = "%d 几分钟前";
+"An hour ago" = "一小时前";
+"%d Hours ago" = "%d几小时前";
+"Yesterday" = "昨天";
+"%d Days ago" = "%d几天前";
+"Last week" = "上周";
+//"%d weeks ago" =
+"Last month" = "上月";
+"%d Months ago" = "%d几个月前";
+"Last year" = "去年";
+"%d Years ago" = "%d几年前";
+"Turn on \"Location Services\" to allow \"varial\" to determine your location" = "打开“位置服务”容许Varial确定您的位置";
+"Turn on \"In-App Purchases\" in your Settings" = "在您的设置中打开“应用内购买”";
+"Allow \"Varial\" to access your Photos" = "允许Varial访问您的照片";
+"Settings -> General -> Restrictions" = "设置 -> 通用 -> 限制";
+
+
+//Custom Views
+
+//"Enter the place name"
+"Cancel" = "取消";
+"Location" = "位置";
+//"Search Location"
+"Pin Nearby Location" = "识别附近位置";
+"Use My Current Location" = "使用我的当前位置";
+//"A newer version of varial is available. Click to update"
+//"Update"
+"Country" = "国家";
+//"Enter Your Phone  Number" =
+"Save" = "保存";
+"Cancel" = "取消";
+//"Set Email ID" =
+//"Enter Email ID" =
+"Confirm Password" = "确认密码";
+"Action" = "活动";
+//"Invite"
+//"Unfriend" =
+//"Cancel Invite"
+//"Accept"
+//"Reject" =
+//"Block"
+//"Edit Information"
+//"Camera"
+//Gallery""
+//"Sign Out"
+//"Do you want sign out?" =
+//"Yes"
+//"No"
+//"Redeem Points"
+"Points Activity Log" = " 积分活动日志";
+//"Network"
+//"Please check your network connection"
+//"Retry"
+//"Resend"
+
+
+
+
+

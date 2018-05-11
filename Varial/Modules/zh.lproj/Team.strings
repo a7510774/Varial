@@ -1,0 +1,174 @@
+
+/* Class = "UIButton"; normalTitle = "Invite"; ObjectID = "1zr-zf-MGw"; */
+"1zr-zf-MGw.normalTitle" = "邀请";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2km-4i-F3H"; */
+"2km-4i-F3H.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "6Qi-Kk-E1S"; */
+"6Qi-Kk-E1S.text" = "姓名";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "6YE-GP-B8S"; */
+"6YE-GP-B8S.text" = "积分";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "7k5-0h-uyA"; */
+"7k5-0h-uyA.text" = "积分";
+
+/* Class = "UIButton"; normalTitle = "Create Your Team"; ObjectID = "8sp-l1-eeC"; */
+"8sp-l1-eeC.normalTitle" = "创建您的团队";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "9Q9-IY-vc7"; */
+"9Q9-IY-vc7.text" = "NAme";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "B1s-jm-pQy"; */
+"B1s-jm-pQy.text" = "排名: ";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "BjY-3t-Wjp"; */
+"BjY-3t-Wjp.text" = "排名: ";
+
+/* Class = "UILabel"; text = "Label sdfsdkjf sdfkj sdkfj sdfkj sdfkj bkfsdjb ksdf ksdjf  sdlfk ldkf lsdkf df "; ObjectID = "DoW-9J-3Qv"; */
+"DoW-9J-3Qv.text" = "Label sdfsdkjf sdfkj sdkfj sdfkj sdfkj bkfsdjb ksdf ksdjf  sdlfk ldkf lsdkf df ";
+
+/* Class = "UILabel"; text = "Choose profile picture"; ObjectID = "E86-bp-KNN"; */
+"E86-bp-KNN.text" = "选择档案图片";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "EsR-f4-Vc8"; */
+"EsR-f4-Vc8.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "FJG-YS-q6z"; */
+"FJG-YS-q6z.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = " Details"; ObjectID = "FLv-Ow-3uQ"; */
+"FLv-Ow-3uQ.normalTitle" = " 详情";
+
+/* Class = "UITextField"; placeholder = "Search by Name or Email or Phone Number"; ObjectID = "Fdk-Bb-iah"; */
+"Fdk-Bb-iah.placeholder" = "按照姓名、电子邮件或手机号码搜索";
+
+/* Class = "UILabel"; text = "EDIT TEAM NAME"; ObjectID = "GBt-yA-rRh"; */
+"GBt-yA-rRh.text" = "编辑团队名称";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Gd9-Yu-3RR"; */
+"Gd9-Yu-3RR.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Please enter minimum 50 points"; ObjectID = "I92-92-lIF"; */
+"I92-92-lIF.placeholder" = "请输入最低50分";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "IPs-j1-V7X"; */
+"IPs-j1-V7X.text" = "NAme";
+
+/* Class = "UIButton"; normalTitle = "Submit For Approval"; ObjectID = "Ihe-BK-3o8"; */
+"Ihe-BK-3o8.normalTitle" = "提交获得批准";
+
+/* Class = "UILabel"; text = "Co-Captain"; ObjectID = "Imj-r3-g7X"; */
+"Imj-r3-g7X.text" = "副队长";
+
+/* Class = "UILabel"; text = "15000"; ObjectID = "MJ8-AR-R4g"; */
+"MJ8-AR-R4g.text" = "15000";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Mz5-bw-gnR"; */
+"Mz5-bw-gnR.text" = "积分";
+
+/* Class = "UITabBarItem"; title = "Get Directions"; ObjectID = "P3c-oe-hbt"; */
+"P3c-oe-hbt.title" = "获得导航";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "QTT-dl-JJy"; */
+"QTT-dl-JJy.text" = "排名: ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "RGi-bz-W7N"; */
+"RGi-bz-W7N.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "|"; ObjectID = "SxK-xv-bB3"; */
+"SxK-xv-bB3.normalTitle" = "|";
+
+/* Class = "UIButton"; normalTitle = "Invite"; ObjectID = "SyY-Jv-Jfy"; */
+"SyY-Jv-Jfy.normalTitle" = "邀请";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "Sya-FP-w9A"; */
+"Sya-FP-w9A.text" = "排名: ";
+
+/* Class = "UITextField"; placeholder = "Team Name"; ObjectID = "TTM-Kx-5Hm"; */
+"TTM-Kx-5Hm.placeholder" = "团队名称";
+
+/* Class = "UIButton"; normalTitle = " Done "; ObjectID = "WyG-P0-ass"; */
+"WyG-P0-ass.normalTitle" = " 完成 ";
+
+/* Class = "UISegmentedControl"; XVn-5T-Maz.segmentTitles[0] = "Feeds"; ObjectID = "XVn-5T-Maz"; */
+"XVn-5T-Maz.segmentTitles[0]" = "消息";
+
+/* Class = "UISegmentedControl"; XVn-5T-Maz.segmentTitles[1] = "Members"; ObjectID = "XVn-5T-Maz"; */
+"XVn-5T-Maz.segmentTitles[1]" = "成员";
+
+/* Class = "UITextView"; text = "yuiuyiyi"; ObjectID = "Yk8-OO-Mff"; */
+"Yk8-OO-Mff.text" = "yuiuyiyi";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ZWQ-pV-Eu4"; */
+"ZWQ-pV-Eu4.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aTP-tF-icJ"; */
+"aTP-tF-icJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "bXX-Hc-lMv"; */
+"bXX-Hc-lMv.text" = "姓名";
+
+/* Class = "UILabel"; text = "Assign the points a player should donate to join the team"; ObjectID = "bXd-aA-vJB"; */
+"bXd-aA-vJB.text" = "指定玩家加入团队应赠送的分数";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dGF-7M-63s"; */
+"dGF-7M-63s.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Valid Upto"; ObjectID = "gSa-3y-PZe"; */
+"gSa-3y-PZe.title" = "有效期至";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gzD-ug-hRC"; */
+"gzD-ug-hRC.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Team name"; ObjectID = "hNa-ve-mOZ"; */
+"hNa-ve-mOZ.placeholder" = "团队名称";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "hff-v8-b0S"; */
+"hff-v8-b0S.text" = "积分";
+
+/* Class = "UIButton"; normalTitle = " Post"; ObjectID = "hsv-ij-bzQ"; */
+"hsv-ij-bzQ.normalTitle" = " 发布";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "hu2-0c-rEJ"; */
+"hu2-0c-rEJ.text" = "积分";
+
+/* Class = "UILabel"; text = "Team Chat"; ObjectID = "iHS-fX-RiP"; */
+"iHS-fX-RiP.text" = "Team Chat";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "krI-Uj-3jf"; */
+"krI-Uj-3jf.text" = "NAme";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "lpw-Q4-u3a"; */
+"lpw-Q4-u3a.text" = "NAme";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "mge-Uv-xZl"; */
+"mge-Uv-xZl.text" = "排名: ";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "pEm-jB-jV4"; */
+"pEm-jB-jV4.text" = "积分";
+
+/* Class = "UIButton"; normalTitle = "Add Post"; ObjectID = "qEv-03-Awe"; */
+"qEv-03-Awe.normalTitle" = "添加博文";
+
+/* Class = "UITextField"; placeholder = "Search by Name or Email or Phone Number"; ObjectID = "qMG-vm-P4y"; */
+"qMG-vm-P4y.placeholder" = "按照姓名、电子邮件或手机号码搜索";
+
+/* Class = "UILabel"; text = "11"; ObjectID = "qcA-Qt-nyV"; */
+"qcA-Qt-nyV.text" = "11";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "t9r-Rv-FXk"; */
+"t9r-Rv-FXk.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u5I-PK-wDI"; */
+"u5I-PK-wDI.text" = "Label";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "uE7-ui-s7h"; */
+"uE7-ui-s7h.text" = "8";
+
+/* Class = "UILabel"; text = "Add Members"; ObjectID = "vRx-0Y-M98"; */
+"vRx-0Y-M98.text" = "加入团队";
+
+/* Class = "UILabel"; text = "Click on picture to change"; ObjectID = "x9N-a9-9pj"; */
+"x9N-a9-9pj.text" = "点击图片进行修改";

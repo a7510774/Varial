@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResponsePopup">
+            <connections>
+                <outlet property="acceptButton" destination="IRw-Ts-Xev" id="AMr-D8-OFC"/>
+                <outlet property="block" destination="v1b-t7-Xaz" id="HMf-WO-vZk"/>
+                <outlet property="cancelInvite" destination="BQz-TS-K9s" id="bdY-cT-dIR"/>
+                <outlet property="cancelRequest" destination="PQU-vH-ozi" id="qcS-pO-hiY"/>
+                <outlet property="inviteButton" destination="QfR-BL-0CT" id="oBQ-QV-4u3"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="MFY-ta-V4C"/>
+                <outlet property="title" destination="Pco-Qv-E7M" id="lUd-1E-0Os"/>
+                <outlet property="unFriendButton" destination="6zy-Me-zzB" id="gbc-lQ-zB2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="370"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-Mw-qip">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="370"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcf-qM-Pnw">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pco-Qv-E7M">
+                                    <rect key="frame" x="10" y="10" width="280" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="95q-U3-16I"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Pco-Qv-E7M" firstAttribute="leading" secondItem="hcf-qM-Pnw" secondAttribute="leading" constant="10" id="Ajm-Nc-fgt"/>
+                                <constraint firstItem="Pco-Qv-E7M" firstAttribute="top" secondItem="hcf-qM-Pnw" secondAttribute="top" constant="10" id="Ql4-w2-1Dm"/>
+                                <constraint firstAttribute="trailing" secondItem="Pco-Qv-E7M" secondAttribute="trailing" constant="10" id="u77-eR-dvd"/>
+                                <constraint firstAttribute="height" constant="50" id="yBp-sd-kBP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ild-kb-zbW">
+                            <rect key="frame" x="0.0" y="50" width="300" height="2"/>
+                            <color key="backgroundColor" red="0.79279119320000002" green="0.79279119320000002" blue="0.79279119320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="nco-RR-paT"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfR-BL-0CT" customClass="ZFRippleButton" customModule="Varial" customModuleProvider="target">
+                            <rect key="frame" x="20" y="62" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="qhf-r5-oNe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Invite">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doInvite:" destination="-1" eventType="touchUpInside" id="3z2-hY-JbY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zy-Me-zzB" customClass="ZFRippleButton" customModule="Varial" customModuleProvider="target">
+                            <rect key="frame" x="20" y="112" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="7U1-4j-GSE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Unfriend">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doUnFriend:" destination="-1" eventType="touchUpInside" id="QTC-XY-YKJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQz-TS-K9s" customClass="ZFRippleButton" customModule="Varial" customModuleProvider="target">
+                            <rect key="frame" x="20" y="162" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="b9D-Li-cc0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Cancel Invite">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doCancelInvite:" destination="-1" eventType="touchUpInside" id="JJj-mA-XTh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRw-Ts-Xev" customClass="ZFRippleButton" customModule="Varial" customModuleProvider="target">
+                            <rect key="frame" x="20" y="212" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="D2c-Et-FRP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Accept">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doAccept:" destination="-1" eventType="touchUpInside" id="U2t-ZT-8qg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-t7-Xaz" customClass="ZFRippleButton" customModule="Varial" customModuleProvider="target">
+                            <rect key="frame" x="20" y="312" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="h74-gC-SeW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Block">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doBlock:" destination="-1" eventType="touchUpInside" id="gcH-gn-af6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQU-vH-ozi" customClass="ZFRippleButton" customModule="Varial" customModuleProvider="target">
+                            <rect key="frame" x="20" y="262" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Ga4-ZF-qmC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Reject">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doCancelRequest:" destination="-1" eventType="touchUpInside" id="NWi-bI-qmQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="v1b-t7-Xaz" secondAttribute="trailing" constant="20" id="04g-f9-Yf1"/>
+                        <constraint firstAttribute="trailing" secondItem="ild-kb-zbW" secondAttribute="trailing" id="1Ib-f7-CEi"/>
+                        <constraint firstItem="QfR-BL-0CT" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" constant="20" id="4Tg-LS-mpp"/>
+                        <constraint firstItem="QfR-BL-0CT" firstAttribute="top" secondItem="ild-kb-zbW" secondAttribute="bottom" constant="10" id="8OF-sb-JFd"/>
+                        <constraint firstAttribute="trailing" secondItem="PQU-vH-ozi" secondAttribute="trailing" constant="20" id="8uO-bh-1H5"/>
+                        <constraint firstAttribute="width" constant="300" id="HMp-hh-Wjp"/>
+                        <constraint firstItem="IRw-Ts-Xev" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" constant="20" id="MeB-ZE-2zH"/>
+                        <constraint firstItem="hcf-qM-Pnw" firstAttribute="top" secondItem="Ofb-Mw-qip" secondAttribute="top" id="NaB-qa-lHn"/>
+                        <constraint firstItem="v1b-t7-Xaz" firstAttribute="top" secondItem="PQU-vH-ozi" secondAttribute="bottom" constant="10" id="PAF-H2-HA6"/>
+                        <constraint firstAttribute="trailing" secondItem="hcf-qM-Pnw" secondAttribute="trailing" id="T8e-VD-MCa"/>
+                        <constraint firstAttribute="trailing" secondItem="BQz-TS-K9s" secondAttribute="trailing" constant="20" id="Wwe-yO-ZkX"/>
+                        <constraint firstItem="BQz-TS-K9s" firstAttribute="top" secondItem="6zy-Me-zzB" secondAttribute="bottom" constant="10" id="bHG-F1-EMH"/>
+                        <constraint firstItem="v1b-t7-Xaz" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" constant="20" id="dlj-7h-t5g"/>
+                        <constraint firstItem="PQU-vH-ozi" firstAttribute="top" secondItem="IRw-Ts-Xev" secondAttribute="bottom" constant="10" id="eYO-ul-xui"/>
+                        <constraint firstItem="PQU-vH-ozi" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" constant="20" id="frB-8r-MON"/>
+                        <constraint firstItem="6zy-Me-zzB" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" constant="20" id="g9c-wN-6Cn"/>
+                        <constraint firstAttribute="trailing" secondItem="6zy-Me-zzB" secondAttribute="trailing" constant="20" id="grd-ld-CHT"/>
+                        <constraint firstAttribute="height" constant="370" id="iAJ-Fa-Vqc"/>
+                        <constraint firstAttribute="trailing" secondItem="IRw-Ts-Xev" secondAttribute="trailing" constant="20" id="k0g-ff-jWo"/>
+                        <constraint firstItem="IRw-Ts-Xev" firstAttribute="top" secondItem="BQz-TS-K9s" secondAttribute="bottom" constant="10" id="mkX-h9-Gwc"/>
+                        <constraint firstItem="6zy-Me-zzB" firstAttribute="top" secondItem="ild-kb-zbW" secondAttribute="bottom" constant="15" id="mle-zN-2vK"/>
+                        <constraint firstItem="ild-kb-zbW" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" id="oYS-8Q-dhD"/>
+                        <constraint firstItem="ild-kb-zbW" firstAttribute="top" secondItem="hcf-qM-Pnw" secondAttribute="bottom" id="q7e-EN-e90"/>
+                        <constraint firstItem="6zy-Me-zzB" firstAttribute="top" secondItem="QfR-BL-0CT" secondAttribute="bottom" constant="10" id="qGT-4F-9fy"/>
+                        <constraint firstItem="BQz-TS-K9s" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" constant="20" id="rsf-fn-B7s"/>
+                        <constraint firstItem="hcf-qM-Pnw" firstAttribute="leading" secondItem="Ofb-Mw-qip" secondAttribute="leading" id="tKT-n0-F6d"/>
+                        <constraint firstAttribute="trailing" secondItem="QfR-BL-0CT" secondAttribute="trailing" constant="20" id="yyp-GT-jrr"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="mle-zN-2vK"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ofb-Mw-qip" secondAttribute="trailing" id="C3s-V5-pBJ"/>
+                <constraint firstItem="Ofb-Mw-qip" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UrG-L7-d8l"/>
+                <constraint firstAttribute="bottom" secondItem="Ofb-Mw-qip" secondAttribute="bottom" id="hdt-hS-xJg"/>
+                <constraint firstItem="Ofb-Mw-qip" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wTX-E9-dZt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

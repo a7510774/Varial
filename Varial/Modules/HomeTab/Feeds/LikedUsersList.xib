@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LikedUsersList">
+            <connections>
+                <outlet property="headerView" destination="J96-P8-v2V" id="Ijw-Fb-ejJ"/>
+                <outlet property="staredListTable" destination="2Y7-iI-PdF" id="oK4-J2-Mcl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="uL1-KO-oOn">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J96-P8-v2V" customClass="HeaderView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="l9C-lj-FBP"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Y7-iI-PdF">
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="1" green="1" blue="1" alpha="0.29946808510638295" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PKM-BF-svu"/>
+                        <outlet property="delegate" destination="-1" id="2cR-xi-U0T"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Y7-iI-PdF" secondAttribute="bottom" id="0eJ-JE-rY5"/>
+                <constraint firstItem="uL1-KO-oOn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DOj-cL-HtW"/>
+                <constraint firstItem="J96-P8-v2V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="OCq-u2-POq"/>
+                <constraint firstAttribute="trailing" secondItem="2Y7-iI-PdF" secondAttribute="trailing" id="Sah-uI-i4P"/>
+                <constraint firstAttribute="trailing" secondItem="J96-P8-v2V" secondAttribute="trailing" id="SsY-gz-NTR"/>
+                <constraint firstAttribute="bottom" secondItem="uL1-KO-oOn" secondAttribute="bottom" id="eXL-3K-xHw"/>
+                <constraint firstItem="2Y7-iI-PdF" firstAttribute="top" secondItem="J96-P8-v2V" secondAttribute="bottom" id="ejd-fC-kO3"/>
+                <constraint firstItem="J96-P8-v2V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hnM-US-S0h"/>
+                <constraint firstItem="uL1-KO-oOn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="k7T-lu-uWc"/>
+                <constraint firstAttribute="trailing" secondItem="uL1-KO-oOn" secondAttribute="trailing" id="vGs-0g-urp"/>
+                <constraint firstItem="2Y7-iI-PdF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w87-0z-ysA"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="uL1-KO-oOn"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="451" y="364"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background.png" width="1242" height="2208"/>
+    </resources>
+</document>

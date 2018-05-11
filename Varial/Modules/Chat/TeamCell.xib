@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" rowHeight="90" id="9Lg-rc-nAz" customClass="TeamCell">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Lg-rc-nAz" id="CsX-wP-V0g">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOG-6D-QfI" customClass="ProfileImage">
+                        <rect key="frame" x="18" y="10" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="8hk-TN-Zw6"/>
+                            <constraint firstAttribute="width" constant="70" id="aNh-Yf-4ZY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-dC-49j">
+                        <rect key="frame" x="98" y="18" width="138" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ldN-xq-Xje"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zx-cv-E8z" userLabel="Captain name">
+                        <rect key="frame" x="124" y="49" width="116" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="yRf-S3-HF4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                        <color key="textColor" red="0.78040598520000004" green="0.78813277709999996" blue="0.78813277709999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TmK-vN-rJN">
+                        <rect key="frame" x="96" y="47" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="AX3-X0-bte"/>
+                            <constraint firstAttribute="width" constant="20" id="CND-TA-8jF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J53-gl-dcn" userLabel="Rank value">
+                        <rect key="frame" x="250" y="49" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="LZD-4i-uj4"/>
+                            <constraint firstAttribute="height" constant="21" id="N6r-Vx-wcb"/>
+                            <constraint firstAttribute="width" constant="210" id="wvq-dZ-RQJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wvq-dZ-RQJ"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwf-Nn-btH">
+                        <rect key="frame" x="248" y="18" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="cii-sH-3fT"/>
+                            <constraint firstAttribute="width" constant="70" id="rPc-Su-aMu"/>
+                            <constraint firstAttribute="width" constant="210" id="zZH-lk-Hhh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zZH-lk-Hhh"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hwf-Nn-btH" secondAttribute="trailing" constant="10" id="0FK-7K-lil"/>
+                    <constraint firstItem="IOG-6D-QfI" firstAttribute="leading" secondItem="CsX-wP-V0g" secondAttribute="leadingMargin" constant="10" id="0bW-YO-Agk"/>
+                    <constraint firstItem="hwf-Nn-btH" firstAttribute="leading" secondItem="vBe-dC-49j" secondAttribute="trailing" constant="12" id="3a0-6r-BeI"/>
+                    <constraint firstItem="hwf-Nn-btH" firstAttribute="top" secondItem="CsX-wP-V0g" secondAttribute="topMargin" constant="10" id="9K4-O2-fLf"/>
+                    <constraint firstItem="2Zx-cv-E8z" firstAttribute="top" secondItem="vBe-dC-49j" secondAttribute="bottom" constant="10" id="EAU-oR-v7G"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="J53-gl-dcn" secondAttribute="trailing" id="GE5-Jd-h5v"/>
+                    <constraint firstItem="TmK-vN-rJN" firstAttribute="top" secondItem="vBe-dC-49j" secondAttribute="bottom" constant="8" id="Hel-Lx-fES"/>
+                    <constraint firstItem="J53-gl-dcn" firstAttribute="top" secondItem="hwf-Nn-btH" secondAttribute="bottom" constant="10" id="KeG-Bz-lHQ"/>
+                    <constraint firstItem="2Zx-cv-E8z" firstAttribute="leading" secondItem="TmK-vN-rJN" secondAttribute="trailing" constant="8" id="Vdf-k2-dqS"/>
+                    <constraint firstItem="vBe-dC-49j" firstAttribute="top" secondItem="CsX-wP-V0g" secondAttribute="topMargin" constant="10" id="a23-aB-Mfz"/>
+                    <constraint firstItem="hwf-Nn-btH" firstAttribute="top" secondItem="CsX-wP-V0g" secondAttribute="top" constant="10" id="fcE-Pf-M2h"/>
+                    <constraint firstItem="J53-gl-dcn" firstAttribute="leading" secondItem="2Zx-cv-E8z" secondAttribute="trailing" constant="10" id="fds-8L-9yo"/>
+                    <constraint firstItem="vBe-dC-49j" firstAttribute="leading" secondItem="IOG-6D-QfI" secondAttribute="trailing" constant="10" id="jR0-D1-tNS"/>
+                    <constraint firstItem="IOG-6D-QfI" firstAttribute="centerY" secondItem="CsX-wP-V0g" secondAttribute="centerY" id="nNv-0V-h3D"/>
+                    <constraint firstItem="TmK-vN-rJN" firstAttribute="leading" secondItem="IOG-6D-QfI" secondAttribute="trailing" constant="8" id="vyq-ve-hQU"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="fcE-Pf-M2h"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="captainName" destination="2Zx-cv-E8z" id="bYc-W2-r7J"/>
+                <outlet property="captainSymbol" destination="TmK-vN-rJN" id="LR2-ZU-2yc"/>
+                <outlet property="profileImage" destination="IOG-6D-QfI" id="6eI-oA-lhw"/>
+                <outlet property="rank" destination="J53-gl-dcn" id="ITm-v6-daN"/>
+                <outlet property="teamMame" destination="vBe-dC-49j" id="BpP-O6-dmt"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

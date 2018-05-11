@@ -1,0 +1,6 @@
+framework module ResponsiveLabel {
+  umbrella header "ResponsiveLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}

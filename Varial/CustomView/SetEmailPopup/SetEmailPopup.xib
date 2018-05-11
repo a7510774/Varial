@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetEmailPopup">
+            <connections>
+                <outlet property="cancelButton" destination="uWo-51-NAQ" id="4Ca-ke-o1u"/>
+                <outlet property="confirmPassword" destination="E6I-fW-EFk" id="b6Z-h6-G3Z"/>
+                <outlet property="emailID" destination="wdP-Ur-Xta" id="x10-dR-fjb"/>
+                <outlet property="header" destination="8dp-Vq-UnI" id="F0I-3j-lDK"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="igr-t4-a1C"/>
+                <outlet property="password" destination="Hnf-5q-YVh" id="aQM-iU-Ztz"/>
+                <outlet property="saveButton" destination="iYE-K0-5Kn" id="e5I-Fe-9Ao"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-kz-foI">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET EMAIL ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dp-Vq-UnI">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="IJc-bG-YRB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvG-hM-3ro">
+                            <rect key="frame" x="0.0" y="40" width="300" height="2"/>
+                            <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="dhA-eg-2JI"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wdP-Ur-Xta">
+                            <rect key="frame" x="10" y="52" width="280" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="nGa-4S-5at"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hnf-5q-YVh">
+                            <rect key="frame" x="10" y="92" width="280" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="ybc-Ig-otA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-fW-EFk">
+                            <rect key="frame" x="10" y="132" width="280" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="z2U-Tq-1WH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmc-Wk-BuM">
+                            <rect key="frame" x="45" y="179" width="210" height="35"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYE-K0-5Kn">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+                                    <color key="backgroundColor" red="0.98431372549999996" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="FMc-zu-HvJ"/>
+                                        <constraint firstAttribute="width" constant="100" id="wuL-KH-2y9"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                    <state key="normal" title="Save">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doSave:" destination="-1" eventType="touchUpInside" id="iHk-Cb-r8Y"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWo-51-NAQ">
+                                    <rect key="frame" x="110" y="0.0" width="100" height="35"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="T15-uP-dQe"/>
+                                        <constraint firstAttribute="width" constant="100" id="VIt-BM-QL3"/>
+                                        <constraint firstAttribute="height" constant="30" id="gXx-bd-lZd"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="VIt-BM-QL3"/>
+                                            <exclude reference="gXx-bd-lZd"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="doCancel:" destination="-1" eventType="touchUpInside" id="qtY-kH-wd8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="uWo-51-NAQ" secondAttribute="trailing" id="3xM-bh-hhl"/>
+                                <constraint firstAttribute="bottom" secondItem="uWo-51-NAQ" secondAttribute="bottom" id="OMq-ds-zyo"/>
+                                <constraint firstAttribute="width" constant="210" id="THn-rJ-6ey"/>
+                                <constraint firstItem="iYE-K0-5Kn" firstAttribute="leading" secondItem="qmc-Wk-BuM" secondAttribute="leading" id="TS8-m9-z01"/>
+                                <constraint firstAttribute="height" constant="35" id="Wgl-B2-Ccn"/>
+                                <constraint firstAttribute="bottom" secondItem="uWo-51-NAQ" secondAttribute="bottom" id="Y3c-Vh-kqp"/>
+                                <constraint firstItem="uWo-51-NAQ" firstAttribute="top" secondItem="qmc-Wk-BuM" secondAttribute="top" id="e6D-hA-aTG"/>
+                                <constraint firstItem="iYE-K0-5Kn" firstAttribute="top" secondItem="qmc-Wk-BuM" secondAttribute="top" id="eN1-c2-U4O"/>
+                                <constraint firstAttribute="trailing" secondItem="uWo-51-NAQ" secondAttribute="trailing" id="jgB-9c-0Bi"/>
+                                <constraint firstAttribute="bottom" secondItem="iYE-K0-5Kn" secondAttribute="bottom" id="mAX-5A-AUU"/>
+                                <constraint firstItem="uWo-51-NAQ" firstAttribute="top" secondItem="qmc-Wk-BuM" secondAttribute="top" id="upF-Ve-xoz"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="3xM-bh-hhl"/>
+                                    <exclude reference="Y3c-Vh-kqp"/>
+                                    <exclude reference="upF-Ve-xoz"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8dp-Vq-UnI" secondAttribute="trailing" id="7Ry-lt-vnl"/>
+                        <constraint firstItem="Hnf-5q-YVh" firstAttribute="leading" secondItem="mmX-kz-foI" secondAttribute="leading" constant="10" id="9Zg-lN-hJU"/>
+                        <constraint firstItem="mvG-hM-3ro" firstAttribute="top" secondItem="8dp-Vq-UnI" secondAttribute="bottom" id="Ai0-2S-IsA"/>
+                        <constraint firstItem="8dp-Vq-UnI" firstAttribute="top" secondItem="mmX-kz-foI" secondAttribute="top" id="HzP-ZW-7E1"/>
+                        <constraint firstItem="qmc-Wk-BuM" firstAttribute="centerX" secondItem="mmX-kz-foI" secondAttribute="centerX" id="LE3-F5-gfS"/>
+                        <constraint firstItem="qmc-Wk-BuM" firstAttribute="top" secondItem="E6I-fW-EFk" secondAttribute="bottom" constant="17" id="P9d-Je-eKw"/>
+                        <constraint firstItem="wdP-Ur-Xta" firstAttribute="leading" secondItem="mmX-kz-foI" secondAttribute="leading" constant="10" id="QPT-h1-FEJ"/>
+                        <constraint firstItem="8dp-Vq-UnI" firstAttribute="leading" secondItem="mmX-kz-foI" secondAttribute="leading" id="TGY-0N-Gj9"/>
+                        <constraint firstItem="E6I-fW-EFk" firstAttribute="top" secondItem="Hnf-5q-YVh" secondAttribute="bottom" constant="10" id="VZg-dF-Dq4"/>
+                        <constraint firstAttribute="height" constant="230" id="W3v-8e-VAE"/>
+                        <constraint firstAttribute="trailing" secondItem="mvG-hM-3ro" secondAttribute="trailing" id="cQM-sg-HCD"/>
+                        <constraint firstAttribute="trailing" secondItem="wdP-Ur-Xta" secondAttribute="trailing" constant="10" id="clq-uV-dCD"/>
+                        <constraint firstAttribute="width" constant="300" id="fA2-vc-fGX"/>
+                        <constraint firstAttribute="trailing" secondItem="E6I-fW-EFk" secondAttribute="trailing" constant="10" id="lvM-6i-Kpd"/>
+                        <constraint firstAttribute="trailing" secondItem="Hnf-5q-YVh" secondAttribute="trailing" constant="10" id="nZu-3t-jS8"/>
+                        <constraint firstItem="wdP-Ur-Xta" firstAttribute="top" secondItem="mvG-hM-3ro" secondAttribute="bottom" constant="10" id="qNT-dC-J39"/>
+                        <constraint firstItem="Hnf-5q-YVh" firstAttribute="top" secondItem="wdP-Ur-Xta" secondAttribute="bottom" constant="10" id="tOB-Da-4Qn"/>
+                        <constraint firstAttribute="height" constant="210" id="uVL-Wo-FlB"/>
+                        <constraint firstItem="mvG-hM-3ro" firstAttribute="leading" secondItem="mmX-kz-foI" secondAttribute="leading" id="whg-Tp-L6o"/>
+                        <constraint firstItem="E6I-fW-EFk" firstAttribute="leading" secondItem="mmX-kz-foI" secondAttribute="leading" constant="10" id="zIM-ct-5vf"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="uVL-Wo-FlB"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mmX-kz-foI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="31B-oh-eJR"/>
+                <constraint firstAttribute="trailing" secondItem="mmX-kz-foI" secondAttribute="trailing" id="5da-8E-UXm"/>
+                <constraint firstItem="mmX-kz-foI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PXu-VS-ioA"/>
+                <constraint firstItem="mmX-kz-foI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VUq-C7-Gff"/>
+                <constraint firstAttribute="bottom" secondItem="mmX-kz-foI" secondAttribute="bottom" id="e1N-Qc-9Jw"/>
+                <constraint firstItem="mmX-kz-foI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h49-uD-74x"/>
+                <constraint firstAttribute="trailing" secondItem="mmX-kz-foI" secondAttribute="trailing" id="scx-6D-oCd"/>
+                <constraint firstAttribute="bottom" secondItem="mmX-kz-foI" secondAttribute="bottom" id="ss4-qJ-hIi"/>
+                <constraint firstItem="mmX-kz-foI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tif-rH-1vz"/>
+                <constraint firstItem="mmX-kz-foI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="u50-9v-dIa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="31B-oh-eJR"/>
+                    <exclude reference="5da-8E-UXm"/>
+                    <exclude reference="PXu-VS-ioA"/>
+                    <exclude reference="ss4-qJ-hIi"/>
+                    <exclude reference="tif-rH-1vz"/>
+                    <exclude reference="u50-9v-dIa"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,35 @@
+//
+//  VarialPrefixHeader.pch
+//  Varial
+//
+//  Created by Guru Prasad chelliah on 12/11/17.
+//  Copyright © 2017 Velan. All rights reserved.
+//
+
+#ifndef VarialPrefixHeader_pch
+#define VarialPrefixHeader_pch
+
+#define BUNDLE_ID @"com.llc.varial"
+
+#pragma mark - Default Libraries
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Foundation/Foundation.h>
+
+#pragma mark - App Delegate
+//#import "AppDelegate.h"
+
+#define NSLog(...)
+
+#pragma mark - Macros
+
+#import "CommonValues.h"
+#import "SharedObjectValues.h"
+#import "Helper.h"
+#import "Session.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* VarialPrefixHeader_pch */

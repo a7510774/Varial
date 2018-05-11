@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Menu">
+            <connections>
+                <outlet property="mainView" destination="iN0-l3-epB" id="Hp1-ho-P7U"/>
+                <outlet property="menuContainer" destination="fmD-zt-UDP" id="98K-VO-Qh4"/>
+                <outlet property="titleBorder" destination="LvO-qK-b3Z" id="Q26-ps-yTo"/>
+                <outlet property="titleLabel" destination="K7h-6A-l8C" id="F6a-aw-gDB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmD-zt-UDP">
+                    <rect key="frame" x="0.0" y="0.0" width="290" height="480"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7h-6A-l8C">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0cC-hK-KLA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvO-qK-b3Z">
+                            <rect key="frame" x="0.0" y="50" width="290" height="2"/>
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="KDG-KE-A7n"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LvO-qK-b3Z" secondAttribute="trailing" id="33R-nW-wRm"/>
+                        <constraint firstAttribute="trailing" secondItem="K7h-6A-l8C" secondAttribute="trailing" id="51P-Cn-g7v"/>
+                        <constraint firstItem="LvO-qK-b3Z" firstAttribute="top" secondItem="K7h-6A-l8C" secondAttribute="bottom" id="Ila-5B-gc2"/>
+                        <constraint firstItem="K7h-6A-l8C" firstAttribute="leading" secondItem="fmD-zt-UDP" secondAttribute="leading" id="SCC-6z-GtN"/>
+                        <constraint firstItem="LvO-qK-b3Z" firstAttribute="leading" secondItem="fmD-zt-UDP" secondAttribute="leading" id="SU3-XU-38m"/>
+                        <constraint firstItem="K7h-6A-l8C" firstAttribute="top" secondItem="fmD-zt-UDP" secondAttribute="top" id="SmS-CM-Lu3"/>
+                        <constraint firstAttribute="height" constant="200" id="tDG-jU-3Z6"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tDG-jU-3Z6"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fmD-zt-UDP" secondAttribute="bottom" id="3rB-iw-H8Q"/>
+                <constraint firstItem="fmD-zt-UDP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kp9-v6-jb6"/>
+                <constraint firstAttribute="trailing" secondItem="fmD-zt-UDP" secondAttribute="trailing" id="Mru-WA-EFE"/>
+                <constraint firstItem="fmD-zt-UDP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SGt-6n-mh4"/>
+                <constraint firstItem="fmD-zt-UDP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UbZ-rU-iMG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="UbZ-rU-iMG"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

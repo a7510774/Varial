@@ -1,0 +1,273 @@
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "0Dm-bV-yPd"; */
+"0Dm-bV-yPd.text" = "NAme";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "1qM-aa-7vs"; */
+"1qM-aa-7vs.text" = "积分";
+
+/* Class = "UISegmentedControl"; 1zp-vt-zWn.segmentTitles[0] = "Feeds"; ObjectID = "1zp-vt-zWn"; */
+"1zp-vt-zWn.segmentTitles[0]" = "消息";
+
+/* Class = "UISegmentedControl"; 1zp-vt-zWn.segmentTitles[1] = "Friends"; ObjectID = "1zp-vt-zWn"; */
+"1zp-vt-zWn.segmentTitles[1]" = "朋友";
+
+/* Class = "UIButton"; normalTitle = "Resend(OTP)"; ObjectID = "2B7-Ah-cJo"; */
+"2B7-Ah-cJo.normalTitle" = "重发（OTP）";
+
+/* Class = "UILabel"; text = "Chat"; ObjectID = "4TS-5T-IAr"; */
+"4TS-5T-IAr.text" = "消息";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "4xo-2N-4Pa"; */
+"4xo-2N-4Pa.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "5eH-ue-XQg"; */
+"5eH-ue-XQg.placeholder" = "姓名";
+
+/* Class = "UILabel"; text = "Enter your One Time Password here to verify your phone number"; ObjectID = "6Is-FV-5tN"; */
+"6Is-FV-5tN.text" = "请在这里输入您的动态密码来验证您的手机号码";
+
+/* Class = "UILabel"; text = "Points: 1000"; ObjectID = "6NH-Ze-qbI"; */
+"6NH-Ze-qbI.text" = "积分: 1000";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "7TT-j5-5g6"; */
+"7TT-j5-5g6.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "8PG-uO-hWJ"; */
+"8PG-uO-hWJ.text" = "NAme";
+
+/* Class = "UILabel"; text = "REMAINING POINTS"; ObjectID = "9gl-hz-gTi"; */
+"9gl-hz-gTi.text" = "剩余积分";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "AE0-uh-68b"; */
+"AE0-uh-68b.placeholder" = "国家";
+
+/* Class = "UIButton"; normalTitle = "Add More  +"; ObjectID = "AgN-QY-TKD"; */
+"AgN-QY-TKD.normalTitle" = "Add More  +";
+
+/* Class = "UIButton"; normalTitle = "Donate"; ObjectID = "BgL-4Y-JCI"; */
+"BgL-4Y-JCI.normalTitle" = "赠送";
+
+/* Class = "UILabel"; text = "Click on picture to change"; ObjectID = "Bmd-GD-fmS"; */
+"Bmd-GD-fmS.text" = "点击图片进行修改";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "E0i-hB-JHK"; */
+"E0i-hB-JHK.text" = "排名: ";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Ejh-dS-x6r"; */
+"Ejh-dS-x6r.text" = "积分";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "EkT-jX-ox7"; */
+"EkT-jX-ox7.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FVC-NX-8SG"; */
+"FVC-NX-8SG.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "GR6-gj-psI"; */
+"GR6-gj-psI.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "GWS-XO-4wi"; */
+"GWS-XO-4wi.text" = "NAme";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "GuR-s3-GoA"; */
+"GuR-s3-GoA.text" = "积分";
+
+/* Class = "UITextField"; placeholder = "Search by Name or Email or Phone Number"; ObjectID = "HSc-Ku-rXc"; */
+"HSc-Ku-rXc.placeholder" = "按照姓名、电子邮件或手机号码搜索";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Jdu-qA-2Os"; */
+"Jdu-qA-2Os.text" = "姓名";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Kzu-ES-o6k"; */
+"Kzu-ES-o6k.text" = "Label";
+
+/* Class = "UILabel"; text = "CHANGE PHONE NUMBER"; ObjectID = "MDh-UG-fts"; */
+"MDh-UG-fts.text" = "更改电话号码";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Mje-sL-TP1"; */
+"Mje-sL-TP1.text" = "姓名";
+
+/* Class = "UISegmentedControl"; Oxt-Pa-hai.segmentTitles[0] = "Donate To Members"; ObjectID = "Oxt-Pa-hai"; */
+"Oxt-Pa-hai.segmentTitles[0]" = "赠送给成";
+
+/* Class = "UISegmentedControl"; Oxt-Pa-hai.segmentTitles[1] = "Donate to Team"; ObjectID = "Oxt-Pa-hai"; */
+"Oxt-Pa-hai.segmentTitles[1]" = "赠送给团队";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "PHD-Gx-Xbh"; */
+"PHD-Gx-Xbh.text" = "date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Py9-eI-FnS"; */
+"Py9-eI-FnS.text" = "Label";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "Q1T-hM-jt8"; */
+"Q1T-hM-jt8.text" = "NAme";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "QEq-4Y-4Q3"; */
+"QEq-4Y-4Q3.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "QZD-XB-hZd"; */
+"QZD-XB-hZd.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "SET LOCATION"; ObjectID = "QyF-RV-mfe"; */
+"QyF-RV-mfe.text" = "设地址";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "S6l-sE-kHx"; */
+"S6l-sE-kHx.placeholder" = "确认密码";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Src-xm-UE5"; */
+"Src-xm-UE5.text" = "积分";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "T50-MP-y5m"; */
+"T50-MP-y5m.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "Unblock"; ObjectID = "TxB-VL-e2g"; */
+"TxB-VL-e2g.normalTitle" = "解锁";
+
+/* Class = "UILabel"; text = "Rank"; ObjectID = "URW-WO-iOO"; */
+"URW-WO-iOO.text" = "排名";
+
+/* Class = "UITextField"; placeholder = "New Phone  Number"; ObjectID = "Uvc-h2-laK"; */
+"Uvc-h2-laK.placeholder" = "新的电话号码";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "WHr-ql-cXZ"; */
+"WHr-ql-cXZ.placeholder" = "输入您的手机号";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "Whw-o7-OVS"; */
+"Whw-o7-OVS.placeholder" = "输入您的手机号";
+
+/* Class = "UILabel"; text = "SET EMAIL ID"; ObjectID = "XBZ-IF-kp8"; */
+"XBZ-IF-kp8.text" = "设置Email ID";
+
+/* Class = "UITextField"; placeholder = "Location"; ObjectID = "YCX-rn-mlA"; */
+"YCX-rn-mlA.placeholder" = "地址";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YRb-LT-Sgn"; */
+"YRb-LT-Sgn.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ZXc-QW-b44"; */
+"ZXc-QW-b44.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "a3p-W4-NWR"; */
+"a3p-W4-NWR.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "EDIT NAME"; ObjectID = "aPN-RS-d71"; */
+"aPN-RS-d71.text" = "编辑名称";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "bS4-ok-w4G"; */
+"bS4-ok-w4G.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "cLu-bU-SfI"; */
+"cLu-bU-SfI.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Enter Email ID"; ObjectID = "cSS-oP-cBh"; */
+"cSS-oP-cBh.placeholder" = "输入Email ID";
+
+/* Class = "UILabel"; text = "Rank: 1"; ObjectID = "dCL-SN-wlm"; */
+"dCL-SN-wlm.text" = "排名: 1";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "dLZ-AI-UIp"; */
+"dLZ-AI-UIp.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "nsmmmrr"; ObjectID = "dkk-m4-ruB"; */
+"dkk-m4-ruB.text" = "nsmmmrr";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eLN-LB-YOF"; */
+"eLN-LB-YOF.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "ftG-vV-Agx"; */
+"ftG-vV-Agx.placeholder" = "国家";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "g7C-nc-Lkx"; */
+"g7C-nc-Lkx.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gm9-Xa-t61"; */
+"gm9-Xa-t61.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "h9r-V0-0k7"; */
+"h9r-V0-0k7.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "hpl-zk-pVg"; */
+"hpl-zk-pVg.placeholder" = "+";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "iyc-fM-PT3"; */
+"iyc-fM-PT3.text" = "NAme";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "jHL-ln-Rto"; */
+"jHL-ln-Rto.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "k5I-gg-7yO"; */
+"k5I-gg-7yO.placeholder" = "密码";
+
+/* Class = "UILabel"; text = "SELECT BOARD"; ObjectID = "kho-wj-Lqi"; */
+"kho-wj-Lqi.text" = "选择滑板";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "lxb-xW-9tJ"; */
+"lxb-xW-9tJ.text" = "NAme";
+
+/* Class = "UITextField"; placeholder = "Enter the  Email"; ObjectID = "mMN-Qz-ciA"; */
+"mMN-Qz-ciA.placeholder" = "输入Email ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "mUM-Uj-zNx"; */
+"mUM-Uj-zNx.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "mV5-7N-kZI"; */
+"mV5-7N-kZI.placeholder" = "+";
+
+/* Class = "UITextField"; placeholder = "OTP Code"; ObjectID = "mWF-RV-dmx"; */
+"mWF-RV-dmx.placeholder" = "OTP验证码";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "mje-Bk-X6M"; */
+"mje-Bk-X6M.text" = "积分";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "myy-hI-O7R"; */
+"myy-hI-O7R.text" = "Label";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "n0a-fS-2qu"; */
+"n0a-fS-2qu.text" = "积分";
+
+/* Class = "UILabel"; text = "Rank"; ObjectID = "o2F-uK-rAb"; */
+"o2F-uK-rAb.text" = "排名";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "ovi-gQ-T7U"; */
+"ovi-gQ-T7U.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "pT0-Sr-VzR"; */
+"pT0-Sr-VzR.placeholder" = "+";
+
+/* Class = "UILabel"; text = "Player Name"; ObjectID = "pYB-EY-FGe"; */
+"pYB-EY-FGe.text" = "Player Name";
+
+/* Class = "UILabel"; text = "SET PHONE NUMBER"; ObjectID = "pln-Nc-vj1"; */
+"pln-Nc-vj1.text" = "设置电话号码";
+
+/* Class = "UILabel"; text = "CHANGE EMAIL ID"; ObjectID = "qF2-x2-XQ5"; */
+"qF2-x2-XQ5.text" = "更改电子邮件";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "qFT-tc-gLV"; */
+"qFT-tc-gLV.text" = "排名: ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "rTD-Kf-TkS"; */
+"rTD-Kf-TkS.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "rXY-kd-865"; */
+"rXY-kd-865.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "s3I-rz-YA3"; */
+"s3I-rz-YA3.normalTitle" = "发送";
+
+/* Class = "UILabel"; text = "Rank"; ObjectID = "sLW-9f-qvS"; */
+"sLW-9f-qvS.text" = "排名";
+
+/* Class = "UILabel"; text = "NUMBER VERIFICATION"; ObjectID = "sP6-ZU-Jnh"; */
+"sP6-ZU-Jnh.text" = "号码验证";
+
+/* Class = "UITextField"; placeholder = "Enter the points to donate"; ObjectID = "sia-On-ab4"; */
+"sia-On-ab4.placeholder" = "请输入要赠送的积分";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "y4k-bc-iCE"; */
+"y4k-bc-iCE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zLh-ms-HmO"; */
+"zLh-ms-HmO.text" = "Label";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "zz1-S4-Eh1"; */
+"zz1-S4-Eh1.text" = "价格";

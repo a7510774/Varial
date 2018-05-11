@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BannerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-oG-Dxj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5wF-vV-znk">
+                    <rect key="frame" x="10" y="10" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="ARA-tX-eiu"/>
+                        <constraint firstAttribute="height" constant="10" id="mSp-6T-tg4"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klK-jr-z2X">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="asN-KN-ujY"/>
+                    </constraints>
+                    <connections>
+                        <action selector="dismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="NdV-eV-Mfh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="klK-jr-z2X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2pQ-xY-UGq"/>
+                <constraint firstItem="Ekb-oG-Dxj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ajo-LN-azV"/>
+                <constraint firstItem="Ekb-oG-Dxj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="E3m-uh-cQm"/>
+                <constraint firstAttribute="bottom" secondItem="klK-jr-z2X" secondAttribute="bottom" id="L2F-Gh-pas"/>
+                <constraint firstItem="5wF-vV-znk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Ow8-dM-rmG"/>
+                <constraint firstAttribute="bottom" secondItem="Ekb-oG-Dxj" secondAttribute="bottom" id="eu0-Pp-w8W"/>
+                <constraint firstAttribute="trailing" secondItem="Ekb-oG-Dxj" secondAttribute="trailing" id="kyD-Wu-DR4"/>
+                <constraint firstItem="5wF-vV-znk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lMk-xT-YBz"/>
+                <constraint firstItem="klK-jr-z2X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="z4H-pm-bgA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adImage" destination="Ekb-oG-Dxj" id="OWy-9h-nny"/>
+                <outlet property="dismissButton" destination="5wF-vV-znk" id="JJq-OV-Phe"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="-261"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancelIcon" width="24" height="24"/>
+    </resources>
+</document>

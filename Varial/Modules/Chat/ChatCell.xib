@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+            <string>CenturyGothic</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="80" id="UcW-EH-OrP" customClass="ChatCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UcW-EH-OrP" id="rsA-Tn-TFF">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-Zt-4vb" customClass="ProfileImage">
+                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Bk0-XN-L8g"/>
+                            <constraint firstAttribute="height" constant="60" id="bf6-zv-fuW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nsmmmrr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9E-hB-UcJ" userLabel="Name">
+                        <rect key="frame" x="80" y="10" width="160" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="Keu-2U-X4G"/>
+                            <constraint firstAttribute="height" constant="20" id="KmW-Zz-gA6"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dAQ-mJ-mue"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Keu-2U-X4G"/>
+                                <exclude reference="dAQ-mJ-mue"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2v-sJ-dlw" userLabel="Message">
+                        <rect key="frame" x="106" y="40" width="158" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Gty-Je-Zqo"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="lsB-3r-yFw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lsB-3r-yFw"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SSy-xF-ypQ">
+                        <rect key="frame" x="78" y="40" width="20" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="W6H-gr-vJg"/>
+                            <constraint firstAttribute="height" constant="20" id="iAb-Pf-uHG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mx-ac-WAk" userLabel="Time">
+                        <rect key="frame" x="242" y="10" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="POc-vx-3n7"/>
+                            <constraint firstAttribute="width" constant="70" id="XgV-Tc-Tdd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                        <color key="textColor" red="0.96862745100000003" green="0.0078431372550000003" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB4-u6-AC1" userLabel="Badge">
+                        <rect key="frame" x="274" y="38" width="25" height="25"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.0078431372550000003" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="fAa-CZ-gQ1"/>
+                            <constraint firstAttribute="width" constant="25" id="huC-F4-Ifu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92M-Ud-qhc" userLabel="Typing">
+                        <rect key="frame" x="78" y="42" width="186" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="186" id="G2L-rr-fSc"/>
+                            <constraint firstAttribute="height" constant="21" id="bQD-PT-IN5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="92M-Ud-qhc" secondAttribute="bottom" constant="16" id="2BL-xH-Tjw"/>
+                    <constraint firstItem="9mx-ac-WAk" firstAttribute="trailing" secondItem="rsA-Tn-TFF" secondAttribute="trailingMargin" id="2S5-ZH-6XD"/>
+                    <constraint firstItem="Y9E-hB-UcJ" firstAttribute="leading" secondItem="Y3a-Zt-4vb" secondAttribute="trailing" constant="10" id="721-1M-yPs"/>
+                    <constraint firstItem="SSy-xF-ypQ" firstAttribute="bottom" secondItem="Y3a-Zt-4vb" secondAttribute="bottom" constant="-10" id="G1a-sJ-Qc5"/>
+                    <constraint firstItem="92M-Ud-qhc" firstAttribute="leading" secondItem="Y3a-Zt-4vb" secondAttribute="trailing" constant="8" id="LKq-ZH-VK6"/>
+                    <constraint firstItem="q2v-sJ-dlw" firstAttribute="leading" secondItem="SSy-xF-ypQ" secondAttribute="trailing" constant="8" id="O91-RS-uX3"/>
+                    <constraint firstItem="Y3a-Zt-4vb" firstAttribute="centerY" secondItem="rsA-Tn-TFF" secondAttribute="centerY" id="UXF-TW-qJl"/>
+                    <constraint firstItem="9mx-ac-WAk" firstAttribute="leading" secondItem="Y9E-hB-UcJ" secondAttribute="trailing" constant="2" id="V3M-9l-ujU"/>
+                    <constraint firstItem="Y9E-hB-UcJ" firstAttribute="top" secondItem="Y3a-Zt-4vb" secondAttribute="top" id="WVo-Gb-NCa"/>
+                    <constraint firstItem="9mx-ac-WAk" firstAttribute="top" secondItem="Y9E-hB-UcJ" secondAttribute="top" id="ZB9-ce-rn8"/>
+                    <constraint firstItem="q2v-sJ-dlw" firstAttribute="centerY" secondItem="SSy-xF-ypQ" secondAttribute="centerY" id="bH0-3p-ioz"/>
+                    <constraint firstItem="Y3a-Zt-4vb" firstAttribute="leading" secondItem="rsA-Tn-TFF" secondAttribute="leading" constant="10" id="brv-DE-Gh3"/>
+                    <constraint firstItem="KB4-u6-AC1" firstAttribute="centerY" secondItem="q2v-sJ-dlw" secondAttribute="centerY" id="fUf-4O-PiN"/>
+                    <constraint firstItem="SSy-xF-ypQ" firstAttribute="leading" secondItem="Y3a-Zt-4vb" secondAttribute="trailing" constant="8" id="lh5-AL-pai"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KB4-u6-AC1" secondAttribute="trailing" constant="13" id="mr5-vL-3RN"/>
+                    <constraint firstItem="KB4-u6-AC1" firstAttribute="leading" secondItem="q2v-sJ-dlw" secondAttribute="trailing" constant="10" id="rnf-Up-8Tw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="badge" destination="KB4-u6-AC1" id="YBA-ce-sF7"/>
+                <outlet property="chatImage" destination="SSy-xF-ypQ" id="S0B-zj-fs3"/>
+                <outlet property="message" destination="q2v-sJ-dlw" id="Mwg-ZX-sdu"/>
+                <outlet property="name" destination="Y9E-hB-UcJ" id="SNS-OS-cki"/>
+                <outlet property="profileImage" destination="Y3a-Zt-4vb" id="x50-KB-Ww9"/>
+                <outlet property="time" destination="9mx-ac-WAk" id="zcZ-br-e5L"/>
+                <outlet property="typingLabel" destination="92M-Ud-qhc" id="Cil-Ll-66P"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

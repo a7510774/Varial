@@ -1,0 +1,604 @@
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "08k-ef-YFu"; */
+"08k-ef-YFu.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "Label sdfsdkjf sdfkj sdkfj sdfkj sdfkj bkfsdjb ksdf ksdjf  sdlfk ldkf lsdkf df "; ObjectID = "0Bd-Sb-DcD"; */
+"0Bd-Sb-DcD.text" = "Label sdfsdkjf sdfkj sdkfj sdfkj sdfkj bkfsdjb ksdf ksdjf  sdlfk ldkf lsdkf df ";
+
+/* Class = "UIButton"; normalTitle = "Members"; ObjectID = "0Ee-CT-FbE"; */
+"0Ee-CT-FbE.normalTitle" = "成员";
+
+/* Class = "UIButton"; normalTitle = "Invited"; ObjectID = "0Kx-aW-gOb"; */
+"0Kx-aW-gOb.normalTitle" = "已邀请";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "0gd-5z-Y5O"; */
+"0gd-5z-Y5O.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "0ia-Xp-C9G"; */
+"0ia-Xp-C9G.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "15s-7V-5ra"; */
+"15s-7V-5ra.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "1CP-YJ-KD4"; */
+"1CP-YJ-KD4.placeholder" = "+";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "1gb-fY-wR8"; */
+"1gb-fY-wR8.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "1jz-MO-zYM"; */
+"1jz-MO-zYM.normalTitle" = "跳过";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "1n7-0f-jBF"; */
+"1n7-0f-jBF.placeholder" = "+";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "27Y-VR-aqo"; */
+"27Y-VR-aqo.placeholder" = "+";
+
+/* Class = "UITextField"; placeholder = "OTP Code"; ObjectID = "2B1-AE-EyC"; */
+"2B1-AE-EyC.placeholder" = "OTP验证码";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "3J9-yM-fqe"; */
+"3J9-yM-fqe.placeholder" = "输入您的手机号";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "3Xf-95-CwN"; */
+"3Xf-95-CwN.normalTitle" = "确认";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "3cb-yZ-iRl"; */
+"3cb-yZ-iRl.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Jhon smith be"; ObjectID = "4dK-uk-nYP"; */
+"4dK-uk-nYP.text" = "Jhon smith be";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4hn-H3-Vbd"; */
+"4hn-H3-Vbd.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4pu-pc-yfo"; */
+"4pu-pc-yfo.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Search by Name or Email or Phone Number"; ObjectID = "4vl-Wy-FCc"; */
+"4vl-Wy-FCc.placeholder" = "按照姓名、电子邮件或手机号码搜索";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "6Vm-VW-SsA"; */
+"6Vm-VW-SsA.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "NUMBER VERIFICATION"; ObjectID = "6XB-MZ-gAW"; */
+"6XB-MZ-gAW.text" = "号码验证";
+
+/* Class = "UIButton"; normalTitle = "15"; ObjectID = "6hZ-1y-01y"; */
+"6hZ-1y-01y.normalTitle" = "15";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "6wx-vj-n8u"; */
+"6wx-vj-n8u.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Email ID"; ObjectID = "7C7-sv-fSM"; */
+"7C7-sv-fSM.placeholder" = "输入Email ID";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "7Ft-Ug-9gs"; */
+"7Ft-Ug-9gs.normalTitle" = "Ok";
+
+/* Class = "UILabel"; text = "Do you have an account?"; ObjectID = "Z7g-NR-7xB"; */
+"Z7g-NR-7xB.text" = "您有账户吗？";
+
+/* Class = "UITextField"; placeholder = "Location"; ObjectID = "8Es-5P-rxf"; */
+"8Es-5P-rxf.placeholder" = "地址";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "8X2-4U-Vg2"; */
+"8X2-4U-Vg2.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "8aa-mU-VMa"; */
+"8aa-mU-VMa.placeholder" = "姓名";
+
+/* Class = "UILabel"; text = "label"; ObjectID = "9Ub-zJ-bfI"; */
+"9Ub-zJ-bfI.text" = "label";
+
+/* Class = "UILabel"; text = "SET EMAIL ID"; ObjectID = "9Yz-zk-tjQ"; */
+"9Yz-zk-tjQ.text" = "设置Email ID";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "9vC-ip-CBo"; */
+"9vC-ip-CBo.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "AI1-an-yEQ"; */
+"AI1-an-yEQ.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "AIK-Fb-5lV"; */
+"AIK-Fb-5lV.normalTitle" = "+";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Aox-v7-lCw"; */
+"Aox-v7-lCw.placeholder" = "姓名";
+
+/* Class = "UILabel"; text = "SELECT FEED TO POST"; ObjectID = "B9G-G8-FKc"; */
+"B9G-G8-FKc.text" = "选择要发布的圈子";
+
+/* Class = "UIButton"; normalTitle = "Check In"; ObjectID = "Baj-CB-LRT"; */
+"Baj-CB-LRT.normalTitle" = "签到";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "BoM-P7-93i"; */
+"BoM-P7-93i.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "SELECT BOARD"; ObjectID = "C55-Gf-vDP"; */
+"C55-Gf-vDP.text" = "选择滑板";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CEA-mf-6sI"; */
+"CEA-mf-6sI.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Change"; ObjectID = "CL4-cR-Bdc"; */
+"CL4-cR-Bdc.normalTitle" = "修改";
+
+/* Class = "UILabel"; text = "Jhon smith"; ObjectID = "D8z-em-hpz"; */
+"D8z-em-hpz.text" = "Jhon smith";
+
+/* Class = "UILabel"; text = "4th of May 2017"; ObjectID = "DLl-gR-SUG"; */
+"DLl-gR-SUG.text" = "4th of May 2017";
+
+/* Class = "UILabel"; text = "A test post message."; ObjectID = "Dah-Rg-nCA"; */
+"Dah-Rg-nCA.text" = "A test post message.";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "Dlz-aV-HpP"; */
+"Dlz-aV-HpP.placeholder" = "国家";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "EbJ-LB-tId"; */
+"EbJ-LB-tId.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "FTY-s0-H6c"; */
+"FTY-s0-H6c.normalTitle" = "登录";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Fnb-XV-zWE"; */
+"Fnb-XV-zWE.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Fnz-xW-8y3"; */
+"Fnz-xW-8y3.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "G0K-fq-Bhg"; */
+"G0K-fq-Bhg.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Email ID"; ObjectID = "G85-W9-ODF"; */
+"G85-W9-ODF.placeholder" = "输入Email ID";
+
+/* Class = "UILabel"; text = "EDIT NAME"; ObjectID = "GEh-iX-0RH"; */
+"GEh-iX-0RH.text" = "编辑名称";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "GLk-rk-oxd"; */
+"GLk-rk-oxd.placeholder" = "国家";
+
+/* Class = "UITextField"; placeholder = "OTP Code"; ObjectID = "H8k-DA-suG"; */
+"H8k-DA-suG.placeholder" = "OTP验证码";
+
+/* Class = "UILabel"; text = "DO YOU HAVE AN INVITE CODE?"; ObjectID = "HKL-im-6lz"; */
+"HKL-im-6lz.text" = "您有邀请码吗？";
+
+/* Class = "UITextField"; placeholder = "New Phone  Number"; ObjectID = "I73-ci-46B"; */
+"I73-ci-46B.placeholder" = "新的电话号码";
+
+/* Class = "UILabel"; text = "CONTINUE WITH PHONE #"; ObjectID = "I9P-WR-kiZ"; */
+"I9P-WR-kiZ.text" = "使用电话号码注册";
+
+/* Class = "UILabel"; text = "Views"; ObjectID = "ICo-UC-1SJ"; */
+"ICo-UC-1SJ.text" = "Views";
+
+/* Class = "UILabel"; text = "CHECK IN"; ObjectID = "IWq-gY-LSN"; */
+"IWq-gY-LSN.text" = "签到";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "JHk-12-2hg"; */
+"JHk-12-2hg.text" = "排名: ";
+
+/* Class = "UILabel"; text = "Click on picture to change"; ObjectID = "Jdl-rc-OSZ"; */
+"Jdl-rc-OSZ.text" = "点击图片进行修改";
+
+/* Class = "UILabel"; text = "11"; ObjectID = "Jk8-jN-sry"; */
+"Jk8-jN-sry.text" = "11";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "JrY-SJ-Bmc"; */
+"JrY-SJ-Bmc.normalTitle" = "注册";
+
+/* Class = "UIButton"; normalTitle = "Friends"; ObjectID = "JvP-U0-PkC"; */
+"JvP-U0-PkC.normalTitle" = "朋友";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Jw7-Tv-GLq"; */
+"Jw7-Tv-GLq.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "KTk-uK-lq8"; */
+"KTk-uK-lq8.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "CHANGE PHONE NUMBER"; ObjectID = "KYZ-vB-chh"; */
+"KYZ-vB-chh.text" = "更改电话号码";
+
+/* Class = "UILabel"; text = "Varial will send a One Time Password to verify your phone number."; ObjectID = "KdH-5O-lWb"; */
+"KdH-5O-lWb.text" = "维里将会向您发送一个动态密码来验证您的手机号码。";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "KpO-ox-pCc"; */
+"KpO-ox-pCc.placeholder" = "密码";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Kyg-vM-duY"; */
+"Kyg-vM-duY.placeholder" = "姓名";
+
+/* Class = "UITextField"; placeholder = "Enter Email ID"; ObjectID = "Kzd-n4-3hr"; */
+"Kzd-n4-3hr.placeholder" = "输入Email ID";
+
+/* Class = "UILabel"; text = "SIGN UP WITH EMAIL"; ObjectID = "LBT-VH-Uxj"; */
+"LBT-VH-Uxj.text" = "使用电子邮件注册";
+
+/* Class = "UILabel"; text = "SET PHONE NUMBER"; ObjectID = "La5-Oj-r1b"; */
+"La5-Oj-r1b.text" = "设置电话号码";
+
+/* Class = "UILabel"; text = "SET PHONE NUMBER"; ObjectID = "Lxz-6c-ZNr"; */
+"Lxz-6c-ZNr.text" = "设置电话号码";
+
+/* Class = "UIButton"; normalTitle = "Continue with Facebook"; ObjectID = "MAp-pb-aNm"; */
+"MAp-pb-aNm.normalTitle" = "Continue with Facebook";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "MKw-i4-vR3"; */
+"MKw-i4-vR3.text" = "积分";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MVa-k5-nGJ"; */
+"MVa-k5-nGJ.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "N0S-2d-K0T"; */
+"N0S-2d-K0T.placeholder" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "Invited"; ObjectID = "N3G-X2-t9A"; */
+"N3G-X2-t9A.normalTitle" = "已邀请";
+
+/* Class = "UITabBarItem"; title = "Friends Notification"; ObjectID = "NiE-dd-ghg"; */
+"NiE-dd-ghg.title" = "Friends Notification";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "OLK-Jx-tdk"; */
+"OLK-Jx-tdk.placeholder" = "+";
+
+/* Class = "UITextField"; placeholder = "OTP Code"; ObjectID = "OND-l5-jk0"; */
+"OND-l5-jk0.placeholder" = "OTP验证码";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "OOc-Nh-ISq"; */
+"OOc-Nh-ISq.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Check In"; ObjectID = "Olq-2D-4VU"; */
+"Olq-2D-4VU.normalTitle" = "签到";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "OmA-s2-z8O"; */
+"OmA-s2-z8O.placeholder" = "输入您的手机号";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "P2Q-Rq-xL1"; */
+"P2Q-Rq-xL1.placeholder" = "密码";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "P9R-0a-eMU"; */
+"P9R-0a-eMU.placeholder" = "确认密码";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PS8-Or-xaW"; */
+"PS8-Or-xaW.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Ptj-P6-8oE"; */
+"Ptj-P6-8oE.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Reset Password"; ObjectID = "Q5r-os-GXA"; */
+"Q5r-os-GXA.normalTitle" = "重置密码";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "Q87-Ac-UBf"; */
+"Q87-Ac-UBf.normalTitle" = "跳过";
+
+/* Class = "UILabel"; text = "CHOOSE FEEDS"; ObjectID = "QA1-oV-XDA"; */
+"QA1-oV-XDA.text" = "选择消息类型";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "QEI-5C-GO6"; */
+"QEI-5C-GO6.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "Enter Invite Code"; ObjectID = "QFM-E5-F4v"; */
+"QFM-E5-F4v.placeholder" = "输入邀请码";
+
+/* Class = "UITextField"; placeholder = "Search Places"; ObjectID = "QIh-WE-xNL"; */
+"QIh-WE-xNL.placeholder" = "搜索地方";
+
+/* Class = "UITextField"; placeholder = "Select City"; ObjectID = "RM8-QC-DEa"; */
+"RM8-QC-DEa.placeholder" = "Select City";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "Rh3-1B-fQa"; */
+"Rh3-1B-fQa.placeholder" = "确认密码";
+
+/* Class = "UILabel"; text = "or"; ObjectID = "SYP-XJ-dWf"; */
+"SYP-XJ-dWf.text" = "或";
+
+/* Class = "UILabel"; text = "Name and Title"; ObjectID = "TZs-Ya-igk"; */
+"TZs-Ya-igk.text" = "Name and Title";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Tbe-Dx-sMF"; */
+"Tbe-Dx-sMF.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "Click on picture to change"; ObjectID = "TfA-gF-Y7P"; */
+"TfA-gF-Y7P.text" = "点击图片进行修改";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "TwG-gZ-01t"; */
+"TwG-gZ-01t.placeholder" = "国家";
+
+/* Class = "UITextField"; placeholder = "Enter Address"; ObjectID = "TyR-3s-4z5"; */
+"TyR-3s-4z5.placeholder" = "输入地址";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "UxP-Pe-vj8"; */
+"UxP-Pe-vj8.text" = "积分";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "VI9-4y-oUc"; */
+"VI9-4y-oUc.placeholder" = "+";
+
+/* Class = "UITextField"; placeholder = "Enter the  Email"; ObjectID = "WJB-wA-mPf"; */
+"WJB-wA-mPf.placeholder" = "Enter the  Email";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "WZt-hK-0Q8"; */
+"WZt-hK-0Q8.placeholder" = "输入您的手机号";
+
+/* Class = "UILabel"; text = "Terms of Service and Privacy Policy"; ObjectID = "X8m-eX-q24"; */
+"X8m-eX-q24.text" = "使用条款和隐私政策";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "XDj-YS-DW7"; */
+"XDj-YS-DW7.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "XRJ-Dk-6D5"; */
+"XRJ-Dk-6D5.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "YFJ-sZ-roe"; */
+"YFJ-sZ-roe.normalTitle" = "登录";
+
+/* Class = "UILabel"; text = "EDIT NAME"; ObjectID = "YlE-Ie-1r4"; */
+"YlE-Ie-1r4.text" = "编辑名称";
+
+/* Class = "UITextField"; placeholder = "Enter Email ID"; ObjectID = "Z2I-8Q-B2y"; */
+"Z2I-8Q-B2y.placeholder" = "输入Email ID";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Z6s-7Q-y6c"; */
+"Z6s-7Q-y6c.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "ZCa-ca-cqx"; */
+"ZCa-ca-cqx.normalTitle" = "+";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ZVC-Kv-242"; */
+"ZVC-Kv-242.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "NUMBER VERIFICATION"; ObjectID = "Zo7-DK-rTe"; */
+"Zo7-DK-rTe.text" = "号码验证";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "ZwP-zG-8aE"; */
+"ZwP-zG-8aE.text" = "积分";
+
+/* Class = "UITextField"; placeholder = "Search by Name or Email or Phone Number"; ObjectID = "aCL-bw-TXs"; */
+"aCL-bw-TXs.placeholder" = "按照姓名、电子邮件或手机号码搜索";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "bAq-72-bMU"; */
+"bAq-72-bMU.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Sign Up With Email"; ObjectID = "7pC-R7-7DF"; */
+"7pC-R7-7DF.normalTitle" = "使用电子邮件注册";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "bM9-sg-nmL"; */
+"bM9-sg-nmL.placeholder" = "输入您的手机号";
+
+/* Class = "UILabel"; text = "FAQ"; ObjectID = "bUL-jh-MPn"; */
+"bUL-jh-MPn.text" = "应用介绍";
+
+/* Class = "UISegmentedControl"; bUd-EW-Rqi.segmentTitles[0] = "My Feed"; ObjectID = "bUd-EW-Rqi"; */
+"bUd-EW-Rqi.segmentTitles[0]" = "我的信息";
+
+/* Class = "UISegmentedControl"; bUd-EW-Rqi.segmentTitles[1] = "Friends"; ObjectID = "bUd-EW-Rqi"; */
+"bUd-EW-Rqi.segmentTitles[1]" = "朋友";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "c8w-nG-4aV"; */
+"c8w-nG-4aV.normalTitle" = "确认";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "cCo-xg-qWr"; */
+"cCo-xg-qWr.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "cPr-ds-qbl"; */
+"cPr-ds-qbl.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Continue with Google"; ObjectID = "cuc-r7-fuj"; */
+"cuc-r7-fuj.normalTitle" = "Continue with Google";
+
+/* Class = "UILabel"; text = "Player Name"; ObjectID = "d5N-W1-Vg8"; */
+"d5N-W1-Vg8.text" = "按玩家姓名搜索";
+
+/* Class = "UITextField"; placeholder = "Enter the  Email"; ObjectID = "dCL-7K-c4m"; */
+"dCL-7K-c4m.placeholder" = "Enter the  Email";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "dEV-hg-iLU"; */
+"dEV-hg-iLU.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "CHANGE EMAIL ID"; ObjectID = "dOf-Ga-j6x"; */
+"dOf-Ga-j6x.text" = "更改电子邮件";
+
+/* Class = "UILabel"; text = "To:"; ObjectID = "dQ2-bG-yma"; */
+"dQ2-bG-yma.text" = "到:";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "dQE-R6-n5W"; */
+"dQE-R6-n5W.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "dWb-eI-Wss"; */
+"dWb-eI-Wss.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "Terms of Service and Privacy Policy"; ObjectID = "dm9-Id-jkr"; */
+"dm9-Id-jkr.text" = "Terms of Service and Privacy Policy";
+
+/* Class = "UIButton"; normalTitle = "Resend(OTP)"; ObjectID = "dxO-Y5-2xe"; */
+"dxO-Y5-2xe.normalTitle" = "重发（OTP）";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "eGg-0Z-Xab"; */
+"eGg-0Z-Xab.normalTitle" = "应用";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "enC-xK-HI9"; */
+"enC-xK-HI9.placeholder" = "确认密码";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "epA-q5-PIY"; */
+"epA-q5-PIY.placeholder" = "+";
+
+/* Class = "UILabel"; text = " Pick a Picture"; ObjectID = "fbV-Sr-WOf"; */
+"fbV-Sr-WOf.text" = "选择一张图片";
+
+/* Class = "UILabel"; text = "SET LOCATION"; ObjectID = "fcb-eY-ndI"; */
+"fcb-eY-ndI.text" = "设地址";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "fqj-yX-rbM"; */
+"fqj-yX-rbM.text" = "登录";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "fz5-Dr-JFM"; */
+"fz5-Dr-JFM.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "Post"; ObjectID = "gM1-Wa-pkp"; */
+"gM1-Wa-pkp.normalTitle" = "发布";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "gOJ-TL-u5g"; */
+"gOJ-TL-u5g.text" = "积分";
+
+/* Class = "UILabel"; text = "NEAREST PLACES"; ObjectID = "gfg-ok-ppi"; */
+"gfg-ok-ppi.text" = "最近的地方";
+
+/* Class = "UILabel"; text = "Enter your One Time Password here to verify your phone number"; ObjectID = "ggf-0V-mAn"; */
+"ggf-0V-mAn.text" = "请在这里输入您的动态密码来验证您的手机号码";
+
+/* Class = "UIButton"; normalTitle = "Get it Here"; ObjectID = "h8N-e7-PZM"; */
+"h8N-e7-PZM.normalTitle" = "从这里获得";
+
+/* Class = "UIButton"; normalTitle = "Video"; ObjectID = "hA4-kE-Z0L"; */
+"hA4-kE-Z0L.normalTitle" = "视频";
+
+/* Class = "UILabel"; text = "8 Stars"; ObjectID = "hH6-t9-3iv"; */
+"hH6-t9-3iv.text" = "8 Stars";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "haW-pS-1A2"; */
+"haW-pS-1A2.text" = "姓名";
+
+/* Class = "UITabBarItem"; title = "Global Notification"; ObjectID = "ib5-Hv-euL"; */
+"ib5-Hv-euL.title" = "Global Notification";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "iph-Vg-LVB"; */
+"iph-Vg-LVB.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "How to find invite code?"; ObjectID = "jdO-3Q-agh"; */
+"jdO-3Q-agh.normalTitle" = "如何找到邀请码？";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "jnX-76-yWZ"; */
+"jnX-76-yWZ.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "jw3-BD-i1Y"; */
+"jw3-BD-i1Y.normalTitle" = "提交";
+
+/* Class = "UILabel"; text = "CONTINUE WITH PHONE NUMBER"; ObjectID = "jwz-u3-LMg"; */
+"jwz-u3-LMg.text" = "CONTINUE WITH PHONE NUMBER";
+
+/* Class = "UILabel"; text = "test"; ObjectID = "kNK-Od-vue"; */
+"kNK-Od-vue.text" = "test";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kkf-hv-T9y"; */
+"kkf-hv-T9y.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "ks5-Na-dg1"; */
+"ks5-Na-dg1.placeholder" = "国家";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "l7n-R6-icA"; */
+"l7n-R6-icA.text" = "排名: ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "lAr-Mv-JjV"; */
+"lAr-Mv-JjV.text" = "姓名";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone  Number"; ObjectID = "ldy-X9-V1A"; */
+"ldy-X9-V1A.placeholder" = "输入您的手机号";
+
+/* Class = "UIButton"; normalTitle = "Resend (OTP)"; ObjectID = "mob-Al-BFq"; */
+"mob-Al-BFq.normalTitle" = "重发（OTP)";
+
+/* Class = "UIButton"; normalTitle = "Continue With Phone #"; ObjectID = "JKf-lW-BKR"; */
+"JKf-lW-BKR.normalTitle" = "使用电话号码注册";
+
+/* Class = "UITextField"; placeholder = "Enter Email ID"; ObjectID = "nJX-DF-FYe"; */
+"nJX-DF-FYe.placeholder" = "输入Email ID";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "oME-wE-64r"; */
+"oME-wE-64r.placeholder" = "密码";
+
+/* Class = "UILabel"; text = " Forgot Password?"; ObjectID = "oS3-ea-Lcq"; */
+"oS3-ea-Lcq.text" = "忘记密码？";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "pko-fg-skB"; */
+"pko-fg-skB.placeholder" = "国家";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "pue-r0-KVE"; */
+"pue-r0-KVE.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "qPx-O0-TUG"; */
+"qPx-O0-TUG.normalTitle" = "+";
+
+/* Class = "UIButton"; normalTitle = "Invited"; ObjectID = "qbf-bC-u0u"; */
+"qbf-bC-u0u.normalTitle" = "已邀请";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "qnw-A2-9RK"; */
+"qnw-A2-9RK.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Image"; ObjectID = "reM-f9-2cU"; */
+"reM-f9-2cU.normalTitle" = "Image";
+
+/* Class = "UILabel"; text = "FORGOT PASSWORD"; ObjectID = "riT-vJ-9jG"; */
+"riT-vJ-9jG.text" = "忘记密码";
+
+/* Class = "UILabel"; text = "SELECT BOARD"; ObjectID = "rnr-eV-iCu"; */
+"rnr-eV-iCu.text" = "选择滑板";
+
+/* Class = "UILabel"; text = "Enter your One Time Password here to verify your phone number"; ObjectID = "sBF-aw-6xZ"; */
+"sBF-aw-6xZ.text" = "请在这里输入您的动态密码来验证您的手机号码";
+
+/* Class = "UITextField"; placeholder = "Email ID"; ObjectID = "sBW-eW-Jpq"; */
+"sBW-eW-Jpq.placeholder" = "输入Email ID";
+
+/* Class = "UIButton"; normalTitle = "Check In"; ObjectID = "sHL-Rv-vJY"; */
+"sHL-Rv-vJY.normalTitle" = "签到";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "sUb-st-GBx"; */
+"sUb-st-GBx.text" = "排名: ";
+
+/* Class = "UILabel"; text = "CHANGE EMAIL ID"; ObjectID = "slJ-fW-EGF"; */
+"slJ-fW-EGF.text" = "更改电子邮件";
+
+/* Class = "UILabel"; text = "CHANGE PHONE NUMBER"; ObjectID = "toa-zK-uwa"; */
+"toa-zK-uwa.text" = "更改电话号码";
+
+/* Class = "UITextField"; placeholder = "+"; ObjectID = "tok-fF-iBa"; */
+"tok-fF-iBa.placeholder" = "+";
+
+/* Class = "UITextField"; placeholder = "Select State"; ObjectID = "vFt-pQ-kAW"; */
+"vFt-pQ-kAW.placeholder" = "Select State";
+
+/* Class = "UILabel"; text = "Edit Info"; ObjectID = "vG1-SI-HWS"; */
+"vG1-SI-HWS.text" = "编辑信息";
+
+/* Class = "UIButton"; normalTitle = "New Feeds"; ObjectID = "wae-Rr-Ft2"; */
+"wae-Rr-Ft2.normalTitle" = "新闻订阅";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "wnh-Mg-bxu"; */
+"wnh-Mg-bxu.normalTitle" = "取消";
+
+/* Class = "UITextField"; placeholder = "New Phone  Number"; ObjectID = "xpm-a1-HJu"; */
+"xpm-a1-HJu.placeholder" = "新的电话号码";
+
+/* Class = "UIButton"; normalTitle = "Send Invitation"; ObjectID = "xyK-jj-0a6"; */
+"xyK-jj-0a6.normalTitle" = "发送邀请";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "yrS-Vg-g8a"; */
+"yrS-Vg-g8a.normalTitle" = "提交";
+
+/* Class = "UILabel"; text = "Rank: "; ObjectID = "yrf-TC-UjL"; */
+"yrf-TC-UjL.text" = "排名: ";
+
+/* Class = "UILabel"; text = "SET EMAIL ID"; ObjectID = "z2j-CA-fy5"; */
+"z2j-CA-fy5.text" = "设置Email ID";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "zZM-CI-hbq"; */
+"zZM-CI-hbq.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Resend(OTP)"; ObjectID = "zZe-rS-QXg"; */
+"zZe-rS-QXg.normalTitle" = "重发（OTP）";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Dm1-X4-PgF"; */
+"Dm1-X4-PgF.text" = "积分";
+
+/* Class = "UILabel"; text = "NAme"; ObjectID = "cjw-H1-0uI"; */
+"cjw-H1-0uI.text" = "NAme";
+
+/* Class = "UIButton"; text = "View all"; ObjectID = "IOG-T9-6mS"; */
+"IOG-T9-6mS.normalTitle" = "查看全部";
+
+/* Class = "SearchBar"; placeholder = "Search"; ObjectID = "Fdu-vC-nzq"; */
+"Fdu-vC-nzq.placeholder" = "搜索..";
+

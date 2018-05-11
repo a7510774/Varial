@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="InviteContactTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7h-DQ-XYR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="700" text="Check" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeI-Ws-9dB">
+                                <rect key="frame" x="10" y="40.5" width="180" height="18.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="600" constant="20" id="EgL-Ml-Fg3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDj-vP-vz6">
+                                <rect key="frame" x="0.0" y="59" width="320" height="40.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etf-V9-NiW">
+                                <rect key="frame" x="200" y="35" width="110" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Hg-9B-uLo"/>
+                                    <constraint firstAttribute="width" constant="110" id="Bxa-TE-l4P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                <state key="normal" title="    Invite">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invite.png" translatesAutoresizingMaskIntoConstraints="NO" id="whX-qV-XwG">
+                                <rect key="frame" x="205" y="42.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="whX-qV-XwG" secondAttribute="height" multiplier="1:1" id="3Jd-Hr-qaH"/>
+                                    <constraint firstAttribute="width" constant="15" id="FQP-Yj-1JB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-Uz-vr3">
+                                <rect key="frame" x="230" y="40" width="1" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="0.5" id="n9r-gM-2CN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="whX-qV-XwG" firstAttribute="centerY" secondItem="etf-V9-NiW" secondAttribute="centerY" id="047-5w-5t7"/>
+                            <constraint firstItem="etf-V9-NiW" firstAttribute="leading" secondItem="QeI-Ws-9dB" secondAttribute="trailing" constant="10" id="24P-ii-bkd"/>
+                            <constraint firstAttribute="trailing" secondItem="etf-V9-NiW" secondAttribute="trailing" constant="10" id="3UB-Q2-Dnp"/>
+                            <constraint firstAttribute="trailing" secondItem="rDj-vP-vz6" secondAttribute="trailing" id="99v-e1-ISw"/>
+                            <constraint firstItem="cWi-Uz-vr3" firstAttribute="bottom" secondItem="etf-V9-NiW" secondAttribute="bottom" constant="-5" id="FYA-eh-2TF"/>
+                            <constraint firstItem="QeI-Ws-9dB" firstAttribute="centerY" secondItem="h7h-DQ-XYR" secondAttribute="centerY" id="KWU-OM-ieC"/>
+                            <constraint firstItem="cWi-Uz-vr3" firstAttribute="leading" secondItem="whX-qV-XwG" secondAttribute="trailing" constant="10" id="MdC-0L-Mfs"/>
+                            <constraint firstAttribute="bottom" secondItem="rDj-vP-vz6" secondAttribute="bottom" id="Rpj-ei-59g"/>
+                            <constraint firstItem="rDj-vP-vz6" firstAttribute="leading" secondItem="h7h-DQ-XYR" secondAttribute="leading" id="StH-l7-lMg"/>
+                            <constraint firstItem="QeI-Ws-9dB" firstAttribute="leading" secondItem="h7h-DQ-XYR" secondAttribute="leading" constant="10" id="XL4-wy-zuS"/>
+                            <constraint firstItem="etf-V9-NiW" firstAttribute="centerY" secondItem="h7h-DQ-XYR" secondAttribute="centerY" id="fRB-Vs-a1m"/>
+                            <constraint firstItem="rDj-vP-vz6" firstAttribute="top" secondItem="QeI-Ws-9dB" secondAttribute="bottom" id="qsO-yj-VL9"/>
+                            <constraint firstItem="cWi-Uz-vr3" firstAttribute="top" secondItem="etf-V9-NiW" secondAttribute="top" constant="5" id="saB-PA-ACn"/>
+                            <constraint firstItem="whX-qV-XwG" firstAttribute="leading" secondItem="etf-V9-NiW" secondAttribute="leading" constant="5" id="vF6-Ty-sgq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="h7h-DQ-XYR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5HX-Wn-5la"/>
+                    <constraint firstAttribute="bottom" secondItem="h7h-DQ-XYR" secondAttribute="bottom" id="Qad-2Q-Dry"/>
+                    <constraint firstAttribute="trailing" secondItem="h7h-DQ-XYR" secondAttribute="trailing" id="tgo-RL-Hig"/>
+                    <constraint firstItem="h7h-DQ-XYR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="voO-VU-tdm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="gBtnInviteContact" destination="etf-V9-NiW" id="ZdH-zf-Vup"/>
+                <outlet property="gContainerView" destination="h7h-DQ-XYR" id="yLd-l5-JWq"/>
+                <outlet property="gLblName" destination="QeI-Ws-9dB" id="YcY-0d-oTB"/>
+            </connections>
+            <point key="canvasLocation" x="-497" y="-520"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="invite.png" width="41" height="41"/>
+    </resources>
+</document>

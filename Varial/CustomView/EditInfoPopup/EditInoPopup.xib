@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="century-gothic.ttf">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditInfoPopup">
+            <connections>
+                <outlet property="email" destination="wUR-4R-Gec" id="VkQ-5H-4GX"/>
+                <outlet property="emailButton" destination="IP7-HG-YdK" id="Tgc-H8-vht"/>
+                <outlet property="header" destination="zno-Bm-kaa" id="i3F-Ky-7L7"/>
+                <outlet property="locationButton" destination="ZGD-sJ-3vr" id="zv4-wa-Lns"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="AgF-pI-Y1R"/>
+                <outlet property="phoneButton" destination="wZb-h4-bit" id="V50-Zp-rld"/>
+                <outlet property="phoneNumber" destination="gnF-qg-P6h" id="ZFD-8p-hvl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXw-XG-p1Y">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="260"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nq-rw-lNh">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EDIT INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zno-Bm-kaa">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="zno-Bm-kaa" firstAttribute="top" secondItem="9nq-rw-lNh" secondAttribute="top" id="Fjy-A5-DgE"/>
+                                <constraint firstAttribute="height" constant="40" id="IED-ly-3HK"/>
+                                <constraint firstAttribute="trailing" secondItem="zno-Bm-kaa" secondAttribute="trailing" id="Rbn-EC-GIc"/>
+                                <constraint firstItem="zno-Bm-kaa" firstAttribute="leading" secondItem="9nq-rw-lNh" secondAttribute="leading" id="dWI-3S-wRZ"/>
+                                <constraint firstAttribute="bottom" secondItem="zno-Bm-kaa" secondAttribute="bottom" id="owj-og-LAL"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-Ht-NC6">
+                            <rect key="frame" x="0.0" y="40" width="300" height="2"/>
+                            <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="x88-pk-sWP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MK-Ek-f0g">
+                            <rect key="frame" x="0.0" y="42" width="300" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUR-4R-Gec">
+                                    <rect key="frame" x="20" y="0.0" width="260" height="30"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="wUR-4R-Gec" firstAttribute="top" secondItem="8MK-Ek-f0g" secondAttribute="top" id="77O-Wd-W6b"/>
+                                <constraint firstAttribute="trailing" secondItem="wUR-4R-Gec" secondAttribute="trailing" constant="20" id="U32-cg-NFJ"/>
+                                <constraint firstItem="wUR-4R-Gec" firstAttribute="leading" secondItem="8MK-Ek-f0g" secondAttribute="leading" constant="20" id="hbA-u0-iuj"/>
+                                <constraint firstAttribute="bottom" secondItem="wUR-4R-Gec" secondAttribute="bottom" id="hri-1D-zuv"/>
+                                <constraint firstAttribute="height" constant="30" id="npk-km-Us6"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IP7-HG-YdK">
+                            <rect key="frame" x="20" y="72" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="D2H-n2-DLR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Email">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doChangeEmail:" destination="-1" eventType="touchUpInside" id="N4I-wn-iAA"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-ax-Cba">
+                            <rect key="frame" x="0.0" y="122" width="300" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnF-qg-P6h">
+                                    <rect key="frame" x="20" y="0.0" width="260" height="30"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="gnF-qg-P6h" firstAttribute="leading" secondItem="rdA-ax-Cba" secondAttribute="leading" constant="20" id="2jt-p7-wKS"/>
+                                <constraint firstAttribute="trailing" secondItem="gnF-qg-P6h" secondAttribute="trailing" constant="20" id="77T-fm-DQQ"/>
+                                <constraint firstAttribute="height" constant="30" id="bj8-EY-Wu7"/>
+                                <constraint firstAttribute="bottom" secondItem="gnF-qg-P6h" secondAttribute="bottom" id="h0I-Xg-8NB"/>
+                                <constraint firstItem="gnF-qg-P6h" firstAttribute="top" secondItem="rdA-ax-Cba" secondAttribute="top" id="qXq-YG-nG0"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZb-h4-bit">
+                            <rect key="frame" x="20" y="152" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="eVk-yp-aUa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Phone number">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doChangePhoneNumber:" destination="-1" eventType="touchUpInside" id="Cmd-vb-mNE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGD-sJ-3vr">
+                            <rect key="frame" x="20" y="202" width="260" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="dlU-PQ-w4G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <state key="normal" title="Location">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doChangeLocation:" destination="-1" eventType="touchUpInside" id="ad7-5W-ar1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="0vb-dA-Dlt"/>
+                        <constraint firstItem="rdA-ax-Cba" firstAttribute="top" secondItem="8MK-Ek-f0g" secondAttribute="bottom" id="2ea-Sl-mJk"/>
+                        <constraint firstItem="ZGD-sJ-3vr" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" constant="20" id="9u0-xj-oTE"/>
+                        <constraint firstItem="9nq-rw-lNh" firstAttribute="top" secondItem="zXw-XG-p1Y" secondAttribute="top" id="ACi-ns-FWO"/>
+                        <constraint firstItem="ZGD-sJ-3vr" firstAttribute="top" secondItem="wZb-h4-bit" secondAttribute="bottom" constant="10" id="BEs-6e-AQu"/>
+                        <constraint firstItem="IP7-HG-YdK" firstAttribute="top" secondItem="rdA-ax-Cba" secondAttribute="bottom" constant="8" symbolic="YES" id="D0W-Xu-abu"/>
+                        <constraint firstItem="wZb-h4-bit" firstAttribute="top" secondItem="rdA-ax-Cba" secondAttribute="bottom" id="D8D-Ec-3v8"/>
+                        <constraint firstAttribute="trailing" secondItem="wZb-h4-bit" secondAttribute="trailing" constant="20" id="GqL-UZ-20j"/>
+                        <constraint firstAttribute="width" constant="300" id="O0Y-q1-hV6"/>
+                        <constraint firstItem="9nq-rw-lNh" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" id="O6P-8J-eYN"/>
+                        <constraint firstItem="Bwc-Ht-NC6" firstAttribute="top" secondItem="9nq-rw-lNh" secondAttribute="bottom" id="Pbw-H0-PLL"/>
+                        <constraint firstAttribute="trailing" secondItem="rdA-ax-Cba" secondAttribute="trailing" id="RR0-df-4Al"/>
+                        <constraint firstItem="8MK-Ek-f0g" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" id="RYd-mu-L64"/>
+                        <constraint firstItem="IP7-HG-YdK" firstAttribute="top" secondItem="8MK-Ek-f0g" secondAttribute="bottom" constant="40" id="Svh-LN-75Z"/>
+                        <constraint firstItem="IP7-HG-YdK" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" constant="20" id="Sxu-5y-vMX"/>
+                        <constraint firstItem="IP7-HG-YdK" firstAttribute="top" secondItem="rdA-ax-Cba" secondAttribute="bottom" id="YOC-zg-1ft"/>
+                        <constraint firstItem="rdA-ax-Cba" firstAttribute="top" secondItem="IP7-HG-YdK" secondAttribute="bottom" constant="10" id="YSD-yj-fA6"/>
+                        <constraint firstItem="8MK-Ek-f0g" firstAttribute="top" secondItem="Bwc-Ht-NC6" secondAttribute="bottom" id="bMN-1W-of5"/>
+                        <constraint firstItem="Bwc-Ht-NC6" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" id="edz-Kv-CE1"/>
+                        <constraint firstAttribute="trailing" secondItem="IP7-HG-YdK" secondAttribute="trailing" constant="20" id="gZV-Hm-GRI"/>
+                        <constraint firstItem="rdA-ax-Cba" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" id="gki-eC-MXf"/>
+                        <constraint firstItem="wZb-h4-bit" firstAttribute="top" secondItem="IP7-HG-YdK" secondAttribute="bottom" constant="15" id="hvw-4N-BJd"/>
+                        <constraint firstAttribute="trailing" secondItem="8MK-Ek-f0g" secondAttribute="trailing" id="iBE-Cm-av9"/>
+                        <constraint firstItem="wZb-h4-bit" firstAttribute="leading" secondItem="zXw-XG-p1Y" secondAttribute="leading" constant="20" id="ise-kv-wu3"/>
+                        <constraint firstItem="IP7-HG-YdK" firstAttribute="top" secondItem="8MK-Ek-f0g" secondAttribute="bottom" id="mWN-rd-8Kz"/>
+                        <constraint firstAttribute="trailing" secondItem="9nq-rw-lNh" secondAttribute="trailing" id="ny7-2S-sSm"/>
+                        <constraint firstAttribute="trailing" secondItem="ZGD-sJ-3vr" secondAttribute="trailing" constant="20" id="rPu-9G-OHc"/>
+                        <constraint firstAttribute="trailing" secondItem="Bwc-Ht-NC6" secondAttribute="trailing" id="srG-2f-5DW"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="D0W-Xu-abu"/>
+                            <exclude reference="Svh-LN-75Z"/>
+                            <exclude reference="YOC-zg-1ft"/>
+                            <exclude reference="2ea-Sl-mJk"/>
+                            <exclude reference="hvw-4N-BJd"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zXw-XG-p1Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rby-Yb-0Ir"/>
+                <constraint firstItem="zXw-XG-p1Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jx7-2v-MZn"/>
+                <constraint firstAttribute="trailing" secondItem="zXw-XG-p1Y" secondAttribute="trailing" id="uAF-8M-5bb"/>
+                <constraint firstAttribute="bottom" secondItem="zXw-XG-p1Y" secondAttribute="bottom" id="xrE-Z8-9DL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-3" y="-7"/>
+        </view>
+    </objects>
+</document>

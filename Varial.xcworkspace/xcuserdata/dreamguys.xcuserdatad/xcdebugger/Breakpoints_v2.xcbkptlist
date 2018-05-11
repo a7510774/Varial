@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/HomeTab/Feeds/List/FeedsViewController.m"
+            timestampString = "540295798.034469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "-getFeedsTypesList"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FeedsViewController getFeedsTypesList]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/HomeTab/Feeds/List/FeedsViewController.m"
+                  timestampString = "541688820.6565779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "267">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[FeedsViewController getFeedsTypesList]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/HomeTab/Feeds/List/FeedsViewController.m"
+                  timestampString = "541688820.661505"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Downloads/Varial app up/AddPostViewController.m"
+            timestampString = "540565658.1200711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "761"
+            endingLineNumber = "761"
+            landmarkName = "-cameraBtnTapped:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Downloads/Varial app up/AddPostViewController.m"
+            timestampString = "540565658.1201971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "769"
+            endingLineNumber = "769"
+            landmarkName = "-videoBtnTapped:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/Friends/InviteFriends.m"
+            timestampString = "540996382.334646"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
+            landmarkName = "-sendInviteFriend:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[InviteFriends sendInviteFriend:]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/Friends/InviteFriends.m"
+                  timestampString = "541688820.684137"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "510">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__34-[InviteFriends sendInviteFriend:]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/Friends/InviteFriends.m"
+                  timestampString = "541688820.688852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/MyCheckins.m"
+            timestampString = "541688820.363023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1003"
+            endingLineNumber = "1003"
+            landmarkName = "-getVisiblePopularCheckin"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MyCheckins getVisiblePopularCheckin]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/MyCheckin/MyCheckins.m"
+                  timestampString = "541688820.6990401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1003"
+                  endingLineNumber = "1003"
+                  offsetFromSymbolStart = "1054">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[MyCheckins getVisiblePopularCheckin]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/MyCheckin/MyCheckins.m"
+                  timestampString = "541688820.703557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1004"
+                  endingLineNumber = "1004"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/MyCheckins.m"
+            timestampString = "541688820.36316"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1005"
+            endingLineNumber = "1005"
+            landmarkName = "-getVisiblePopularCheckin"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/Bookmark/BookmarkViewController.m"
+            timestampString = "541688820.36329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "523"
+            endingLineNumber = "523"
+            landmarkName = "-getFeedsList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/MyCheckins.m"
+            timestampString = "541688820.363414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
+            landmarkName = "-getAllPopularCheckins"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MyCheckins getAllPopularCheckins]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/MyCheckin/MyCheckins.m"
+                  timestampString = "541688820.798329"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "462"
+                  endingLineNumber = "462"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35-[MyCheckins getAllPopularCheckins]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/MyCheckin/MyCheckins.m"
+                  timestampString = "541688820.802858"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "463"
+                  endingLineNumber = "463"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Varial/Modules/MyCheckin/BaiduPopularCheckin.m"
+            timestampString = "541687122.338653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "566"
+            endingLineNumber = "566"
+            landmarkName = "-getAllPopularCheckins"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BaiduPopularCheckin getAllPopularCheckins]"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/MyCheckin/BaiduPopularCheckin.m"
+                  timestampString = "541688820.813597"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "566"
+                  endingLineNumber = "566"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[BaiduPopularCheckin getAllPopularCheckins]_block_invoke"
+                  moduleName = "Varial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dreamguys/Documents/Nithi/Projects/Varial/Code/Varail-2-3-18/VarialiOS/Varial/Modules/MyCheckin/BaiduPopularCheckin.m"
+                  timestampString = "541688820.818053"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "567"
+                  endingLineNumber = "567"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "DUM-Ps-KlJ"; */
+"DUM-Ps-KlJ.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "cWw-qY-aNP"; */
+"cWw-qY-aNP.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "faZ-pR-Gpb"; */
+"faZ-pR-Gpb.normalTitle" = "返回";
+
+/* Class = "UIButton"; normalTitle = "附近热门签到"; ObjectID = "lXb-5q-Xe7"; */
+"lXb-5q-Xe7.normalTitle" = "附近热门签到";
+
+/* Class = "UIButton"; normalTitle = "Search"; ObjectID = "p8r-6k-gRa"; */
+"p8r-6k-gRa.normalTitle" = "搜索";
+
+/* Class = "UITextField"; placeholder = "搜索签到"; ObjectID = "rDj-tf-QK6"; */
+"rDj-tf-QK6.placeholder" = "搜索签到";
+
+/* Class = "UITextField"; placeholder = "Categories"; ObjectID = "u31-Fr-UMh"; */
+"u31-Fr-UMh.placeholder" = "类别";
+
+/* Class = "UITextField"; placeholder = "Enter City"; ObjectID = "wAb-7c-j5K"; */
+"wAb-7c-j5K.placeholder" = "选择城市";
+
+/* Class = "UITextField"; placeholder = "Search Location"; ObjectID = "yz1-lV-XV6"; */
+"yz1-lV-XV6.placeholder" = "搜索位置";

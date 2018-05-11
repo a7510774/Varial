@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PopularFeedsCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-yU-tat">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-rp-l9K">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQj-Gt-2g7">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOd-5t-sSM">
+                        <rect key="frame" x="63" y="63" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="195-ao-Sw0"/>
+                            <constraint firstAttribute="width" constant="24" id="MgV-PE-Tgq"/>
+                        </constraints>
+                        <state key="normal" image="feedPlayIcon">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ss-zJ-aWH">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZPE-jM-f7q"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="wfs-Cu-moB"/>
+                        </constraints>
+                        <state key="normal" image="play-btn_white">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVY-zx-4zG">
+                        <rect key="frame" x="125" y="5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="MWd-Ui-gmX"/>
+                            <constraint firstAttribute="height" constant="20" id="irN-l3-dZQ"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="video-camera"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="e1D-rp-l9K" secondAttribute="bottom" id="5CX-T2-R34"/>
+                <constraint firstItem="IVY-zx-4zG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="9bV-yp-cv0"/>
+                <constraint firstAttribute="bottom" secondItem="fbZ-yU-tat" secondAttribute="bottom" id="B5C-Kd-TwA"/>
+                <constraint firstItem="tOd-5t-sSM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ich-Eu-z3m"/>
+                <constraint firstAttribute="trailing" secondItem="dQj-Gt-2g7" secondAttribute="trailing" id="IlY-aP-0mZ"/>
+                <constraint firstItem="dQj-Gt-2g7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JFh-Cq-7gS"/>
+                <constraint firstAttribute="trailing" secondItem="e1D-rp-l9K" secondAttribute="trailing" id="L0F-ip-6Al"/>
+                <constraint firstItem="e1D-rp-l9K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LZ8-Mw-zMt"/>
+                <constraint firstItem="8Ss-zJ-aWH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Qk1-bJ-nWF"/>
+                <constraint firstItem="fbZ-yU-tat" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ti9-cH-s1n"/>
+                <constraint firstAttribute="trailing" secondItem="IVY-zx-4zG" secondAttribute="trailing" constant="5" id="TiU-SM-MF4"/>
+                <constraint firstItem="dQj-Gt-2g7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UK4-Wt-UmB"/>
+                <constraint firstItem="fbZ-yU-tat" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UoX-pf-1CL"/>
+                <constraint firstItem="8Ss-zJ-aWH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="euu-0j-ol9"/>
+                <constraint firstItem="tOd-5t-sSM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ik0-3D-C4j"/>
+                <constraint firstAttribute="trailing" secondItem="fbZ-yU-tat" secondAttribute="trailing" id="tLr-pw-aT5"/>
+                <constraint firstItem="e1D-rp-l9K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tkt-TG-GMv"/>
+                <constraint firstAttribute="bottom" secondItem="dQj-Gt-2g7" secondAttribute="bottom" id="u4a-7q-4SH"/>
+            </constraints>
+            <connections>
+                <outlet property="cameraIcon" destination="IVY-zx-4zG" id="92v-u5-FJ6"/>
+                <outlet property="imgView" destination="dQj-Gt-2g7" id="vtH-bg-X5Y"/>
+                <outlet property="mainPreview" destination="fbZ-yU-tat" id="AyX-vD-IIz"/>
+                <outlet property="playIcon" destination="tOd-5t-sSM" id="CHu-gb-mrK"/>
+                <outlet property="roundPlayIcon" destination="8Ss-zJ-aWH" id="eS1-G1-ELb"/>
+                <outlet property="videoView" destination="e1D-rp-l9K" id="fkb-vs-Dav"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="feedPlayIcon" width="31" height="38"/>
+        <image name="play-btn_white" width="32" height="32"/>
+        <image name="video-camera" width="32" height="32"/>
+    </resources>
+</document>
