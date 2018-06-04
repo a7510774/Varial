@@ -131,7 +131,7 @@
 
 // Follow and Following
 "Follow" = "跟随";
-"Following" = "以下";
+"Following" = "粉丝";
 
 //History
 "History" = "歷史";
@@ -609,7 +609,7 @@
 "CHOOSE THE REASON" = "选择原因";
 "Media should have minimum 3 seconds duration" = "媒体应至少有3秒的持续时间";
 "Description" = "描述";
-"Post" = "崗位";
+"Post" = "发送";
 "No Bookmarks" = "沒有書籤";
 "View all" = "查看全部";
 "Channel Details" = "頻道詳情";

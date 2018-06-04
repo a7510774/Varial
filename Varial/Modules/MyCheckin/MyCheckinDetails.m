@@ -33,8 +33,8 @@
 
     [self designTheView];
     [self createPopUpWindows];
-    [self getFeedsList];
     
+    [self getFeedsList];
     [self scrollViewDidScroll:_feedsTable];
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -67,24 +67,25 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [Util setStatusBar];
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
+    appDelegate.shouldAllowRotation = NO;
     
     //Check for update has made in the feed
     if (selectedPostIndex != -1) {
         [self updateTheFeedDetails];
     }
-
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [feedsDesign playVideoConditionally];
+//        [feedsDesign playVideoConditionally];
     });
+    [super viewDidAppear:animated];
     
 }
 -(void)viewWillAppear:(BOOL)animated{
-    [Util setStatusBar];
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
-    appDelegate.shouldAllowRotation = NO;
+   
     
-    [_feedsTable reloadData];
+//    [_feedsTable reloadData];
     
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(PlayVideoOnAppForeground)
@@ -101,9 +102,7 @@
     
 }
 -(void)viewWillDisappear:(BOOL)animated{
-    if (!_isFromChannel) {
-    [feedsDesign stopAllVideos];
-    }
+    [feedsDesign muteAllVideos];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
@@ -120,7 +119,9 @@
 }
 
 - (void)updateTheFeedDetails{
-    [_feedsTable reloadData];
+    if(!_isFromChannel) {
+        [_feedsTable reloadData];
+    }
     selectedPostIndex = -1;
 }
 
@@ -145,13 +146,13 @@
     feedRefreshSelf.feedsTable.pullToRefreshView.arrowColor = [UIColor whiteColor];
     feedRefreshSelf.feedsTable.pullToRefreshView.textColor = [UIColor whiteColor];
     [feedRefreshSelf.feedsTable.pullToRefreshView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
-    
+    if (!_isFromChannel) {
     // setup infinite scrolling
     [self.feedsTable addInfiniteScrollingWithActionHandler:^{
         [feedRefreshSelf insertRowAtBottom];
     }];
     [feedRefreshSelf.feedsTable.infiniteScrollingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    
+    }
     //Alert popup
     blockConfirmation = [[YesNoPopup alloc] init];
     blockConfirmation.delegate = self;
@@ -226,16 +227,23 @@
         fcell.gBtnMuteUnMute.tag = indexPath.row;
         
          feedsDesign.feeds = feeds;
-         feedsDesign.feedTable = tableView;
+        feedsDesign.feedTable = _feedsTable;
          feedsDesign.mediaBaseUrl= mediaBaseUrl;
          feedsDesign.viewController = self;
-        feedsDesign.isVolumeClicked = NO;
+         feedsDesign.isVolumeClicked = NO;
+        feedsDesign.gIsFromChannel = YES;
+        
+        
+         [feedsDesign designTheContainerView:fcell forFeedData:[feeds objectAtIndex:indexPath.row] mediaBase:mediaBaseUrl forDelegate:self tableView:tableView];
+        
+    
         
         // Hide Share View
         [fcell.shareView setHidden:YES];
         fcell.shareViewHeightConstraint.constant = 0.0;
-        
-         [feedsDesign designTheContainerView:fcell forFeedData:[feeds objectAtIndex:indexPath.row] mediaBase:mediaBaseUrl forDelegate:self tableView:tableView];
+        if (_isFromChannel) {
+            fcell.myConstraintShareViewTop.constant = -70.0;
+        }
         
         fcell.backgroundColor = [UIColor clearColor];
     }
@@ -520,7 +528,7 @@
             [_feedsTable.infiniteScrollingView stopAnimating];
             [[AlertMessage sharedInstance] showMessage:[response objectForKey:@"message"]];
         }
-    } isShowLoader:NO];
+    } isShowLoader:YES];
 }
 
 

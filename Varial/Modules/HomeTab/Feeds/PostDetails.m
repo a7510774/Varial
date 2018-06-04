@@ -325,7 +325,6 @@ UIImageView *thumbImage;
     }
 }
 
-
 #pragma mark - Attributed Label delegate
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result {
     NSString *tag = [[label.text substringWithRange:result.range] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -718,7 +717,6 @@ UIImageView *thumbImage;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     PostDetailCell *cell;
     
     cell= (PostDetailCell *)[tableView dequeueReusableCellWithIdentifier:@"PostDetailCell"];

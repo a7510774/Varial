@@ -12,6 +12,7 @@
 @interface OTPViewController : UIViewController
 
 @property (nonatomic) int gIntSecondsLeft;
+@property (assign) BOOL gIsLoginBtnTapped;
 @property (strong) NSString *gStrcountryId, *gStrPhoneNumber, *gStrPhoneName, *gStrOTPCode;
 @property (weak, nonatomic) IBOutlet HeaderView *myViewHeader;
 @property (weak, nonatomic) IBOutlet UITextField *myTxtFldOTP;

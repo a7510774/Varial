@@ -101,6 +101,7 @@
 @property (weak, nonatomic) IBOutlet ResponsiveLabel *gLblShareDescription;
 
 @property (weak, nonatomic) IBOutlet UIButton *gBtnMuteUnMute;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *myConstraintShareViewTop;
 
 
 @end

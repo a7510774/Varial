@@ -19,6 +19,7 @@
 #import "MLKMenuPopover.h"
 #import "Menu.h"
 
+
 @interface MyCheckinDetails : UIViewController<UITableViewDataSource,UITableViewDelegate,YesNoPopDelegate,TTTAttributedLabelDelegate,MLKMenuPopoverDelegate,MenuDelegate>
 {
     NSMutableArray *feeds;

@@ -15,7 +15,7 @@
     UIPickerView *myCountryPicker;
     int playerType;
 }
-@property (assign) BOOL isNewUser;
+@property (assign) BOOL isNewUser, isLoginBtnTapped;
 @property (weak, nonatomic) IBOutlet HeaderView *myViewHeader;
 @property (weak, nonatomic) IBOutlet UITextField *myTxtFldCountry;
 @property (weak, nonatomic) IBOutlet UITextField *myTxtFldMobileCode;

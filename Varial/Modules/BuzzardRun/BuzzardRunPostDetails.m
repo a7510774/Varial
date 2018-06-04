@@ -190,7 +190,8 @@ BOOL isScrolled, isPlay;
     [_profileImageHeader setFrame:CGRectMake(_profileImageHeader.frame.origin.x, _profileImageHeader.frame.origin.y, _profileImageHeader.frame.size.width, _name.frame.size.height + 55)];
     headerHeight = headerHeight + _profileImageHeader.frame.size.height;
     if (_isFromNotification != nil) {
-        headerHeight = headerHeight + 20;
+//        headerHeight = headerHeight + 20;
+        headerHeight = headerHeight;
     }
     
     _postedDate.text = [Util timeStamp:[[postInfo valueForKey:@"time_stamp"]longValue]];
@@ -216,7 +217,8 @@ BOOL isScrolled, isPlay;
     if ([[postInfo valueForKey:@"post_content"] isEqualToString:@""]) {
         _postContent.text = @"";
         [_postContent sizeToFit];
-        headerHeight = headerHeight + _postContent.frame.size.height + 20;
+//        headerHeight = headerHeight + _postContent.frame.size.height + 20;
+        headerHeight = headerHeight + _postContent.frame.size.height;
     }
     else{
         _postContent.text = [postInfo valueForKey:@"post_content"];
@@ -225,7 +227,8 @@ BOOL isScrolled, isPlay;
             _postContent.delegate = self;
         }
         [_postContent sizeToFit];
-        headerHeight = headerHeight + _postContent.frame.size.height + 20 + 10;
+//        headerHeight = headerHeight + _postContent.frame.size.height + 20 + 10;
+        headerHeight = headerHeight + _postContent.frame.size.height;
         
     }
     

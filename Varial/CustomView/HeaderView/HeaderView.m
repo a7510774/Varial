@@ -50,7 +50,7 @@
 //    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     self.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self addSubview:self.view];
-    [Util createRoundedCorener:_btnSearchIcon withCorner:10.0];
+    [Util createRoundedCorener:_btnSearchIcon withCorner:12.5];
 //    [self.view.layer setBorderColor:UIColorFromHexCode(THEME_COLOR).CGColor];
 //    [self.view.layer setBorderWidth:1.0];
     

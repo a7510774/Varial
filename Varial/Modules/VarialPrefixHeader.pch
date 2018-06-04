@@ -19,7 +19,7 @@
 #pragma mark - App Delegate
 //#import "AppDelegate.h"
 
-#define NSLog(...)
+//#define NSLog(...)
 
 #pragma mark - Macros
 

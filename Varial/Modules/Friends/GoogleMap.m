@@ -24,7 +24,8 @@
         placesClient = [[GMSPlacesClient alloc] init];
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:location.latitude
                                                                 longitude:location.longitude
-                                                                     zoom:5];
+                                                                     zoom:0];
+        // default zoom level 5
         [self setCamera:camera];
         self.settings.rotateGestures = NO;
         self.settings.tiltGestures = NO;
@@ -387,8 +388,8 @@
         
         marker.userData = item.userData;
         
-        marker.icon = [UIImage imageNamed:@"pinIconMapActive"];
-        marker.icon = [self image:marker.icon scaledToSize:CGSizeMake(MARKER_WIDTH, MARKER_HEIGHT)];
+//        marker.icon = [UIImage imageNamed:@"pinIconMapActive"];
+//        marker.icon = [self image:marker.icon scaledToSize:CGSizeMake(MARKER_WIDTH, MARKER_HEIGHT)];
     }
 }
 

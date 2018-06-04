@@ -2811,7 +2811,7 @@
         
         else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
         {
-            viewString = [NSString stringWithFormat:NSLocalizedString(@"%@ 意見", nil),[self abbreviateNumber: viewCount]];
+            viewString = [NSString stringWithFormat:NSLocalizedString(@"%@ 浏览", nil),[self abbreviateNumber: viewCount]];
         }
         
     }
@@ -2826,7 +2826,7 @@
         
         else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
         {
-            views = @"%@ 意見";
+            views = @"%@ 浏览";
         }
         
         viewString = [NSString stringWithFormat:NSLocalizedString(views, nil),vCount];

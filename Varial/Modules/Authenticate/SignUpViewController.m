@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "SignInViewController.h"
 #import "IQUIView+IQKeyboardToolbar.h"
+#import "IQKeyboardManager.h"
 
 @interface SignUpViewController ()
 
@@ -34,6 +35,7 @@
     [Util createRoundedCorener:self.myViewSignUpBtn withCorner:5.0];
     [self changeLanguageForAllObjects];
     [self.myTxtFldConfirmPassword addDoneOnKeyboardWithTarget:self action:@selector(doneAction:)];
+    [[IQKeyboardManager sharedManager] setEnable:YES];
 }
 
 - (void)setUpModel {
@@ -85,17 +87,6 @@
     if(![Util validateTextField:_myTxtFldEmail withValueToDisplay:EMAIL withIsEmailType:TRUE withMinLength:EMAIL_MIN withMaxLength:EMAIL_MAX]){
         return FALSE;
     }
-    //Validate name
-    if(![Util validateTextField:_myTxtFldName withValueToDisplay:NAME_TITLE withIsEmailType:FALSE withMinLength:NAME_MIN withMaxLength:NAME_MAX_LEN]){
-        return FALSE;
-    }
-    if(![Util validCharacter:_myTxtFldName forString:_myTxtFldName.text withValueToDisplay:NAME_TITLE]){
-        return FALSE;
-    }
-    if(![Util validateName:_myTxtFldName.text]){
-        [Util showErrorMessage:_myTxtFldName withErrorMessage:NSLocalizedString(INVALID_NAME, nil)];
-        return FALSE;
-    }
     //Validate password
     else if(![Util validatePasswordField:_myTxtFldPassword withValueToDisplay:@"Password" withMinLength:PASSWORD_MIN withMaxLength:PASSWORD_MAX]){
         return FALSE;
@@ -121,6 +112,17 @@
         [Util showErrorMessage:_myTxtFldConfirmPassword withErrorMessage:NSLocalizedString(CONFIRM_MISMATCH, nil)];
         return FALSE;
     }
+    //Validate name
+    if(![Util validateTextField:_myTxtFldName withValueToDisplay:NAME_TITLE withIsEmailType:FALSE withMinLength:NAME_MIN withMaxLength:NAME_MAX_LEN]){
+        return FALSE;
+    }
+    if(![Util validCharacter:_myTxtFldName forString:_myTxtFldName.text withValueToDisplay:NAME_TITLE]){
+        return FALSE;
+    }
+    if(![Util validateName:_myTxtFldName.text]){
+        [Util showErrorMessage:_myTxtFldName withErrorMessage:NSLocalizedString(INVALID_NAME, nil)];
+        return FALSE;
+    }
     
     return YES;
 }
@@ -140,7 +142,7 @@
     {
         [self.myViewHeader setHeader:NSLocalizedString(TITLE_SIGNUP, nil)];
         _myTxtFldEmail.placeholder = @"Email";
-        _myTxtFldName.placeholder = @"Name";
+        _myTxtFldName.placeholder = @"Username";
         _myTxtFldPassword.placeholder = @"Password";
         _myTxtFldConfirmPassword.placeholder = @"Confirm Password";
         [_myBtnSignUp setTitle:@"SIGN UP" forState:UIControlStateNormal];
@@ -153,10 +155,10 @@
     {
         [self.myViewHeader setHeader:NSLocalizedString(@"注册", nil)];
         _myTxtFldEmail.placeholder = @"电子邮件";
-        _myTxtFldName.placeholder = @"名称";
+        _myTxtFldName.placeholder = @"用戶名";
         _myTxtFldPassword.placeholder = @"密码";
         _myTxtFldConfirmPassword.placeholder = @"确认密码";
-        [_myBtnSignUp setTitle:@"注册" forState:UIControlStateNormal];
+        [_myBtnSignUp setTitle:@"提交" forState:UIControlStateNormal];
         _myLabelAlreadyHavAcc.text = @"您有账户吗";
         [_myBtnLogin setTitle:@"登录" forState:UIControlStateNormal];
     }

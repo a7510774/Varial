@@ -41,6 +41,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="collctionView" destination="aaC-Xc-7yc" id="tgK-8b-8Mp"/>
+                <outlet property="myConstraintCollectionviewHeight" destination="CPT-FI-kVe" id="c01-jy-CgD"/>
             </connections>
         </tableViewCell>
     </objects>

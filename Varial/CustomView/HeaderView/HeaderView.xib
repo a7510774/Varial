@@ -151,12 +151,13 @@
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-fm-EdW" customClass="MIBadgeButton">
-                    <rect key="frame" x="247" y="28.5" width="23" height="23"/>
+                    <rect key="frame" x="245" y="27.5" width="25" height="25"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="a1g-fm-EdW" secondAttribute="height" multiplier="1:1" id="I3O-VN-ePm"/>
-                        <constraint firstAttribute="width" constant="23" id="qF9-Pb-iUB"/>
+                        <constraint firstAttribute="width" constant="25" id="qF9-Pb-iUB"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>

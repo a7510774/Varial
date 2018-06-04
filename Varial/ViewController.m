@@ -88,11 +88,11 @@ NSMutableDictionary *content;
     }
 }
 
-//-(void)viewDidLayoutSubviews
-//{
-//    [super viewDidLayoutSubviews];
-//    [self.tabBar invalidateIntrinsicContentSize];
-//}
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self.tabBar invalidateIntrinsicContentSize];
+}
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleDefault;
@@ -107,6 +107,19 @@ NSMutableDictionary *content;
     [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
     delegate.shouldAllowRotation = NO;
     
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+        if (screenSize.height == 812){
+            NSLog(@"iPhone X");
+            self.myConstraintTabBarHeight.constant = 70.0;
+        }
+        else {
+            self.myConstraintTabBarHeight.constant = 40.0;
+        }
+    }
+    
+    
+//    NSLog(@"%@",[[UIDevice currentDevice] identifierForVendor]);
     // Reload the notification count
     [delegate refreshNotification];
 }

@@ -9,6 +9,7 @@
 #import "SignUpWithPhoneViewController.h"
 #import "IQUIView+IQKeyboardToolbar.h"
 #import "OTPViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface SignUpWithPhoneViewController ()
 
@@ -58,6 +59,8 @@ NSString *myStrCountryId;
     myCountryPicker.frame = CGRectMake(0, self.view.frame.size.height-
                                        myCountryPicker.frame.size.height-50, 320, 230);
     _myTxtFldCountry.inputView = myCountryPicker;
+    
+    [[IQKeyboardManager sharedManager] setEnable:YES];
 }
 
 - (void)setUpModel {
@@ -109,12 +112,21 @@ NSString *myStrCountryId;
         //Build Input Parameters
         NSMutableDictionary *inputParams = [[NSMutableDictionary alloc] init];
         [inputParams setValue:myStrCountryId forKey:@"country_id"];
-        [inputParams setValue:_myTxtFldName.text forKey:@"name"];
         [inputParams setValue:_myTxtFldPhoneNumber.text forKey:@"phone_number"];
-
+        
+        NSString * aUrl;
+        if(_isLoginBtnTapped) {
+            aUrl = SIGNIN_PHONE_NUMBER;
+        }
+        else {
+            [inputParams setValue:_myTxtFldName.text forKey:@"name"];
+            aUrl = PHONE_NUMBER;
+        }
+        
+        
         [Util appendDeviceMeta:inputParams];
 
-        [[Util sharedInstance]  sendHTTPPostRequest:inputParams withRequestUrl:PHONE_NUMBER withCallBack:^(NSDictionary * response){
+        [[Util sharedInstance]  sendHTTPPostRequest:inputParams withRequestUrl:aUrl withCallBack:^(NSDictionary * response){
 
             //check for new user
             _isNewUser = [[response valueForKey:@"new_registeration"] boolValue];
@@ -138,6 +150,7 @@ NSString *myStrCountryId;
                 aOTP.gStrcountryId = myStrCountryId;
                 aOTP.gStrPhoneName = _myTxtFldName.text;
                 aOTP.gStrPhoneNumber = _myTxtFldPhoneNumber.text;
+                aOTP.gIsLoginBtnTapped = _isLoginBtnTapped;
                 [self.navigationController pushViewController:aOTP animated:YES];
             }
             else{
@@ -174,16 +187,21 @@ NSString *myStrCountryId;
         return FALSE;
     }
     //Validate name
-    if(![Util validateTextField:_myTxtFldName withValueToDisplay:NAME_TITLE withIsEmailType:FALSE withMinLength:NAME_MIN withMaxLength:NAME_MAX_LEN]){
-        return FALSE;
+    
+    if(!_isLoginBtnTapped) {
+        
+        if(![Util validateTextField:_myTxtFldName withValueToDisplay:NAME_TITLE withIsEmailType:FALSE withMinLength:NAME_MIN withMaxLength:NAME_MAX_LEN]){
+            return FALSE;
+        }
+        if(![Util validCharacter:_myTxtFldName forString:_myTxtFldName.text withValueToDisplay:NAME_TITLE]){
+            return FALSE;
+        }
+        if(![Util validateName:_myTxtFldName.text]){
+            [Util showErrorMessage:_myTxtFldName withErrorMessage:NSLocalizedString(INVALID_NAME, nil)];
+            return FALSE;
+        }
     }
-    if(![Util validCharacter:_myTxtFldName forString:_myTxtFldName.text withValueToDisplay:NAME_TITLE]){
-        return FALSE;
-    }
-    if(![Util validateName:_myTxtFldName.text]){
-        [Util showErrorMessage:_myTxtFldName withErrorMessage:NSLocalizedString(INVALID_NAME, nil)];
-        return FALSE;
-    }
+    
 
     return YES;
 }
@@ -201,7 +219,14 @@ NSString *myStrCountryId;
     
     if([[Util getFromDefaults:@"language"] isEqualToString:@"en-US"])
     {
-        [self.myViewHeader setHeader:NSLocalizedString(TITLE_SIGNUP_WITH_MOBILE, nil)];
+        if(_isLoginBtnTapped) {
+            [self.myViewHeader setHeader:NSLocalizedString(TITLE_SIGNIN_WITH_MOBILE, nil)];
+            _myTxtFldName.hidden = YES;
+            
+        } else {
+            [self.myViewHeader setHeader:NSLocalizedString(TITLE_SIGNUP_WITH_MOBILE, nil)];
+            _myTxtFldName.hidden = NO;
+        }
         _myTxtFldCountry.placeholder = @"Country";
         _myTxtFldPhoneNumber.placeholder = @"Enter your phone number";
         _myTxtFldName.placeholder = @"Name";
@@ -210,9 +235,17 @@ NSString *myStrCountryId;
     
     else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
     {
-        [self.myViewHeader setHeader:NSLocalizedString(@"与电话的注册", nil)];
+        if(_isLoginBtnTapped) {
+            [self.myViewHeader setHeader:NSLocalizedString(@"登录", nil)];
+            _myTxtFldName.hidden = YES;
+            
+        } else {
+            [self.myViewHeader setHeader:NSLocalizedString(@"注册", nil)];
+            _myTxtFldName.hidden = NO;
+        }
+        
         _myTxtFldCountry.placeholder = @"国家";
-        _myTxtFldPhoneNumber.placeholder = @"输入你的电话号码";
+        _myTxtFldPhoneNumber.placeholder = @"输入你的手机号码";
         _myTxtFldName.placeholder = @"名称";
         [_myBtnSubmit setTitle:@"提交" forState:UIControlStateNormal];
     }

@@ -438,7 +438,7 @@
 "fz5-Dr-JFM.normalTitle" = "提交";
 
 /* Class = "UIButton"; normalTitle = "Post"; ObjectID = "gM1-Wa-pkp"; */
-"gM1-Wa-pkp.normalTitle" = "发布";
+"gM1-Wa-pkp.normalTitle" = "编辑";
 
 /* Class = "UILabel"; text = "Points"; ObjectID = "gOJ-TL-u5g"; */
 "gOJ-TL-u5g.text" = "积分";

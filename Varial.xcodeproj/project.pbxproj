@@ -272,7 +272,6 @@
 		18C283C71D843AE1008CDB81 /* MapMarkerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C283C61D843AE1008CDB81 /* MapMarkerWindow.m */; };
 		18C283C91D843AFA008CDB81 /* MapMarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C283C81D843AFA008CDB81 /* MapMarkerWindow.xib */; };
 		18F239A71D62E4DA00B063C5 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F2399F1D62E4DA00B063C5 /* FeedCell.m */; };
-		18F239A81D62E4DA00B063C5 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F239A01D62E4DA00B063C5 /* FeedCell.xib */; };
 		18F239A91D62E4DA00B063C5 /* MessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F239A21D62E4DA00B063C5 /* MessagesCell.m */; };
 		18F239AA1D62E4DA00B063C5 /* MessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F239A31D62E4DA00B063C5 /* MessagesCell.xib */; };
 		18F239AB1D62E4DA00B063C5 /* TeamFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F239A51D62E4DA00B063C5 /* TeamFeedCell.m */; };
@@ -1323,6 +1322,7 @@
 		C1FFD03E1CA3D1E600F62C05 /* registered.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FFD03B1CA3D1E600F62C05 /* registered.png */; };
 		C1FFD03F1CA3D1E600F62C05 /* registered@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FFD03C1CA3D1E600F62C05 /* registered@2x.png */; };
 		C1FFD0401CA3D1E600F62C05 /* registered@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FFD03D1CA3D1E600F62C05 /* registered@3x.png */; };
+		CE02948520AC0C2300459FC7 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE02948420AC0C2200459FC7 /* FeedCell.xib */; };
 		CE046B1A208F56C60042AD4D /* OtherVideosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE046B18208F56C60042AD4D /* OtherVideosCollectionViewCell.m */; };
 		CE046B1B208F56C60042AD4D /* OtherVideosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE046B19208F56C60042AD4D /* OtherVideosCollectionViewCell.xib */; };
 		CE046B3B208F6B310042AD4D /* JPResourceLoadingRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CE046B1E208F6B300042AD4D /* JPResourceLoadingRequestTask.m */; };
@@ -1351,6 +1351,7 @@
 		CE604D07208EF23C00A7DB51 /* PopularFeedsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE604D05208EF23C00A7DB51 /* PopularFeedsCollectionViewCell.xib */; };
 		CE6364E0209B3C5F0051FB86 /* KNCirclePercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6364DD209B3C5E0051FB86 /* KNCirclePercentView.m */; };
 		CE6364E1209B3C5F0051FB86 /* KNPercentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6364DF209B3C5E0051FB86 /* KNPercentLabel.m */; };
+		CEBA8AF320BC092D00B03476 /* SmallVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA8AF220BC092D00B03476 /* SmallVideoDetailViewController.m */; };
 		CEEC57E32090921F000AECA6 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEC57E22090921E000AECA6 /* SignInViewController.m */; };
 		CEEC57E92090AB7D000AECA6 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEC57E82090AB7D000AECA6 /* SignUpViewController.m */; };
 		CEF28807209308D000993A8B /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF28806209308CF00993A8B /* OTPViewController.m */; };
@@ -1778,7 +1779,6 @@
 		18C283C81D843AFA008CDB81 /* MapMarkerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapMarkerWindow.xib; sourceTree = "<group>"; };
 		18F2399E1D62E4DA00B063C5 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		18F2399F1D62E4DA00B063C5 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
-		18F239A01D62E4DA00B063C5 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		18F239A11D62E4DA00B063C5 /* MessagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesCell.h; sourceTree = "<group>"; };
 		18F239A21D62E4DA00B063C5 /* MessagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesCell.m; sourceTree = "<group>"; };
 		18F239A31D62E4DA00B063C5 /* MessagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesCell.xib; sourceTree = "<group>"; };
@@ -3383,6 +3383,7 @@
 		C1FFD03B1CA3D1E600F62C05 /* registered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registered.png; sourceTree = "<group>"; };
 		C1FFD03C1CA3D1E600F62C05 /* registered@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "registered@2x.png"; sourceTree = "<group>"; };
 		C1FFD03D1CA3D1E600F62C05 /* registered@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "registered@3x.png"; sourceTree = "<group>"; };
+		CE02948420AC0C2200459FC7 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		CE046B17208F56C60042AD4D /* OtherVideosCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherVideosCollectionViewCell.h; sourceTree = "<group>"; };
 		CE046B18208F56C60042AD4D /* OtherVideosCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherVideosCollectionViewCell.m; sourceTree = "<group>"; };
 		CE046B19208F56C60042AD4D /* OtherVideosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherVideosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -3438,6 +3439,8 @@
 		CE6364DD209B3C5E0051FB86 /* KNCirclePercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCirclePercentView.m; sourceTree = "<group>"; };
 		CE6364DE209B3C5E0051FB86 /* KNPercentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNPercentLabel.h; sourceTree = "<group>"; };
 		CE6364DF209B3C5E0051FB86 /* KNPercentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNPercentLabel.m; sourceTree = "<group>"; };
+		CEBA8AF120BC092D00B03476 /* SmallVideoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallVideoDetailViewController.h; sourceTree = "<group>"; };
+		CEBA8AF220BC092D00B03476 /* SmallVideoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallVideoDetailViewController.m; sourceTree = "<group>"; };
 		CEEC57E12090921D000AECA6 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		CEEC57E22090921E000AECA6 /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		CEEC57E72090AB7D000AECA6 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -4191,7 +4194,7 @@
 			children = (
 				18F2399E1D62E4DA00B063C5 /* FeedCell.h */,
 				18F2399F1D62E4DA00B063C5 /* FeedCell.m */,
-				18F239A01D62E4DA00B063C5 /* FeedCell.xib */,
+				CE02948420AC0C2200459FC7 /* FeedCell.xib */,
 				18F239A11D62E4DA00B063C5 /* MessagesCell.h */,
 				18F239A21D62E4DA00B063C5 /* MessagesCell.m */,
 				18F239A31D62E4DA00B063C5 /* MessagesCell.xib */,
@@ -4801,6 +4804,8 @@
 				44B66E9F2026D6DE00E2D6CD /* FeedSearchViewController.h */,
 				44B66EA02026D6DE00E2D6CD /* FeedSearchViewController.m */,
 				44B66EA12026D6DE00E2D6CD /* FeedSearchViewController.xib */,
+				CEBA8AF120BC092D00B03476 /* SmallVideoDetailViewController.h */,
+				CEBA8AF220BC092D00B03476 /* SmallVideoDetailViewController.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -8251,7 +8256,6 @@
 				A321EA9D1D6C46E4006DF047 /* corner_right.png in Resources */,
 				C139BF751C59E79A000BBCF9 /* usa.png in Resources */,
 				C1FFD03F1CA3D1E600F62C05 /* registered@2x.png in Resources */,
-				18F239A81D62E4DA00B063C5 /* FeedCell.xib in Resources */,
 				C1A529BB1C92AFF300C98E8C /* I@3x.png in Resources */,
 				A3AEBCF91CF31195003273DF /* shopicon.png in Resources */,
 				C1FC45541C6C7BA900F7A863 /* private@3x.png in Resources */,
@@ -8743,6 +8747,7 @@
 				09D9E7081CCF6C1B00A49FFA /* about.png in Resources */,
 				A321EABE1D6C46E4006DF047 /* emoji_tab_symbols_icon-selected@2x.png in Resources */,
 				C1FC457A1C6CC2AA00F7A863 /* checkinCancel.png in Resources */,
+				CE02948520AC0C2300459FC7 /* FeedCell.xib in Resources */,
 				C139BF451C58CAB1000BBCF9 /* logo@2x.png in Resources */,
 				A321EAC61D6C46E4006DF047 /* flower_n@2x.png in Resources */,
 				C1FC45361C6C7BA900F7A863 /* commentActive@3x.png in Resources */,
@@ -9293,6 +9298,7 @@
 				0288E6511C918C7A005F266C /* Notification.m in Sources */,
 				CE046B49208F6B310042AD4D /* UIView+WebVideoCache.m in Sources */,
 				C134EE661C9BCCD800180D1E /* MyBuzzardRun.m in Sources */,
+				CEBA8AF320BC092D00B03476 /* SmallVideoDetailViewController.m in Sources */,
 				A39F3B421D016E18003F3119 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				A39F3B3A1D016E18003F3119 /* XMPPLastActivity.m in Sources */,
 				A39F3B781D016E18003F3119 /* XMPPStreamManagement.m in Sources */,
@@ -9710,7 +9716,7 @@
 				GENERATE_PKGINFO_FILE = YES;
 				INSTALL_GROUP = "";
 				INSTALL_OWNER = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.llc.varial;
@@ -9766,7 +9772,7 @@
 				GENERATE_PKGINFO_FILE = YES;
 				INSTALL_GROUP = "";
 				INSTALL_OWNER = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.llc.varial;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
@@ -9790,8 +9796,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_ENTITLEMENTS = Varial/Varial.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -9817,7 +9823,7 @@
 				INFOPLIST_FILE = Varial/Info.plist;
 				INSTALL_GROUP = "";
 				INSTALL_OWNER = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -9835,8 +9841,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.llc.varial;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0305d1ab-e998-4e9c-aceb-988c8d45e7b6";
-				PROVISIONING_PROFILE_SPECIFIER = Varial_AppStore;
+				PROVISIONING_PROFILE = "a030a85f-0dcc-4ecb-8af5-05465509a6ee";
+				PROVISIONING_PROFILE_SPECIFIER = Varial_Dev_Profile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Varial/Varial-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -9853,8 +9859,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_ENTITLEMENTS = Varial/Varial.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -9879,7 +9885,7 @@
 				INFOPLIST_FILE = Varial/Info.plist;
 				INSTALL_GROUP = "";
 				INSTALL_OWNER = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -9897,8 +9903,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.llc.varial;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0305d1ab-e998-4e9c-aceb-988c8d45e7b6";
-				PROVISIONING_PROFILE_SPECIFIER = Varial_AppStore;
+				PROVISIONING_PROFILE = "a030a85f-0dcc-4ecb-8af5-05465509a6ee";
+				PROVISIONING_PROFILE_SPECIFIER = Varial_Dev_Profile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Varial/Varial-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

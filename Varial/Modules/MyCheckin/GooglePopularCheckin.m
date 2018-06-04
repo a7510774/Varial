@@ -234,7 +234,7 @@
     NSMutableDictionary *inputParams = [[NSMutableDictionary alloc] init];
     [inputParams setValue:[Util getFromDefaults:@"auth_token"] forKey:@"auth_token"];
     [inputParams setValue:[NSNumber numberWithInt:pageNumber] forKey:@"page_number"];
-    [inputParams setValue:@"300" forKey:@"per_page"];
+    [inputParams setValue:@"200" forKey:@"per_page"];
     
     
     if (nearByLocationsList.count == 0){
@@ -248,11 +248,12 @@
         {
             self.myLabelLoadingMessage.text = @"加載簽入";
         }
-        self.myConstraintContainerTop.constant = 50.0;
+        self.myConstraintContainerTop.constant = 30.0;
         self.myViewActivityIndicator.type = DGActivityIndicatorAnimationTypeBallClipRotatePulse;
+        self.myViewActivityIndicator.size = 30.0;
         self.myViewActivityIndicator.tintColor = [UIColor yellowColor];
         
-        self.myViewActivityIndicator.frame = CGRectMake(self.myViewActivityIndicator.frame.origin.x, self.myViewActivityIndicator.frame.origin.y, 30.0, 30.0);
+        self.myViewActivityIndicator.frame = CGRectMake(self.myViewActivityIndicator.frame.origin.x, self.myViewActivityIndicator.frame.origin.y, 20.0, 20.0);
         [self.myViewActivityIndicator startAnimating];
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     }

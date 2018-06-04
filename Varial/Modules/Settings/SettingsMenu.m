@@ -85,8 +85,9 @@ BOOL havingEmail, havingPhone,isManual = FALSE;
     
     LoginOptions *login = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginOptions"];
     login.gIsPresentSettingsScreen = YES;
-    UINavigationController * aNavi = [[UINavigationController alloc]initWithRootViewController:login];
-    [self.navigationController pushViewController:aNavi animated:YES];
+//    UINavigationController * aNavi = [[UINavigationController alloc]initWithRootViewController:login];
+//    [[UIApplication sharedApplication] delegate].window.rootViewController = aNavi;
+    [self.navigationController pushViewController:login animated:YES];
 }
 
 //- (IBAction)tappedLanguageButton:(id)sender {

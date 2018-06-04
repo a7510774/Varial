@@ -2758,43 +2758,54 @@
 //Append the media url with base
 - (void)alterTheMediaList:(NSDictionary *)response{
     
-    for (int i=0; i< [[response objectForKey:@"feed_list"] count]; i++) {
-        NSMutableDictionary *dict = [[[response objectForKey:@"feed_list"] objectAtIndex:i] mutableCopy];
-        
-        int postIndex = [Util getMatchedObjectPosition:@"post_id" valueToMatch:[dict valueForKey:@"post_id"] from:feedList type:1];
-        
-        if (postIndex == -1) {
+    if([[response objectForKey:@"feed_list"] count] > 0) {
+        for (int i=0; i< [[response objectForKey:@"feed_list"] count]; i++) {
+            NSMutableDictionary *dict = [[[response objectForKey:@"feed_list"] objectAtIndex:i] mutableCopy];
             
-            NSMutableDictionary *profileImage = [[dict objectForKey:@"posters_profile_image"] mutableCopy];
-            [profileImage setValue: [NSString stringWithFormat:@"%@%@",feedImageUrl,[profileImage  valueForKey:@"profile_image"]] forKey:@"profile_image"];
-            [dict setObject:profileImage forKey:@"posters_profile_image"];
+            int postIndex = [Util getMatchedObjectPosition:@"post_id" valueToMatch:[dict valueForKey:@"post_id"] from:feedList type:1];
             
-            NSMutableArray *mediaList = [[dict valueForKey:@"image_present"] boolValue] ? [[dict objectForKey:@"image"] mutableCopy] : [[dict objectForKey:@"video"] mutableCopy];
-            for (int i=0; i<[mediaList count]; i++) {
-                NSMutableDictionary *media = [[mediaList objectAtIndex:i] mutableCopy];
-                NSString *imageUrl = [NSString stringWithFormat:@"%@%@",feedImageUrl,[media valueForKey:@"media_url"]];
-                [media setValue:imageUrl forKey:@"media_url"];
-                [media setValue:@"true" forKey:@"isEnabled"];
-                [mediaList replaceObjectAtIndex:i withObject:media];
+            if (postIndex == -1) {
+                
+                NSMutableDictionary *profileImage = [[dict objectForKey:@"posters_profile_image"] mutableCopy];
+                [profileImage setValue: [NSString stringWithFormat:@"%@%@",feedImageUrl,[profileImage  valueForKey:@"profile_image"]] forKey:@"profile_image"];
+                [dict setObject:profileImage forKey:@"posters_profile_image"];
+                
+                NSMutableArray *mediaList = [[dict valueForKey:@"image_present"] boolValue] ? [[dict objectForKey:@"image"] mutableCopy] : [[dict objectForKey:@"video"] mutableCopy];
+                for (int i=0; i<[mediaList count]; i++) {
+                    NSMutableDictionary *media = [[mediaList objectAtIndex:i] mutableCopy];
+                    NSString *imageUrl = [NSString stringWithFormat:@"%@%@",feedImageUrl,[media valueForKey:@"media_url"]];
+                    [media setValue:imageUrl forKey:@"media_url"];
+                    [media setValue:@"true" forKey:@"isEnabled"];
+                    [mediaList replaceObjectAtIndex:i withObject:media];
+                }
+                
+                if ([[dict valueForKey:@"image_present"] boolValue]) {
+                    [dict setObject:mediaList forKey:@"image"];
+                }
+                else{
+                    [dict setObject:mediaList forKey:@"video"];
+                }
+                
+                [dict setValue:@"true" forKey:@"isEnabled"];
+                
+                // Add response array to the selected feed type
+                [feedList addObject:dict];
             }
+        }
+        if ([[response objectForKey:@"feed_list"] count] != 0) {
+            [_profileTable reloadData];
             
-            if ([[dict valueForKey:@"image_present"] boolValue]) {
-                [dict setObject:mediaList forKey:@"image"];
-            }
-            else{
-                [dict setObject:mediaList forKey:@"video"];
-            }
-            
-            [dict setValue:@"true" forKey:@"isEnabled"];
-            
-            // Add response array to the selected feed type
-            [feedList addObject:dict];
+            double delayInSeconds = 1.0;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                //code to be executed on the main queue after delay
+                [feedsDesign checkWhichVideoToEnable:_profileTable];
+            });
         }
     }
-    if ([[response objectForKey:@"feed_list"] count] != 0) {
-        [_profileTable reloadData];
-    }
-    
+//    else {
+//        [_profileTable reloadData];
+//    }
 }
 
 //Get user feeds

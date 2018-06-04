@@ -230,7 +230,7 @@
                                             <constraint firstItem="mfl-iw-9cY" firstAttribute="leading" secondItem="Tf3-nL-J30" secondAttribute="trailing" constant="5" id="7te-41-gL6"/>
                                             <constraint firstAttribute="trailing" secondItem="Op5-7U-OyO" secondAttribute="trailing" id="Aud-QE-keK"/>
                                             <constraint firstItem="Op5-7U-OyO" firstAttribute="leading" secondItem="vhc-V8-SyX" secondAttribute="leading" id="Jnq-V7-NpG"/>
-                                            <constraint firstAttribute="height" priority="750" constant="40" placeholder="YES" id="NOU-zr-vie"/>
+                                            <constraint firstAttribute="height" constant="40" placeholder="YES" id="NOU-zr-vie"/>
                                             <constraint firstItem="Tf3-nL-J30" firstAttribute="centerY" secondItem="vhc-V8-SyX" secondAttribute="centerY" id="P1e-mQ-SAc"/>
                                             <constraint firstItem="Tf3-nL-J30" firstAttribute="leading" secondItem="vhc-V8-SyX" secondAttribute="leading" id="WBD-17-cSh"/>
                                             <constraint firstItem="mfl-iw-9cY" firstAttribute="centerY" secondItem="vhc-V8-SyX" secondAttribute="centerY" id="X4X-uS-A50"/>
@@ -240,21 +240,21 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhG-49-9aH" userLabel="message" customClass="TTTAttributedLabel">
-                                        <rect key="frame" x="14" y="48.5" width="272" height="69"/>
+                                        <rect key="frame" x="10" y="48.5" width="280" height="69"/>
                                         <string key="text">This is for the sample text to test.This is for the sample text to test.This is for the sample text to test.This is for the sample text to test.</string>
                                         <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pe3-jX-P2S" customClass="URLPreviewView">
-                                        <rect key="frame" x="10" y="129.5" width="280" height="0.0"/>
+                                        <rect key="frame" x="10" y="134" width="280" height="0.0"/>
                                         <accessibility key="accessibilityConfiguration" identifier="$URLPreview$"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="7ie-er-Wpx"/>
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" tag="50" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRM-Gl-lfn" userLabel="medias">
-                                        <rect key="frame" x="0.0" y="129.5" width="300" height="200"/>
+                                        <rect key="frame" x="0.0" y="134" width="300" height="200"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgD-9I-smd" userLabel="mainPreview">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
@@ -366,7 +366,7 @@
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="$FeedBody$"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="UhG-49-9aH" secondAttribute="trailing" constant="14" id="3nN-x7-6uf"/>
+                                    <constraint firstAttribute="trailing" secondItem="UhG-49-9aH" secondAttribute="trailing" constant="10" id="3nN-x7-6uf"/>
                                     <constraint firstItem="sRM-Gl-lfn" firstAttribute="top" secondItem="pe3-jX-P2S" secondAttribute="bottom" priority="750" constant="10" id="6zK-Mq-vOj" userLabel="urlPreviewMargin on"/>
                                     <constraint firstItem="vhc-V8-SyX" firstAttribute="leading" secondItem="bau-bN-qDp" secondAttribute="leading" constant="10" id="7eZ-Nc-KRH"/>
                                     <constraint firstItem="UhG-49-9aH" firstAttribute="top" secondItem="vhc-V8-SyX" secondAttribute="bottom" priority="999" constant="10" id="E2O-0F-4Rz" userLabel="checkinMargin"/>
@@ -375,8 +375,8 @@
                                     <constraint firstAttribute="trailing" secondItem="sRM-Gl-lfn" secondAttribute="trailing" id="WEi-e5-3jO"/>
                                     <constraint firstItem="pe3-jX-P2S" firstAttribute="top" secondItem="UhG-49-9aH" secondAttribute="bottom" priority="999" constant="10" id="cJy-HU-O4i" userLabel="messageMargin"/>
                                     <constraint firstAttribute="trailing" secondItem="vhc-V8-SyX" secondAttribute="trailing" constant="10" id="doq-J8-B0s"/>
-                                    <constraint firstItem="UhG-49-9aH" firstAttribute="leading" secondItem="bau-bN-qDp" secondAttribute="leading" constant="14" id="gUo-W4-QN9"/>
-                                    <constraint firstItem="vhc-V8-SyX" firstAttribute="top" secondItem="bau-bN-qDp" secondAttribute="top" constant="10" id="jNI-8G-lNT"/>
+                                    <constraint firstItem="UhG-49-9aH" firstAttribute="leading" secondItem="bau-bN-qDp" secondAttribute="leading" constant="10" id="gUo-W4-QN9"/>
+                                    <constraint firstItem="vhc-V8-SyX" firstAttribute="top" secondItem="bau-bN-qDp" secondAttribute="top" constant="5" id="jNI-8G-lNT"/>
                                     <constraint firstAttribute="bottom" secondItem="sRM-Gl-lfn" secondAttribute="bottom" id="khe-Je-vVn"/>
                                     <constraint firstItem="sRM-Gl-lfn" firstAttribute="leading" secondItem="bau-bN-qDp" secondAttribute="leading" id="mMV-c3-yjb"/>
                                     <constraint firstItem="pe3-jX-P2S" firstAttribute="top" secondItem="UhG-49-9aH" secondAttribute="bottom" priority="750" id="mcE-hH-ecC" userLabel="urlPreviewMargin2"/>
@@ -385,10 +385,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEA-3p-BQS" userLabel="options">
-                                <rect key="frame" x="10" y="419.5" width="280" height="36"/>
+                                <rect key="frame" x="10" y="400.5" width="280" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IH-ud-ram">
-                                        <rect key="frame" x="243" y="6" width="37" height="20"/>
+                                        <rect key="frame" x="241" y="6" width="39" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="J2c-jC-zV4"/>
                                         </constraints>
@@ -574,7 +574,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bau-bN-qDp" firstAttribute="top" secondItem="yMO-eL-a6n" secondAttribute="bottom" constant="10" id="7AP-rj-OEQ"/>
+                            <constraint firstItem="bau-bN-qDp" firstAttribute="top" secondItem="yMO-eL-a6n" secondAttribute="bottom" constant="5" id="7AP-rj-OEQ"/>
                             <constraint firstAttribute="trailing" secondItem="dEA-3p-BQS" secondAttribute="trailing" constant="10" id="Ezw-qj-4xm"/>
                             <constraint firstItem="Lo8-RR-FoN" firstAttribute="top" secondItem="yZ7-tC-Wf0" secondAttribute="top" id="HqJ-rF-xFa"/>
                             <constraint firstItem="yMO-eL-a6n" firstAttribute="top" secondItem="6W9-Zf-1iS" secondAttribute="top" constant="10" id="JSe-64-uWe"/>
@@ -631,6 +631,7 @@
                 <outlet property="menuButton" destination="Lo8-RR-FoN" id="47G-Is-UvR"/>
                 <outlet property="message" destination="UhG-49-9aH" id="Uin-M4-RHZ"/>
                 <outlet property="messageMargin" destination="cJy-HU-O4i" id="Cz7-5l-fXj"/>
+                <outlet property="myConstraintShareViewTop" destination="OmK-X0-gOI" id="pZx-Ap-bI8"/>
                 <outlet property="name" destination="d8a-HM-Oll" id="dhk-4V-6JX"/>
                 <outlet property="optionsView" destination="dEA-3p-BQS" id="N1t-AW-u5G"/>
                 <outlet property="playIcon" destination="fgc-3V-7F6" id="ID0-45-A5D"/>

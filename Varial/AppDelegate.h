@@ -42,6 +42,7 @@
 @property (nonatomic) NSMutableDictionary *downloadingMessageTasks, *upDownProgress, *uploadDownloadImage, *videoIds;
 @property (nonatomic) NSMutableDictionary *buzzardRunEventPost;
 @property (nonatomic) NSMutableDictionary *moviePlayer,*searchPlayer;
+@property (nonatomic) NSMutableDictionary *seachVideoPlayer;
 @property (nonatomic) NSString *currentVideoUrl;
 //@property (strong, nonatomic) RTSMediaPlayerController *currentPlayer;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

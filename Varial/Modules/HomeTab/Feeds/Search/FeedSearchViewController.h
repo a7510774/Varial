@@ -24,7 +24,7 @@
     NSInteger intCountRow ;
     NSInteger intCountBigScreen ;
     AppDelegate *delegate;
-     BOOL isLoadMore;
+     BOOL isLoadMore, isSectionHided;
     NSInteger intCountBigScreenForIndexpath;
     NSInteger intCountRowForIndexpath;
 

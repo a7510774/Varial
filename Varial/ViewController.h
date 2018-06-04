@@ -42,6 +42,7 @@
 - (void)setFeedType:(int)type;
 - (void)createEmailAlertView;
 - (void)setBadge;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *myConstraintTabBarHeight;
 
 
 @end

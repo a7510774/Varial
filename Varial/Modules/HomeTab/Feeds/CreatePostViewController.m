@@ -502,7 +502,7 @@ BOOL isCaptured,isMaxFileShown,isComposingDone;
         if(_checkinView.frame.size.height == 0)
             [self setHeaderForCheckIn:YES];
         _checkinTitle.text = [_inputParams valueForKey:@"check_in_name"];
-        [_checkinView setConstraintConstant:40 forAttribute:NSLayoutAttributeHeight];
+        [_checkinView setConstraintConstant:30 forAttribute:NSLayoutAttributeHeight];
         [_clearCheckinButton setHidden:NO];
         [self changeCheckinButton:YES];
     }

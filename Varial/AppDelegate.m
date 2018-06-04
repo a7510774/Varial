@@ -39,6 +39,7 @@ BMKMapManager* _mapManager;
     _upDownProgress = [[NSMutableDictionary alloc] init];
     _uploadDownloadImage = [[NSMutableDictionary alloc] init];
     _moviePlayer = [[NSMutableDictionary alloc] init];
+    _seachVideoPlayer = [[NSMutableDictionary alloc] init];
     _searchPlayer = [[NSMutableDictionary alloc] init];
     _videoUrls = [[NSMutableArray alloc] init];
     _playerViewController = [[AVPlayerViewController alloc] init];

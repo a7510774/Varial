@@ -11,6 +11,7 @@
 #import "SignUpViewController.h"
 #import "IQUIView+IQKeyboardToolbar.h"
 #import "ForgotPasswordViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface SignInViewController ()
 
@@ -38,6 +39,7 @@ UIStoryboard *myMainStoryboard;
     [Util createRoundedCorener:_myViewLoginBtn withCorner:5.0];
     [self changeLanguageForAllObjects];
     [self.myTxtFldPassword addDoneOnKeyboardWithTarget:self action:@selector(doneAction:)];
+    [[IQKeyboardManager sharedManager] setEnable:YES];
 }
 
 - (void)setUpModel {
@@ -148,7 +150,7 @@ UIStoryboard *myMainStoryboard;
     if([[Util getFromDefaults:@"language"] isEqualToString:@"en-US"])
     {
         [self.myViewHeader setHeader:NSLocalizedString(TITLE_SIGNIN, nil)];
-        _myTxtFldUsername.placeholder = @"Username";
+        _myTxtFldUsername.placeholder = @"Email";
         _myTxtFldPassword.placeholder = @"Password";
         [_myBtnForgotPassword setTitle:@"Forgot Password" forState:UIControlStateNormal];
         [_myBtnSignIn setTitle:@"LOGIN" forState:UIControlStateNormal];
@@ -158,8 +160,8 @@ UIStoryboard *myMainStoryboard;
     
     else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
     {
-        [self.myViewHeader setHeader:NSLocalizedString(@"签到", nil)];
-        _myTxtFldUsername.placeholder = @"用户名";
+        [self.myViewHeader setHeader:NSLocalizedString(@"登录", nil)];
+        _myTxtFldUsername.placeholder = @"電子郵件";
         _myTxtFldPassword.placeholder = @"密码";
         [_myBtnForgotPassword setTitle:@"忘记密码" forState:UIControlStateNormal];
         [_myBtnSignIn setTitle:@"登录" forState:UIControlStateNormal];

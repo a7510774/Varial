@@ -755,7 +755,7 @@ BOOL isRefresh = FALSE, canDonate = FALSE;
             [fcell.gBtnMuteUnMute addTarget:self action:@selector(muteUnmutePressed:) forControlEvents:UIControlEventTouchUpInside];
             fcell.gBtnMuteUnMute.tag = indexPath.row;
         
-            feedsDesign.feeds = feedList;
+            feedsDesign.feeds = feedList;      
             feedsDesign.feedTable = tableView;
             feedsDesign.mediaBaseUrl= strMediaUrl;
             feedsDesign.viewController = self;
@@ -1486,6 +1486,13 @@ BOOL isRefresh = FALSE, canDonate = FALSE;
     }
     if ([[response objectForKey:@"feed_list"] count] != 0) {
         [_profileTable reloadData];
+        
+        double delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            //code to be executed on the main queue after delay
+            [feedsDesign checkWhichVideoToEnable:_profileTable];
+        });
     }
 }
 

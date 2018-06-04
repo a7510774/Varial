@@ -640,6 +640,12 @@
     }
     if ([[response objectForKey:@"feed_list"] count] != 0) {
         [self.myTblView reloadData];
+        double delayInSeconds = 1.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            //code to be executed on the main queue after delay
+            [feedsDesign checkWhichVideoToEnable:_myTblView];
+        });
     }
 }
 
@@ -743,4 +749,20 @@
     });
 }
 
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    //    [feedsDesign playVideoConditionally];
+    //    [feedsDesign checkWhichVideoToEnable:_feedsTable];
+    [feedsDesign stopAllVideos];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate {
+    [feedsDesign checkWhichVideoToEnable:_myTblView];
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [feedsDesign checkWhichVideoToEnable:_myTblView];
+
+}
+    
 @end

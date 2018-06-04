@@ -40,17 +40,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEr-XG-zHB">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-nr-ga0" customClass="DGActivityIndicatorView">
-                            <rect key="frame" x="10" y="0.0" width="80" height="50"/>
+                            <rect key="frame" x="10" y="0.0" width="80" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="dND-kd-vIh"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Checkins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-ZX-C5W">
-                            <rect key="frame" x="100" y="14" width="265" height="21"/>
+                            <rect key="frame" x="100" y="4" width="265" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="VAV-Pe-6tS"/>
                             </constraints>
@@ -63,7 +63,7 @@
                     <constraints>
                         <constraint firstItem="FTZ-nr-ga0" firstAttribute="leading" secondItem="IEr-XG-zHB" secondAttribute="leading" constant="10" id="0iP-fS-BaF"/>
                         <constraint firstAttribute="bottom" secondItem="FTZ-nr-ga0" secondAttribute="bottom" id="Cn4-5Z-JH4"/>
-                        <constraint firstAttribute="height" constant="50" id="ISw-cw-XdN"/>
+                        <constraint firstAttribute="height" constant="30" id="ISw-cw-XdN"/>
                         <constraint firstAttribute="trailing" secondItem="GXY-ZX-C5W" secondAttribute="trailing" constant="10" id="QBh-HU-kdD"/>
                         <constraint firstItem="FTZ-nr-ga0" firstAttribute="top" secondItem="IEr-XG-zHB" secondAttribute="top" id="VCW-Gz-640"/>
                         <constraint firstItem="GXY-ZX-C5W" firstAttribute="centerY" secondItem="FTZ-nr-ga0" secondAttribute="centerY" id="eB2-ef-x05"/>

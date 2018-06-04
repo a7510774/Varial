@@ -31,7 +31,7 @@
 @property (nonatomic) UITableView *feedTable;
 //@property (nonatomic) AVPlayerViewController *playerViewController;
 @property (nonatomic, strong) UIViewController *viewController;
-@property (nonatomic) BOOL isNoNeedProfileRedirection, isNoNeedNameRedirection, myBoolIsVideoViewedInBigScreen, gBoolIsFromFeeds, isVolumeMuted, isVolumeClicked;
+@property (nonatomic) BOOL isNoNeedProfileRedirection, isNoNeedNameRedirection, myBoolIsVideoViewedInBigScreen, gBoolIsFromFeeds, isVolumeMuted, isVolumeClicked, gIsFromChannel;
 
 typedef void (^CompletionBlockForFeed)(BOOL);
 
@@ -47,6 +47,7 @@ typedef void (^CompletionBlockForFeed)(BOOL);
 - (void)playInlineVideo:(FeedCell *)cell withSize:(CGSize)size andUrl:(NSString *)videoUrl;
 -(void)prepareTheVideo:(NSString *)videoURL;
 -(void)stopAllVideos;
+-(void)muteAllVideos;
 - (void)playVideo:(NSString *)mediaUrl withThumb:(UIImage *)thumbImg fromController:(UIViewController *)controller withUrl:(NSString *)thumbUrl;
 - (void)increaseViewCount:(NSString *)mediaUrl;
 -(void)checkWhichVideoToEnable :(UITableView *)tableView;

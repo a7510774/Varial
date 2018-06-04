@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
             endingLineNumber = "125"
-            landmarkName = "-addBookmark:fromArray:forControl:"
+            landmarkName = "-addStar:fromArray:forControl:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -49,7 +49,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
     [self.feedsTable registerNib:[UINib nibWithNibName:@"MessagesCell" bundle:nil] forCellReuseIdentifier:@"MessagesCell"];
     [self.feedsTable registerNib:[UINib nibWithNibName:@"TeamFeedCell" bundle:nil] forCellReuseIdentifier:@"TeamFeedCell"];
     
-//    [self getFeedValuesFromSelectedType];
+    //    [self getFeedValuesFromSelectedType];
     if ([rootViewController.feedTypeList count] == 0)
     {
         [self getFeedsTypesList];
@@ -64,7 +64,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
     feedsDesign = [[FeedsDesign alloc] init];
     
     _feedsTable.rowHeight = UITableViewAutomaticDimension;
-
+    
     [self scrollViewDidScroll:_feedsTable];
     
     // Notification for View Count Increase
@@ -85,7 +85,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
 {
     NSLog(@"Feeds viewDidAppear %d", animated);
     [super viewDidAppear:animated];
-
+    
     [self designTheView];
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -104,8 +104,8 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 -(void)PlayVideoOnAppForeground
 {
-//    NSLog(@"PlayVideoOnAppForeground");
-//    [feedsDesign checkWhichVideoToEnable:_feedsTable];
+    //    NSLog(@"PlayVideoOnAppForeground");
+    //    [feedsDesign checkWhichVideoToEnable:_feedsTable];
 }
 
 - (void)StopVideoOnAppBackground {
@@ -148,7 +148,6 @@ BOOL needToShowFeedIcon,isShareAvailable;
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     NSLog(@"Feeds view will disappear");
-    [feedsDesign stopAllVideos];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -162,7 +161,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
-    
+    [feedsDesign stopAllVideos];
 }
 
 //Scroll to top while clicking the new feed button
@@ -211,7 +210,6 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 - (void)updateTheFeedDetails{
     [_feedsTable reloadDataWithAnimation];
-    
     
     selectedPostIndex = -1;
 }
@@ -269,14 +267,14 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 - (void)insertRowAtTop {
     
-//    __weak Feeds *feedRefreshSelf = self ;
+    //    __weak Feeds *feedRefreshSelf = self ;
     int64_t delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         //[self getNewFeeds];
         [self getFeedsList];
-//        [feedRefreshSelf.feedsTable.pullToRefreshView stopAnimating];
-//        [refreshControl endRefreshing];
+        //        [feedRefreshSelf.feedsTable.pullToRefreshView stopAnimating];
+        //        [refreshControl endRefreshing];
     });
 }
 
@@ -296,6 +294,14 @@ BOOL needToShowFeedIcon,isShareAvailable;
         
         // Reload Table View
         [_feedsTable reloadData];
+        
+        //        double delayInSeconds = 0.5;
+        //        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        //        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        //            //code to be executed on the main queue after delay
+        //            [feedsDesign checkWhichVideoToEnable:_feedsTable];
+        //        });
+        //
         
         if ([feeds count] == 1 && [[feeds[0] valueForKey:@"is_local"] isEqualToString:@"true"]) {
             [self getFeedsList];
@@ -325,7 +331,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
         }
         
         [feedRefreshSelf.feedsTable.infiniteScrollingView stopAnimating];
-//        [refreshControl endRefreshing];
+        //        [refreshControl endRefreshing];
     });
 }
 
@@ -421,7 +427,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
                 if ([topResult count] != 0) {
                     [_feedsTable reloadDataWithAnimation];
                 } else {
-//                    [feedsDesign checkWhichVideoToEnable:_feedsTable];
+                    //                    [feedsDesign checkWhichVideoToEnable:_feedsTable];
                 }
             }
         }
@@ -469,6 +475,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
                 
                 [self alterTheMediaList:response];
             }
+            
         }
         else
         {
@@ -495,16 +502,16 @@ BOOL needToShowFeedIcon,isShareAvailable;
     __weak Feeds *feedRefreshSelf = self;
     
     // setup pull-to-refresh
-//    [self.feedsTable addPullToRefreshWithActionHandler:^{
-//        [feedRefreshSelf insertRowAtTop];
-//    }];
-//    feedRefreshSelf.feedsTable.pullToRefreshView.arrowColor = [UIColor whiteColor];
-//    feedRefreshSelf.feedsTable.pullToRefreshView.textColor = [UIColor whiteColor];
-//    [feedRefreshSelf.feedsTable.pullToRefreshView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
-//    
+    //    [self.feedsTable addPullToRefreshWithActionHandler:^{
+    //        [feedRefreshSelf insertRowAtTop];
+    //    }];
+    //    feedRefreshSelf.feedsTable.pullToRefreshView.arrowColor = [UIColor whiteColor];
+    //    feedRefreshSelf.feedsTable.pullToRefreshView.textColor = [UIColor whiteColor];
+    //    [feedRefreshSelf.feedsTable.pullToRefreshView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
+    //
     refreshControl = [[UIRefreshControl alloc] init];
-//    self.refreshControl.backgroundColor = [UIColor purpleColor];
-//    self.refreshControl.tintColor = [UIColor whiteColor];
+    //    self.refreshControl.backgroundColor = [UIColor purpleColor];
+    //    self.refreshControl.tintColor = [UIColor whiteColor];
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10")) {
         self.feedsTable.refreshControl = refreshControl;
@@ -513,8 +520,8 @@ BOOL needToShowFeedIcon,isShareAvailable;
     }
     
     [refreshControl addTarget:self
-                            action:@selector(insertRowAtTop)
-                  forControlEvents:UIControlEventValueChanged];
+                       action:@selector(insertRowAtTop)
+             forControlEvents:UIControlEventValueChanged];
     
     // setup infinite scrolling
     [self.feedsTable addInfiniteScrollingWithActionHandler:^{
@@ -545,7 +552,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
 //            createPostViewController.isPostFromFeeds = nil;
 //            createPostViewController.isPostFromTeam = selectedFeedTypeName;
 //        }
-//        
+//
 //        [self.navigationController pushViewController:createPostViewController animated:YES];
 //    }
 //    else{
@@ -634,52 +641,52 @@ BOOL needToShowFeedIcon,isShareAvailable;
             [adCell updateImage];
             return adCell;
         } else
-        
-        if ([[[feeds objectAtIndex:indexPath.row] objectForKey:@"is_team_activity"] boolValue]) {
-            fcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"TeamFeedCell"];
-            if (fcell == nil)
-            {
-                fcell = [[FeedCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TeamFeedCell"];
-            }
             
-            fcell.selectionStyle = UITableViewCellSelectionStyleNone;
-            fcell.name.delegate =self;
-            NSDictionary *Values = [[feeds objectAtIndex:indexPath.row] objectForKey:@"activity"];
-            [Util createTeamActivityLabel:fcell.name fromValues:Values];
-            fcell.date.text = [Util timeStamp:[[[feeds objectAtIndex:indexPath.row] objectForKey:@"time_stamp"] longValue]];
-            fcell.backgroundColor = [UIColor clearColor];
-            return fcell;
-        }
-        else
-        {
-            if([feeds count] > 0){
-                static NSString *cellIdentifier = nil;
-                cellIdentifier = ([[[feeds objectAtIndex:indexPath.row] objectForKey:@"image_present"] boolValue] || [[[feeds objectAtIndex:indexPath.row] objectForKey:@"video_present"] boolValue])? @"FeedCell" : @"MessagesCell";
-                
-                fcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            if ([[[feeds objectAtIndex:indexPath.row] objectForKey:@"is_team_activity"] boolValue]) {
+                fcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"TeamFeedCell"];
                 if (fcell == nil)
                 {
-                    fcell = [[FeedCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+                    fcell = [[FeedCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TeamFeedCell"];
+                }
+                
+                fcell.selectionStyle = UITableViewCellSelectionStyleNone;
+                fcell.name.delegate =self;
+                NSDictionary *Values = [[feeds objectAtIndex:indexPath.row] objectForKey:@"activity"];
+                [Util createTeamActivityLabel:fcell.name fromValues:Values];
+                fcell.date.text = [Util timeStamp:[[[feeds objectAtIndex:indexPath.row] objectForKey:@"time_stamp"] longValue]];
+                fcell.backgroundColor = [UIColor clearColor];
+                return fcell;
+            }
+            else
+            {
+                if([feeds count] > 0){
+                    static NSString *cellIdentifier = nil;
+                    cellIdentifier = ([[[feeds objectAtIndex:indexPath.row] objectForKey:@"image_present"] boolValue] || [[[feeds objectAtIndex:indexPath.row] objectForKey:@"video_present"] boolValue])? @"FeedCell" : @"MessagesCell";
+                    
+                    fcell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+                    if (fcell == nil)
+                    {
+                        fcell = [[FeedCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+                    }
+                }
+                
+                // Mute Button Actions
+                [fcell.gBtnMuteUnMute addTarget:self action:@selector(muteUnmutePressed:) forControlEvents:UIControlEventTouchUpInside];
+                fcell.gBtnMuteUnMute.tag = indexPath.row;
+                
+                if ([feeds count] > indexPath.row) {
+                    
+                    feedsDesign.feeds = feeds;
+                    feedsDesign.feedTable = tableView;
+                    feedsDesign.mediaBaseUrl= mediaBaseUrl;
+                    feedsDesign.viewController = self;
+                    // set Is From Feeds True
+                    feedsDesign.gBoolIsFromFeeds = YES;
+                    feedsDesign.isVolumeClicked = NO;
+                    //                feedsDesign.delegate = self;
+                    [feedsDesign designTheContainerView:fcell forFeedData:[feeds objectAtIndex:indexPath.row] mediaBase:mediaBaseUrl forDelegate:self tableView:tableView];
                 }
             }
-            
-            // Mute Button Actions
-            [fcell.gBtnMuteUnMute addTarget:self action:@selector(muteUnmutePressed:) forControlEvents:UIControlEventTouchUpInside];
-            fcell.gBtnMuteUnMute.tag = indexPath.row;
-            
-            if ([feeds count] > indexPath.row) {
-                
-                feedsDesign.feeds = feeds;
-                feedsDesign.feedTable = tableView;
-                feedsDesign.mediaBaseUrl= mediaBaseUrl;
-                feedsDesign.viewController = self;
-                // set Is From Feeds True
-                feedsDesign.gBoolIsFromFeeds = YES;
-                feedsDesign.isVolumeClicked = NO;
-//                feedsDesign.delegate = self;
-                [feedsDesign designTheContainerView:fcell forFeedData:[feeds objectAtIndex:indexPath.row] mediaBase:mediaBaseUrl forDelegate:self tableView:tableView];
-            }
-        }
         fcell.backgroundColor = [UIColor clearColor];
         fcell.shareView.hidden = YES;
         fcell.shareViewHeightConstraint.constant = 0.0;
@@ -687,15 +694,15 @@ BOOL needToShowFeedIcon,isShareAvailable;
         if ([isShare isEqualToString:@"1"]) {
             fcell.shareView.hidden = NO;
             fcell.shareViewHeightConstraint.constant = 60.0;
-//            [fcell.shareView addConstraint:[NSLayoutConstraint constraintWithItem:fcell.shareView
-//                                                              attribute:NSLayoutAttributeHeight
-//                                                              relatedBy:NSLayoutRelationGreaterThanOrEqual
-//                                                                 toItem:nil
-//                                                              attribute: NSLayoutAttributeNotAnAttribute
-//                                                             multiplier:1
-//                                                               constant:70]];
+            //            [fcell.shareView addConstraint:[NSLayoutConstraint constraintWithItem:fcell.shareView
+            //                                                              attribute:NSLayoutAttributeHeight
+            //                                                              relatedBy:NSLayoutRelationGreaterThanOrEqual
+            //                                                                 toItem:nil
+            //                                                              attribute: NSLayoutAttributeNotAnAttribute
+            //                                                             multiplier:1
+            //                                                               constant:70]];
             NSString * sharedPerson = feeds[indexPath.row][@"share_details"][@"name"];
-//            NSString * postOwnerName = feeds[indexPath.row][@"name"];
+            //            NSString * postOwnerName = feeds[indexPath.row][@"name"];
             
             NSString * postOwnerName = [NSString stringWithFormat:@"%@'s ",feeds[indexPath.row][@"name"]];
             
@@ -705,7 +712,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
                                        placeholderImage:nil
                                                 options:indexPath.row == 0 ? SDWebImageRefreshCached : 0];
             UIColor *color = [UIColor colorWithRed:153.0/255.0f green:153.0/255.0f blue:153.0/255.0f alpha:1.0];
-//            UIFont * font = [UIFont systemFontOfSize:14.0];
+            //            UIFont * font = [UIFont systemFontOfSize:14.0];
             NSDictionary *attrs = @{ NSForegroundColorAttributeName : color};
             NSMutableAttributedString * combinedStr = [[NSMutableAttributedString alloc]init];
             NSAttributedString *attrStr2;
@@ -872,9 +879,9 @@ BOOL needToShowFeedIcon,isShareAvailable;
             
             NSLog(@"TableView did select: reloadData");
             //[_feedsTable reloadDataWithAnimation];
-           // [self.feedsTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
-
-           // [_feedsTable reloadData];
+            // [self.feedsTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+            
+            // [_feedsTable reloadData];
         }
     }
     else{
@@ -897,31 +904,31 @@ BOOL needToShowFeedIcon,isShareAvailable;
         inviteFriends.getSearchString = stringWithoutSpecialChar;
         [self.navigationController pushViewController:inviteFriends animated:YES];
     }
-//
-//        CGPoint hitPoint = [label convertPoint:CGPointZero toView:self.feedsTable];
-//        NSIndexPath *indexpath = [self.feedsTable indexPathForRowAtPoint:hitPoint];
-//        if (![[[feeds objectAtIndex:indexpath.row] objectForKey:@"is_local"] isEqualToString:@"true"]) {
-//            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-//            FriendProfile *profile = [storyBoard instantiateViewControllerWithIdentifier:@"FriendProfile"];
-//
-////            profile.friendId = [feeds objectAtIndex:indexpath.row][@"post_owner_id"];
-////            profile.friendName = [feeds objectAtIndex:indexpath.row][@"name"];
-//            //profile.friendName = [feeds objectAtIndex:indexpath.row][@"name"];
-//
-//            profile.friendId = @"";
-//            profile.friendName = @"";
-//            profile.strNameTag = [tag stringByReplacingOccurrencesOfString:@"@" withString:@""];
-//            [self.navigationController pushViewController:profile animated:YES];
-//        }
-//    }
+    //
+    //        CGPoint hitPoint = [label convertPoint:CGPointZero toView:self.feedsTable];
+    //        NSIndexPath *indexpath = [self.feedsTable indexPathForRowAtPoint:hitPoint];
+    //        if (![[[feeds objectAtIndex:indexpath.row] objectForKey:@"is_local"] isEqualToString:@"true"]) {
+    //            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    //            FriendProfile *profile = [storyBoard instantiateViewControllerWithIdentifier:@"FriendProfile"];
+    //
+    ////            profile.friendId = [feeds objectAtIndex:indexpath.row][@"post_owner_id"];
+    ////            profile.friendName = [feeds objectAtIndex:indexpath.row][@"name"];
+    //            //profile.friendName = [feeds objectAtIndex:indexpath.row][@"name"];
+    //
+    //            profile.friendId = @"";
+    //            profile.friendName = @"";
+    //            profile.strNameTag = [tag stringByReplacingOccurrencesOfString:@"@" withString:@""];
+    //            [self.navigationController pushViewController:profile animated:YES];
+    //        }
+    //    }
     
-//    else {
-//        InviteFriends *inviteFriends = [self.storyboard instantiateViewControllerWithIdentifier:@"InviteFriends"];
-//        NSString *stringWithoutSpecialChar = [tag
-//                                              stringByReplacingOccurrencesOfString:@"@" withString:@""];
-//        inviteFriends.getSearchString = stringWithoutSpecialChar;
-//        [self.navigationController pushViewController:inviteFriends animated:YES];
-//    }
+    //    else {
+    //        InviteFriends *inviteFriends = [self.storyboard instantiateViewControllerWithIdentifier:@"InviteFriends"];
+    //        NSString *stringWithoutSpecialChar = [tag
+    //                                              stringByReplacingOccurrencesOfString:@"@" withString:@""];
+    //        inviteFriends.getSearchString = stringWithoutSpecialChar;
+    //        [self.navigationController pushViewController:inviteFriends animated:YES];
+    //    }
 }
 
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
@@ -1053,65 +1060,65 @@ BOOL needToShowFeedIcon,isShareAvailable;
 -(void)ShowSharedMenu:(UITapGestureRecognizer *)tapRecognizer
 {
     [self ShowMenu:tapRecognizer];
-//    if([[Util sharedInstance] getNetWorkStatus])
-//    {
-//        CGPoint buttonPosition = [tapRecognizer.view convertPoint:CGPointZero toView:self.feedsTable];
-//        NSIndexPath *indexPath = [self.feedsTable indexPathForRowAtPoint:buttonPosition];
-//        menuPosition = indexPath;
-//
-//        if ([feeds count] > indexPath.row) {
-//
-//            NSDictionary *feed = [feeds objectAtIndex:indexPath.row];
-//
-//            if ([selectedFeedType intValue] == 2) // Private Feeds
-//            {
-//                // Hide already showing popover
-//                [self.menuPopover dismissMenuPopover];
-//
-//                if ([[feed valueForKey:@"is_local"] boolValue]) {
-//                    self.menuPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(buttonPosition.x - 105, buttonPosition.y + 22 - _feedsTable.contentOffset.y, 140, 42) menuItems:@[NSLocalizedString(@"Cancel Upload",nil)]];
-//                }
-//                else{
-//                    self.menuPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(buttonPosition.x - 105, buttonPosition.y + 22 - _feedsTable.contentOffset.y, 140, 130) menuItems:
-//                                        @[NSLocalizedString(EDIT_MENU,nil),
-//                                          NSLocalizedString(DELETE_MENU,nil),
-//                                          NSLocalizedString(POST_TO_PUBLIC,nil),
-//                                          NSLocalizedString(POST_TO_FRIENDS,nil)]];
-//                }
-//                self.menuPopover.menuPopoverDelegate = self;
-//                self.menuPopover.tag = 100;
-//                [self.menuPopover showInView:self.view];
-//            }
-//            else{
-//                UIMenuController *menucontroller=[UIMenuController sharedMenuController];
-//
-//                if ([[feed valueForKey:@"is_local"] boolValue]) {
-//
-//                    UIMenuItem *Menuitem=[[UIMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel Upload", nil) action:@selector(DeletePost:)];
-//                    [menucontroller setMenuItems:[NSArray arrayWithObjects:Menuitem,nil]];
-//
-//                }
-//                else{
-//                    UIMenuItem *Menuitem=[[UIMenuItem alloc] initWithTitle:NSLocalizedString(DELETE_MENU, nil) action:@selector(DeletePost:)];
-//                    [menucontroller setMenuItems:[NSArray arrayWithObjects:Menuitem,nil]];
-//                }
-//
-//                //It's mandatory
-//                [self becomeFirstResponder];
-//                //It's also mandatory ...remeber we've added a mehod on view class
-//                if([self canBecomeFirstResponder])
-//                {
-//                    UIButton *btn = (UIButton *)tapRecognizer.view;
-//                    [menucontroller setTargetRect:CGRectMake(10,10, 0, 200) inView:btn];
-//                    [menucontroller setMenuVisible:YES animated:YES];
-//                }
-//            }
-//
-//        }
-//    }
-//    else{
-//        [appDelegate.networkPopup show];
-//    }
+    //    if([[Util sharedInstance] getNetWorkStatus])
+    //    {
+    //        CGPoint buttonPosition = [tapRecognizer.view convertPoint:CGPointZero toView:self.feedsTable];
+    //        NSIndexPath *indexPath = [self.feedsTable indexPathForRowAtPoint:buttonPosition];
+    //        menuPosition = indexPath;
+    //
+    //        if ([feeds count] > indexPath.row) {
+    //
+    //            NSDictionary *feed = [feeds objectAtIndex:indexPath.row];
+    //
+    //            if ([selectedFeedType intValue] == 2) // Private Feeds
+    //            {
+    //                // Hide already showing popover
+    //                [self.menuPopover dismissMenuPopover];
+    //
+    //                if ([[feed valueForKey:@"is_local"] boolValue]) {
+    //                    self.menuPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(buttonPosition.x - 105, buttonPosition.y + 22 - _feedsTable.contentOffset.y, 140, 42) menuItems:@[NSLocalizedString(@"Cancel Upload",nil)]];
+    //                }
+    //                else{
+    //                    self.menuPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(buttonPosition.x - 105, buttonPosition.y + 22 - _feedsTable.contentOffset.y, 140, 130) menuItems:
+    //                                        @[NSLocalizedString(EDIT_MENU,nil),
+    //                                          NSLocalizedString(DELETE_MENU,nil),
+    //                                          NSLocalizedString(POST_TO_PUBLIC,nil),
+    //                                          NSLocalizedString(POST_TO_FRIENDS,nil)]];
+    //                }
+    //                self.menuPopover.menuPopoverDelegate = self;
+    //                self.menuPopover.tag = 100;
+    //                [self.menuPopover showInView:self.view];
+    //            }
+    //            else{
+    //                UIMenuController *menucontroller=[UIMenuController sharedMenuController];
+    //
+    //                if ([[feed valueForKey:@"is_local"] boolValue]) {
+    //
+    //                    UIMenuItem *Menuitem=[[UIMenuItem alloc] initWithTitle:NSLocalizedString(@"Cancel Upload", nil) action:@selector(DeletePost:)];
+    //                    [menucontroller setMenuItems:[NSArray arrayWithObjects:Menuitem,nil]];
+    //
+    //                }
+    //                else{
+    //                    UIMenuItem *Menuitem=[[UIMenuItem alloc] initWithTitle:NSLocalizedString(DELETE_MENU, nil) action:@selector(DeletePost:)];
+    //                    [menucontroller setMenuItems:[NSArray arrayWithObjects:Menuitem,nil]];
+    //                }
+    //
+    //                //It's mandatory
+    //                [self becomeFirstResponder];
+    //                //It's also mandatory ...remeber we've added a mehod on view class
+    //                if([self canBecomeFirstResponder])
+    //                {
+    //                    UIButton *btn = (UIButton *)tapRecognizer.view;
+    //                    [menucontroller setTargetRect:CGRectMake(10,10, 0, 200) inView:btn];
+    //                    [menucontroller setMenuVisible:YES animated:YES];
+    //                }
+    //            }
+    //
+    //        }
+    //    }
+    //    else{
+    //        [appDelegate.networkPopup show];
+    //    }
 }
 
 
@@ -1133,19 +1140,19 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 -(void)sharedReportButtonAction:(UITapGestureRecognizer *)tapRecognizer{
     [self reportButtonAction:tapRecognizer];
-//    if([[Util sharedInstance] getNetWorkStatus])
-//    {
-//        CGPoint buttonPosition = [tapRecognizer.view convertPoint:CGPointZero toView:self.feedsTable];
-//        NSIndexPath *indexPath = [self.feedsTable indexPathForRowAtPoint:buttonPosition];
-//        reportFeed = [feeds objectAtIndex:indexPath.row];
-//
-//        [self.reportPopover dismissMenuPopover];
-//
-//        self.reportPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(buttonPosition.x - 105, buttonPosition.y + 22 - _feedsTable.contentOffset.y, 140, 84) menuItems:@[NSLocalizedString(REPORT_THE_POST,nil),NSLocalizedString(BLOCK_THE_USER, nil)]];
-//        self.reportPopover.menuPopoverDelegate = self;
-//        self.reportPopover.tag = 101;
-//        [self.reportPopover showInView:self.view];
-//    }
+    //    if([[Util sharedInstance] getNetWorkStatus])
+    //    {
+    //        CGPoint buttonPosition = [tapRecognizer.view convertPoint:CGPointZero toView:self.feedsTable];
+    //        NSIndexPath *indexPath = [self.feedsTable indexPathForRowAtPoint:buttonPosition];
+    //        reportFeed = [feeds objectAtIndex:indexPath.row];
+    //
+    //        [self.reportPopover dismissMenuPopover];
+    //
+    //        self.reportPopover = [[MLKMenuPopover alloc] initWithFrame:CGRectMake(buttonPosition.x - 105, buttonPosition.y + 22 - _feedsTable.contentOffset.y, 140, 84) menuItems:@[NSLocalizedString(REPORT_THE_POST,nil),NSLocalizedString(BLOCK_THE_USER, nil)]];
+    //        self.reportPopover.menuPopoverDelegate = self;
+    //        self.reportPopover.tag = 101;
+    //        [self.reportPopover showInView:self.view];
+    //    }
 }
 // Delegate method for MLKMenuPopover
 - (void)menuPopover:(MLKMenuPopover *)menuPopover didSelectMenuItemAtIndex:(NSInteger)selectedIndex
@@ -1160,7 +1167,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
         {
             int clickedIndex = (int) selectedIndex;
             if (clickedIndex == 0) {
-//                movePostId = [[feeds objectAtIndex:menuPosition.row] objectForKey:@"post_id"];
+                //                movePostId = [[feeds objectAtIndex:menuPosition.row] objectForKey:@"post_id"];
                 [self editPost];
             }
             else if (clickedIndex == 1) {
@@ -1265,7 +1272,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
             EditPostViewController *editPostController = [[UIStoryboard storyboardWithName:@"Post" bundle:nil] instantiateViewControllerWithIdentifier:@"EditViewController"];
             
             [editPostController setPostInfo:postInfo];
-
+            
             [self.navigationController presentViewController:editPostController animated:YES completion:nil];
         }
     }
@@ -1588,7 +1595,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
                 
                 // If page load and Pull to to refresh -> remove all records and reload the records
                 for (int i =0; i<[feeds count]; i++) {
-//                    if ([[[feeds objectAtIndex:i] objectForKey:@"is_local"] isEqualToString:@"false"]) {
+                    //                    if ([[[feeds objectAtIndex:i] objectForKey:@"is_local"] isEqualToString:@"false"]) {
                     if (![[[feeds objectAtIndex:i] objectForKey:@"is_local"] isEqualToString:@"true"]) {
                         [feeds removeObjectAtIndex:i];
                         i--;
@@ -1747,9 +1754,16 @@ BOOL needToShowFeedIcon,isShareAvailable;
     
     if ([[response objectForKey:@"feed_list"] count] != 0) {
         NSLog(@"alterTheMediaList reloadData");
-       // [_feedsTable reloadDataWithAnimation];
+        // [_feedsTable reloadDataWithAnimation];
         
         [_feedsTable reloadData];
+        
+        double delayInSeconds = 0.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            //code to be executed on the main queue after delay
+            [feedsDesign checkWhichVideoToEnable:_feedsTable];
+        });
     }
     
 }
@@ -1946,13 +1960,13 @@ BOOL needToShowFeedIcon,isShareAvailable;
         NSMutableDictionary *media = [medias objectAtIndex:0];
         NSDictionary *config = [[NSUserDefaults standardUserDefaults] objectForKey:@"mediaConfig"];
         NSNumber *mediaSize = [config objectForKey:@"default_video_size"];
-//        MBProgressHUD *loader = [Util showLoading];
+        //        MBProgressHUD *loader = [Util showLoading];
         
         // Using Photos library
         PHAsset *asset = [media valueForKey:@"asset"];
         if (asset != nil) {
             PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
-//            options.deliveryMode = PHVideoRequestOptionsDeliveryModeMediumQualityFormat;
+            //            options.deliveryMode = PHVideoRequestOptionsDeliveryModeMediumQualityFormat;
             options.deliveryMode = PHVideoRequestOptionsVersionCurrent;
             
             [[PHImageManager defaultManager] requestAVAssetForVideo:asset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
@@ -1965,9 +1979,9 @@ BOOL needToShowFeedIcon,isShareAvailable;
                         [media setObject:[outputURL absoluteString] forKey:@"mediaUrl"];
                         [media setObject:mediaData forKey:@"assetData"];
                         
-//                        dispatch_async(dispatch_get_main_queue(), ^{
-//                            [loader hide:YES];
-//                        });
+                        //                        dispatch_async(dispatch_get_main_queue(), ^{
+                        //                            [loader hide:YES];
+                        //                        });
                         
                         if (![self isMediaPostCancel:[inputparams objectForKey:@"unique_id"]]) {
                             [self uploadPost:inputparams Media:medias feedType:type getIndex:index];
@@ -1978,19 +1992,19 @@ BOOL needToShowFeedIcon,isShareAvailable;
                 }
             }];
         }
-
-    // Captured media is a url
+        
+        // Captured media is a url
     } else if ([medias count] > 0 && [[[medias objectAtIndex:0] valueForKey:@"isCaptured"] boolValue] && ![[[medias objectAtIndex:0] valueForKey:@"mediaType"] boolValue]) {
         NSMutableDictionary *media = [medias objectAtIndex:0];
         NSDictionary *config = [[NSUserDefaults standardUserDefaults] objectForKey:@"mediaConfig"];
         NSNumber *mediaSize = [config objectForKey:@"default_video_size"];
-//        MBProgressHUD *loader = [Util showLoading];
+        //        MBProgressHUD *loader = [Util showLoading];
         
-//        NSURL *url = [media valueForKey:@"mediaData"];
+        //        NSURL *url = [media valueForKey:@"mediaData"];
         NSURL *url = [NSURL URLWithString:[media valueForKey:@"mediaUrl"]];
         NSLog(@"NSURL %@", url);
         [Util compressVideo:url withCallback:^(NSURL *outputURL) {
-//            [loader hide:YES];
+            //            [loader hide:YES];
             
             NSData *assetData = [NSData dataWithContentsOfURL:outputURL];
             [media setObject:assetData forKey:@"assetData"];
@@ -2005,10 +2019,10 @@ BOOL needToShowFeedIcon,isShareAvailable;
     }
     
     //Show progress
-//    UIProgressView *progressView = [self getProgressViewAtIndex:0];
-//    if ([medias count] > 0) {
-//        [Util setProgressWithAnimation:progressView withDuration:15];
-//    }
+    //    UIProgressView *progressView = [self getProgressViewAtIndex:0];
+    //    if ([medias count] > 0) {
+    //        [Util setProgressWithAnimation:progressView withDuration:15];
+    //    }
 }
 -(BOOL)isMediaPostCancel :(NSString *)uniuqeId
 {
@@ -2040,10 +2054,10 @@ BOOL needToShowFeedIcon,isShareAvailable;
                 NSLog(@"Posting failed %d", index);
                 // Time Out Error
                 [[AlertMessage sharedInstance] showMessage:NSLocalizedString(TRY_AGAIN_STRING, nil)];
-//                [self getNewFeeds];
+                //                [self getNewFeeds];
                 
                 // Change the is_upload status while uploading to server
-//                [[rootViewController.privateFeeds objectAtIndex:i]setObject:@"true" forKey:@"is_upload"];
+                //                [[rootViewController.privateFeeds objectAtIndex:i]setObject:@"true" forKey:@"is_upload"];
                 
                 NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
                 [dictionary setObject:inputparams forKey:@"inputparams"];
@@ -2112,31 +2126,31 @@ BOOL needToShowFeedIcon,isShareAvailable;
             
             [cell.activityIndicator setHidden:YES];
             
-//            if (cell.isVideo) {
-//                [cell.playIcon setHidden:NO];
-//            }
+            //            if (cell.isVideo) {
+            //                [cell.playIcon setHidden:NO];
+            //            }
             
             if (index != -1) {
                 
                 [[feeds objectAtIndex:index] setObject:[NSNumber numberWithFloat:percentDone] forKey:@"progress"];
                 if (percentDone == 1) {
                     NSLog(@"UPLOAD 100");
-//                    cell.dimView.hidden = YES;
+                    //                    cell.dimView.hidden = YES;
                     // Done uploading, show infinite spinner until call returns
-//                    cell.spinnerProgressView.hidden = YES;
-//                    cell.spinnerView.hidden = NO;
-//                    [cell.spinnerView startAnimating];
+                    //                    cell.spinnerProgressView.hidden = YES;
+                    //                    cell.spinnerView.hidden = NO;
+                    //                    [cell.spinnerView startAnimating];
                     
                     [[feeds objectAtIndex:index] setObject:@"completed" forKey:@"is_upload"];
                     [_feedsTable reloadDataWithAnimation];
                 }
                 else{
-//                    UIProgressView *progressView = [self getProgressViewAtIndex:index];
+                    //                    UIProgressView *progressView = [self getProgressViewAtIndex:index];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (percentDone > .15 )
                         {
                             cell.spinnerProgressView.value = percentDone;
-//                            progressView.progress =  percentDone;
+                            //                            progressView.progress =  percentDone;
                         }
                         cell.spinnerView.hidden = YES;
                         [cell.spinnerView stopAnimating];
@@ -2207,7 +2221,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
 -(void)getFeedValuesFromSelectedType
 {
     feeds = [self getCurrentArray];
-        
+    
     if ([feeds count] == 0)
     {
         [self getFeedsList];
@@ -2263,6 +2277,13 @@ BOOL needToShowFeedIcon,isShareAvailable;
         mediaBaseUrl = [response objectForKey:@"media_base_url"];
         rootViewController.mediaBase = mediaBaseUrl;
         [self alterTheMediaList:response];
+        
+        //        double delayInSeconds = 0.5;
+        //        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        //        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        //            //code to be executed on the main queue after delay
+        //            [feedsDesign checkWhichVideoToEnable:_feedsTable];
+        //        });
     }
     NSLog(@"Cached feed reload data");
     [_feedsTable reloadDataWithAnimation];
@@ -2291,8 +2312,8 @@ BOOL needToShowFeedIcon,isShareAvailable;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    [feedsDesign playVideoConditionally];
-//    [feedsDesign checkWhichVideoToEnable:_feedsTable];
+    //    [feedsDesign playVideoConditionally];
+    //    [feedsDesign checkWhichVideoToEnable:_feedsTable];
     [feedsDesign stopAllVideos];
 }
 
@@ -2338,17 +2359,17 @@ BOOL needToShowFeedIcon,isShareAvailable;
     
     if ([[notification name] isEqualToString:@"ViewCountNotification"]){
         NSLog (@"Successfully received the test notification!");
-        newFeedsTimer = [NSTimer scheduledTimerWithTimeInterval:80 target:self selector:@selector(getFeedsList) userInfo:nil repeats: YES];
-//        [self getFeedsList];
+        //        newFeedsTimer = [NSTimer scheduledTimerWithTimeInterval:80 target:self selector:@selector(getFeedsList) userInfo:nil repeats: YES];
+        //        [self getFeedsList];
     }
 }
 
 // Mute/Unmute Pressed
 
 -(void)muteUnmutePressed:(UIButton*)sender {
-  
+    
     UIButton *btn = sender;
-//    btn.selected = !btn.selected;
+    //    btn.selected = !btn.selected;
     NSDictionary* userInfo;
     UIImage * aImgMute = [UIImage imageNamed:@"icon_mute"];
     UIImage * aImgUnMute = [UIImage imageNamed:@"icon_unmute"];
@@ -2373,7 +2394,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
      object:self userInfo:userInfo];
     
     if ([feeds count] > sender.tag) {
-
+        
         feedsDesign.feeds = feeds;
         feedsDesign.feedTable = _feedsTable;
         feedsDesign.mediaBaseUrl= mediaBaseUrl;

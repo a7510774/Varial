@@ -61,26 +61,44 @@ int myIntSecondsRem;
         //Build Input Parameters
         NSMutableDictionary *inputParams = [[NSMutableDictionary alloc] init];
         [inputParams setValue:_gStrcountryId forKey:@"country_id"];
-        [inputParams setValue:_gStrPhoneName forKey:@"name"];
         [inputParams setValue:_gStrPhoneNumber forKey:@"phone_number"];
         [inputParams setValue:_myTxtFldOTP.text forKey:@"OTP"];
         
+        NSString * aUrl;
+        if(_gIsLoginBtnTapped) {
+            
+            aUrl = SUBMIT_LOGIN_OTP;
+        }
+        else {
+            
+            [inputParams setValue:_gStrPhoneName forKey:@"name"];
+            aUrl = SUBMIT_OTP;
+        }
+        
         [Util appendDeviceMeta:inputParams];
         
-        [[Util sharedInstance]  sendHTTPPostRequest:inputParams withRequestUrl:SUBMIT_OTP withCallBack:^(NSDictionary * response){
+        [[Util sharedInstance]  sendHTTPPostRequest:inputParams withRequestUrl:aUrl withCallBack:^(NSDictionary * response){
             
             if ([[response valueForKey:@"status"] boolValue]) {
                 [Util setInDefaults:[response valueForKey:@"auth_token"] withKey:@"auth_token"];
                 
-                //Login success
-                if ([[response valueForKey:@"player_type_id"] intValue ] == 0) {
-                    [self showPlayerTypeScreen:[response valueForKey:@"message"]];
-                }
-                else{
-                    [Util setInDefaults:@"YES" withKey:@"isPlayerTypeSet"];
-                    [Util setInDefaults:[response valueForKey:@"player_type_id"] withKey:@"playerType"];
+                if(_gIsLoginBtnTapped) {
                     [self moveToHomeScreen];
                 }
+                else {
+                    
+                    //Login success
+                    if ([[response valueForKey:@"player_type_id"] intValue ] == 0) {
+                        [self showPlayerTypeScreen:[response valueForKey:@"message"]];
+                    }
+                    else{
+                        [Util setInDefaults:@"YES" withKey:@"isPlayerTypeSet"];
+                        [Util setInDefaults:[response valueForKey:@"player_type_id"] withKey:@"playerType"];
+                        [self moveToHomeScreen];
+                    }
+                }
+                
+                
                 [_myTxtFldOTP resignFirstResponder];
             }
             else{

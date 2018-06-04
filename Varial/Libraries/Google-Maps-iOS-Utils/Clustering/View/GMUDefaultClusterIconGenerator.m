@@ -124,7 +124,7 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
     return icon;
   }
 
-  UIFont *font = [UIFont boldSystemFontOfSize:12];
+  UIFont *font = [UIFont boldSystemFontOfSize:15];
   CGSize size = image.size;
   UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
   [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
@@ -167,7 +167,7 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
 
   // Create an image context with a square shape to contain the text (with more padding for
   // larger buckets).
-  CGFloat rectDimension = MAX(20, MAX(textSize.width, textSize.height)) + 3 * bucketIndex + 6;
+  CGFloat rectDimension = MAX(20, MAX(textSize.width, textSize.height)) + 3 * bucketIndex + 8;
   CGRect rect = CGRectMake(0.f, 0.f, rectDimension, rectDimension);
   UIGraphicsBeginImageContext(rect.size);
 

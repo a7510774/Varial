@@ -12,4 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collctionView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *myConstraintCollectionviewHeight;
+
+
 @end

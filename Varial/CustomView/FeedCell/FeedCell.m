@@ -96,7 +96,7 @@
         if ([[_cellData objectForKey:@"check_in_details"] count] > 0) {
 //            _checkinMargin.active = YES;
             _checkinMargin.priority = 999;
-            [_checkinView hideByHeight:NO];
+//            [_checkinView hideByHeight:NO];
         } else {
 //            _checkinMargin.active = NO;
             _checkinMargin.priority = 250;
@@ -104,8 +104,10 @@
         }
         
         if ([[_cellData objectForKey:@"post_content"] isEqualToString:@""]) {
+            _message.hidden = YES;
             _messageMargin.active = NO;
         } else {
+            _message.hidden = NO;
             _messageMargin.active = YES;
         }
         

@@ -418,6 +418,7 @@
 #define TITLE_FORGOT_PASSWORD @"Forgot Password"
 #define TITLE_SIGNUP_WITH_MOBILE @"SignUp With Phone"
 #define TITLE_OTP_VALIDATION @"OTP Validation"
+#define TITLE_SIGNIN_WITH_MOBILE @"SignIn With Phone"
 
 #define CHECK_NETWORK @"Please check network connection"
 #define NETWORK_TITLE @"Network"

@@ -91,6 +91,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *myBtnLogin;
 @property (weak, nonatomic) IBOutlet UIButton *myBtnChooseLanguage;
 @property (weak, nonatomic) IBOutlet UIView *myViewSignIn;
+@property (weak, nonatomic) IBOutlet UIView *myViewSignInWithMobile;
 
+@property (weak, nonatomic) IBOutlet UIButton *myBtnLoginWithMobile;
 
 @end

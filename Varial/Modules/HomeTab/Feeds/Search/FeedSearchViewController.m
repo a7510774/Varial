@@ -16,6 +16,8 @@
 #import "JPVideoPlayer.h"
 #import "UIView+WebVideoCache.h"
 #import "MyCheckinDetails.h"
+#import "FeedsDesign.h"
+#import "SmallVideoDetailViewController.h"
 
 
 @import TRMosaicLayout;
@@ -24,6 +26,7 @@
     NSString *mediaBaseUrl;
     UIImageView *thumbImage;
     BOOL isSelectVideoCell;
+     FeedsDesign *feedsDesign;
     
 }
 @property(nonatomic, strong)NSMutableArray *myAryInfo, *myAryFilterInfo, *ChannelList;
@@ -74,7 +77,11 @@
     });
 }
 
-
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [feedsDesign muteAllVideos];
+//     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -84,6 +91,7 @@
 
 - (void)setUpUI {
     
+    feedsDesign = [[FeedsDesign alloc] init];
     delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     self.navigationController.navigationBar.hidden = YES;
     self.navigationController.navigationBar.translucent = NO;
@@ -97,13 +105,13 @@
     
     if([[Util getFromDefaults:@"language"] isEqualToString:@"en-US"])
     {
-        channelStr = @"Channels";
+        channelStr = @"Media Channels";
         recentSearchStr = @"RECENT SEARCHES";
     }
     
     else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
     {
-        channelStr = @"渠道";
+        channelStr = @"媒体渠道";
         recentSearchStr = @"最近的搜索";
     }
     
@@ -258,7 +266,7 @@
         }
         else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
         {
-            return @"推薦的";
+            return @"推荐";
         }
     }
    
@@ -268,10 +276,10 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     UILabel *myLabel = [[UILabel alloc] init];
-    myLabel.frame = CGRectMake(15, 4, 320, 21);
+    myLabel.frame = CGRectMake(10, 4, 320, 21);
     myLabel.font = [UIFont fontWithName:@"Century Gothic" size:15];
     myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
-    myLabel.textColor = [UIColor blackColor];
+    myLabel.textColor = [UIColor darkGrayColor];
     
     UIView *headerView = [[UIView alloc] init];
     headerView.backgroundColor = UIColor.whiteColor;
@@ -282,7 +290,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
     if (section == 1 && self.otherVideosList.count > 2) {
-        return 40;
+        return 30;
     }
     return 0;
 }
@@ -384,11 +392,11 @@
     [inputParams setValue:[NSNumber numberWithInt:1] forKey:@"post_type_id"];
     [inputParams setValue:[NSNumber numberWithInt:0] forKey:@"time_stamp"];
     [inputParams setValue:@"en-US" forKey:@"language_code"];
-    [inputParams setValue:@"100" forKey:@"page_limit"];
+    [inputParams setValue:@"15" forKey:@"page_limit"];
    
     if (page_number != 0) {
     [inputParams setValue:[NSNumber numberWithInteger:page_number] forKey:@"page_number"];
-    [inputParams setValue:@"20" forKey:@"page_limit"];
+    [inputParams setValue:@"15" forKey:@"page_limit"];
     }
     
     //    [self.profileTable.infiniteScrollingView startAnimating];
@@ -707,9 +715,9 @@
             
             aCell.videoUrl = videoUrlString;
             
-            if ([delegate.moviePlayer objectForKey:videoUrlString] != nil) {
+            if ([delegate.seachVideoPlayer objectForKey:videoUrlString] != nil) {
                 
-                player = [delegate.moviePlayer objectForKey:videoUrlString];
+                player = [delegate.seachVideoPlayer objectForKey:videoUrlString];
                 
                 NSLog(@"got existing player");
                 
@@ -723,7 +731,7 @@
                     
                 {
                     
-                    [delegate.moviePlayer setValue:player forKey:videoUrlString];
+                    [delegate.seachVideoPlayer setValue:player forKey:videoUrlString];
                     
                     [delegate.videoUrls addObject:videoUrlString];
                     
@@ -754,50 +762,41 @@
             aCell.videoUrl = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_url"]]];
             
             if (!isSameVideo || [aCell.mainPreview.layer.sublayers count] == 0) {
-                
+
                 NSLog(@"Making an AVPlayerLayer %d %d", isSameVideo, (int)[aCell.imgView.layer.sublayers count]);
-                
-                
-                
+
+
+
                 AVPlayerLayer *videoLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-                
-                
-                
-                
-                
-                
-                
+
+
                 [aCell.mainPreview.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
-                
-                
-                
+
+
+
                 videoLayer.frame = aCell.bounds;//CGRectMake(0, 0, aCell.mainPreview.frame.size.width, aCell.mainPreview.frame.size.height);
-                
+
                 videoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-                
+
                 aCell.mainPreview.frame = aCell.bounds;
-                
+
                 [aCell.mainPreview.layer addSublayer:videoLayer];
-                
+
             }
-            
+
             [aCell.videoView setHidden:YES];
-            
+
             [player setMuted:YES];
-            
+
             player.actionAtItemEnd = AVPlayerActionAtItemEndNone; dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
-                
+
                 // dispatch_async( dispatch_get_main_queue(), ^{
-                
+
                 [player play];
-                
+
                 // });
-                
+
             });
-            
-            
-            
-            
             
             aCell.playIcon.hidden = YES;
             
@@ -824,6 +823,7 @@
             aCell.playIcon.hidden = YES;
             
             [aCell.imgView yy_setImageWithURL:[NSURL URLWithString:urlString] options:YYWebImageOptionProgressiveBlur];
+            
             
         }
         
@@ -869,11 +869,20 @@
        });
    }
 } //((indexPath.item == self.otherVideosList.count - 2) ||
-
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:1];
+    OtherVideosTableViewCell *cell = [self.myInfoTblView cellForRowAtIndexPath:path];
+    
+    CGRect visibleRect = (CGRect){.origin = cell.collctionView.contentOffset, .size = cell.collctionView.bounds.size};
+    CGPoint visiblePoint = CGPointMake(CGRectGetMidX(visibleRect), CGRectGetMidY(visibleRect));
+    NSIndexPath *visibleIndexPath = [cell.collctionView indexPathForItemAtPoint:visiblePoint];
+    NSLog(@"%@",visibleIndexPath);
+}
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGFloat aCollectionViewCellHeight = self.view.frame.size.width/4;
-    CGFloat ContentOffsetMaxY = scrollView.contentOffset.y + scrollView.bounds.size.height ;
+    CGFloat ContentOffsetMaxY = scrollView.contentOffset.y + scrollView.bounds.size.height;
     CGFloat contentHeight = scrollView.contentSize.height ;
     BOOL ret = ContentOffsetMaxY > contentHeight;
     
@@ -888,7 +897,17 @@
         
         _myConstraintViewAll.constant = 21.0;
         _myConstraintHeightRecentSearch.constant = 21.0;
-        [_myBtnViewAll setTitle:@"View all" forState:UIControlStateNormal];
+        
+        if([[Util getFromDefaults:@"language"] isEqualToString:@"en-US"])
+        {
+            [_myBtnViewAll setTitle:@"View all" forState:UIControlStateNormal];
+        }
+        
+        else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
+        {
+            [_myBtnViewAll setTitle:@"查看全部" forState:UIControlStateNormal];
+        }
+        
     }
     
     if (ret) {
@@ -913,17 +932,17 @@
         return CGSizeMake(self.view.frame.size.width / 4 , self.view.frame.size.width / 4) ;
     }
     
-    return  CGSizeMake(self.view.frame.size.width / 3 , self.view.frame.size.width / 3);
+    return  CGSizeMake(150, self.view.frame.size.width / 3);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSMutableDictionary *data;
+    NSMutableDictionary *data = [NSMutableDictionary new];
     if (collectionView.tag == 0) {
-        data = [_ChannelList objectAtIndex:indexPath.row];
+        data = [[_ChannelList objectAtIndex:indexPath.row] mutableCopy];
     }
     else {
-        data = [_otherVideosList objectAtIndex:indexPath.row];
+        data = [[_otherVideosList objectAtIndex:indexPath.row] mutableCopy];
     }
 //    NSString *urlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_url"]]];
 //    NSString *thumbUrl = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_image"]]];
@@ -948,13 +967,22 @@
         
 //        [self playVideo:urlString withThumb:nil fromController:self withUrl:thumbUrl];
         
+//        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle: nil];
+//
+//        MyCheckinDetails *details = [mainStoryboard instantiateViewControllerWithIdentifier:@"MyCheckinDetails"];
+//        details.post_Id = [data objectForKey:@"post_id"];
+//        details.isPopularCheckinDetail = @"NO";
+//        details.isFromChannel = YES;
+//        [self.navigationController pushViewController:details animated:YES];
+        
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle: nil];
         
-        MyCheckinDetails *details = [mainStoryboard instantiateViewControllerWithIdentifier:@"MyCheckinDetails"];
-        details.post_Id = [data objectForKey:@"post_id"];
-        details.isPopularCheckinDetail = @"NO";
-        details.isFromChannel = YES;
-        [self.navigationController pushViewController:details animated:YES];
+        SmallVideoDetailViewController *aViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"smallvideodetails"];
+        
+        
+        aViewController.gDicFeeds = data;
+        aViewController.gMediaBaseUrl = mediaBaseUrl;
+        [self.navigationController pushViewController:aViewController animated:YES];
     }
 }
 
@@ -1128,7 +1156,7 @@
     if([cell isKindOfClass:[PopularFeedsCollectionViewCell class]])
     {
         PopularFeedsCollectionViewCell *feedCell = (PopularFeedsCollectionViewCell* )cell;
-        AVPlayer *player = [delegate.moviePlayer objectForKey:videoUrl];
+        AVPlayer *player = [delegate.seachVideoPlayer objectForKey:videoUrl];
         if (player != nil) {
             
             //Check if video has already in play state
@@ -1179,22 +1207,22 @@
     AVAsset *currentPlayerAsset = playerItem.asset;
     NSString *videoUrl = [(AVURLAsset* )currentPlayerAsset URL].absoluteString;
     
-    AVPlayer *player = [delegate.moviePlayer objectForKey:videoUrl];
+    AVPlayer *player = [delegate.seachVideoPlayer objectForKey:videoUrl];
     [player setMuted: YES];
     
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
         [player play];
     });
     
-    if (delegate.currentVideoUrl != nil && [videoUrl isEqualToString:delegate.currentVideoUrl]) {
-        [delegate.playerViewController dismissViewControllerAnimated:YES completion:nil];
-        delegate.currentVideoUrl = nil;
-    }
+//    if (delegate.currentVideoUrl != nil && [videoUrl isEqualToString:delegate.currentVideoUrl]) {
+//        [delegate.playerViewController dismissViewControllerAnimated:YES completion:nil];
+//        delegate.currentVideoUrl = nil;
+//    }
     
     
 }
 -(void)stopAllVideos{
-    NSMutableDictionary *movieDictionary = [delegate.moviePlayer copy];
+    NSMutableDictionary *movieDictionary = [delegate.seachVideoPlayer copy];
     for (NSString* key in movieDictionary) {
         AVPlayer *player = [movieDictionary objectForKey:key];
         //  dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{

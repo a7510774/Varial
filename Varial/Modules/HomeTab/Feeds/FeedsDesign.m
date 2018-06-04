@@ -464,12 +464,6 @@ NSInteger viewCount;
             [player play];
         }
     }];
-    
-//    if ([controller isKindOfClass:feeds]){
-//        controller * aNewObj = [[Feeds alloc]init];
-//        aNewObj.is
-//    }
-    
 }
 
 
@@ -712,7 +706,7 @@ NSInteger viewCount;
 //                        cell.videoViewCountHeight.constant = 0;
                         cell.videoViewCount.hidden = YES;
                     }
-                    else{
+                    else {
 //                        cell.videoViewCountHeight.constant = 20;
                         cell.videoViewCount.hidden = NO;
                         cell.videoViewCount.text = [Util getViewsString:viewCount];
@@ -720,12 +714,15 @@ NSInteger viewCount;
                     
                     [delegate.videoIds setValue:[[medias objectAtIndex:loop] valueForKey:@"video_id"] forKey:[[medias objectAtIndex:loop] valueForKey:@"media_url"]];
                     
-                    NSString *strVideoUrl = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[[medias objectAtIndex:0] objectForKey:@"video_thumb_image_url"]]];
-                    
                     [currentImage.layer setValue:[[medias objectAtIndex:0] objectForKey:@"media_dimension"] forKey:@"dimension"];
                     
                     // Show DownLoad Progress for media
-                    [self showDownloadProgress:cell imageView:currentImage mediaUrl:strVideoUrl imageSize:cell.medias.frame.size onProgressView:[Util designdownloadProgress:cell.downloadProgress]];
+                    
+                    if(!_gIsFromChannel) {
+                        NSString *strVideoUrl = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[[medias objectAtIndex:0] objectForKey:@"video_thumb_image_url"]]];
+                        [self showDownloadProgress:cell imageView:currentImage mediaUrl:strVideoUrl imageSize:cell.medias.frame.size onProgressView:[Util designdownloadProgress:cell.downloadProgress]];
+                    }
+//
                     [cell.playIcon setHidden:YES];
                     [cell.activityIndicator setHidden:YES];
 //                    NSLog(@"frame height: %@", NSStringFromCGRect(cell.medias.frame));
@@ -1206,9 +1203,9 @@ NSInteger viewCount;
     
     else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
     {
-        actionSheet = [UIAlertController alertControllerWithTitle:@"分享" message:@"通過分享帖子" preferredStyle:UIAlertControllerStyleActionSheet];
+        actionSheet = [UIAlertController alertControllerWithTitle:@"分享" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
         aStrCancelTit = @"取消";
-        aStrSocialShareTit = @"社會";
+        aStrSocialShareTit = @"社交";
         aStrTimelineTit = @"時間線";
     }
     
@@ -1403,9 +1400,9 @@ NSInteger viewCount;
 
 //Create or reuse the video
 - (void)playInlineVideo:(FeedCell *)cell withSize:(CGSize)size andUrl:(NSString *)videoUrl {
-//    NSLog(@"playInlineVideo");
     
 //    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
+    
     
     UIImage * aImgUnMute = [UIImage imageNamed:@"icon_unmute"];
     UIImage * aImgMute = [UIImage imageNamed:@"icon_mute"];
@@ -1431,6 +1428,7 @@ NSInteger viewCount;
     }
     
     else {
+        
         NSURL *url = [NSURL URLWithString:videoUrl];
         
         
@@ -1558,7 +1556,7 @@ NSInteger viewCount;
                 [feedCell.activityIndicator setHidden:NO];
             }
             
-            //Play current vide
+            //Play current video
             dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
                 // dispatch_async( dispatch_get_main_queue(), ^{
                 [player play];
@@ -1610,11 +1608,22 @@ NSInteger viewCount;
     }
 }
 
+- (void)muteAllVideos{
+    NSMutableDictionary *movieDictionary = [delegate.moviePlayer copy];
+    for (NSString* key in movieDictionary) {
+        AVPlayer *player = [movieDictionary objectForKey:key];
+        //  dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
+        if(player != nil){
+            [player setMuted:YES];
+        }
+        //  });
+    }
+}
+
 
 // Will be called when AVPlayer finishes playing playerItem
 -(void)itemDidFinishPlaying:(NSNotification *) notification {
     NSLog(@"itemDidFinishPlaying");
-    
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        
 //    });

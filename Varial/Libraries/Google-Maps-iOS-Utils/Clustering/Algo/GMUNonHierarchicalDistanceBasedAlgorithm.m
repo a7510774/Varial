@@ -26,7 +26,7 @@
 #import "GMUWrappingDictionaryKey.h"
 #import "GQTPointQuadTree.h"
 
-static const NSUInteger kGMUClusterDistancePoints = 20;
+static const NSUInteger kGMUClusterDistancePoints = 50; // before it was 20
 static const double kGMUMapPointWidth = 2.0;  // MapPoint is in a [-1,1]x[-1,1] space.
 
 #pragma mark Utilities Classes

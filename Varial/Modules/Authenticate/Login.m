@@ -86,6 +86,7 @@ NSMutableArray *myAryLanguages;
     [Util createRoundedCorener:_myViewEmailSignUp withCorner:5.0];
     [Util createRoundedCorener:_myViewPhoneSignUp withCorner:5.0];
     [Util createRoundedCorener:_myViewSignIn withCorner:5.0];
+    [Util createRoundedCorener:_myViewSignInWithMobile withCorner:5.0];
 //    [self designTheView];
 }
 
@@ -949,16 +950,28 @@ NSMutableArray *myAryLanguages;
     
 }
 
+- (IBAction)myBtnLoginWithMobileAction:(id)sender {
+    
+    mainStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle: nil];
+    
+    SignUpWithPhoneViewController *aSignUpWithPhone = [mainStoryboard instantiateViewControllerWithIdentifier:@"SignUpWithPhone"];
+    aSignUpWithPhone.isLoginBtnTapped = YES;
+    [self.navigationController pushViewController:aSignUpWithPhone animated:YES];
+}
+
+
 -(void) changeLanguageForAllObjects {
 //    NSAttributedString * aAttributedEnglishStr = [[NSAttributedString alloc]initWithString:@"Terms of Service   |   Privacy Policy   |   FAQ"];
 //    NSAttributedString * aAttributedChineseStr = [[NSAttributedString alloc]initWithString:@"使用条款   |   隐私政策   |   应用介绍"];
 //    [_termsLabel setAttributedText:aAttributedEnglishStr];
     if([[Util getFromDefaults:@"language"] isEqualToString:@"en-US"])
     {
-        [_myBtnSignUpWithEmail setTitle:@"Sign Up With Email" forState:UIControlStateNormal];
-        [_myBtnSignUpWithPhone setTitle:@"Continue With Phone #" forState:UIControlStateNormal];
+        [_myBtnSignUpWithEmail setTitle:@"SIGNUP WITH EMAIL" forState:UIControlStateNormal];
+        [_myBtnSignUpWithPhone setTitle:@"SIGNUP WITH PHONE" forState:UIControlStateNormal];
         _myLabelDoUhaveAcc.text = @"Do you have an account";
-        [_myBtnLogin setTitle:@"LOGIN" forState:UIControlStateNormal];
+        [_myBtnLogin setTitle:@"LOGIN WITH EMAIL" forState:UIControlStateNormal];
+        [_myBtnLoginWithMobile setTitle:@"LOGIN WITH PHONE" forState:UIControlStateNormal];
+//        myBtnLoginWithPhone
 //        [_termsLabel setAttributedText:aAttributedEnglishStr];
         _termsLabel.text = @"Terms of Service   |   Privacy Policy   |   FAQ";
         [_myBtnChooseLanguage setTitle:@"Choose Language" forState:UIControlStateNormal];
@@ -968,14 +981,15 @@ NSMutableArray *myAryLanguages;
     
     else if([[Util getFromDefaults:@"language"] isEqualToString:@"zh"])
     {
-        [_myBtnSignUpWithEmail setTitle:@"使用电子邮件注册" forState:UIControlStateNormal];
-        [_myBtnSignUpWithPhone setTitle:@"使用电话号码注册" forState:UIControlStateNormal];
+        [_myBtnSignUpWithEmail setTitle:@"邮箱注册" forState:UIControlStateNormal];
+        [_myBtnSignUpWithPhone setTitle:@"电话注册" forState:UIControlStateNormal];
         _myLabelDoUhaveAcc.text = @"您有账户吗";
-        [_myBtnLogin setTitle:@"登录" forState:UIControlStateNormal];
+        [_myBtnLogin setTitle:@"邮箱登陆" forState:UIControlStateNormal];
+        [_myBtnLoginWithMobile setTitle:@"手机登陆" forState:UIControlStateNormal];
 //        [_termsLabel setAttributedText:aAttributedChineseStr];
         _termsLabel.text = @"使用条款   |   隐私政策   |   应用介绍";
         [_myBtnChooseLanguage setTitle:@"选择语言" forState:UIControlStateNormal];
-        [_myBtnEnglishLanguage setTitle:@"选择语言" forState:UIControlStateNormal];
+        [_myBtnEnglishLanguage setTitle:@"英文" forState:UIControlStateNormal];
         [_myBtnChineseLanguage setTitle:@"中文" forState:UIControlStateNormal];
     }
     [self designTerms];
