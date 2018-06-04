@@ -103,5 +103,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *gBtnMuteUnMute;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *myConstraintShareViewTop;
 
+@property (strong, nonatomic) IBOutlet UIButton *playVideoFullscreen;//From small video screen
+
 
 @end

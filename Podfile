@@ -18,5 +18,6 @@ target 'Varial' do
   pod 'TRMosaicLayout'
   pod 'MIBadgeButton'
   pod 'CircularSpinner' , '~> 1.2.0'
+  pod 'JPVideoPlayer' , '~> 3.0.3'
 
 end

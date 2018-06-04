@@ -14,6 +14,7 @@ PODS:
     - GooglePlaces (= 2.6.0)
   - GooglePlaces (2.6.0):
     - GoogleMaps/Base (= 2.6.0)
+  - JPVideoPlayer (3.0.6)
   - MIBadgeButton (0.0.7)
   - ResponsiveLabel (1.0.11)
   - SDWebImage (4.3.0):
@@ -29,10 +30,26 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - JPVideoPlayer (~> 3.0.3)
   - MIBadgeButton
   - ResponsiveLabel (~> 1.0.11)
   - SDWebImage (~> 4.0)
   - TRMosaicLayout
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CircularSpinner
+    - Crashlytics
+    - DGActivityIndicatorView
+    - Fabric
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - JPVideoPlayer
+    - MIBadgeButton
+    - ResponsiveLabel
+    - SDWebImage
+    - TRMosaicLayout
 
 SPEC CHECKSUMS:
   CircularSpinner: 80b8ee3eda59b66d20631d4ca7c7c83720931739
@@ -42,11 +59,12 @@ SPEC CHECKSUMS:
   GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
   GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
+  JPVideoPlayer: a6ffa4a1b5040f312e8d0dda31d5b75eed0712dc
   MIBadgeButton: 7c34f180a194d152bb3817c05443eab3a01433cd
   ResponsiveLabel: 9e31c425ed082481faf2360689243bb0ec8f8b22
   SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
   TRMosaicLayout: 2f1af0d457377ebc135912b658a65040be9e1651
 
-PODFILE CHECKSUM: 4be8aee8a3906fde367c1d27244f7e70d4b212cc
+PODFILE CHECKSUM: 426b52b7bc3a6820fbc35499ba98a461e7a9ffb2
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
