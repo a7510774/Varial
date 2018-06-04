@@ -409,27 +409,27 @@ NSInteger viewCount;
 //Play video
 - (void)playVideo:(NSString *)mediaUrl withThumb:(UIImage *)thumbImg fromController:(UIViewController *)controller withUrl:(NSString *)thumbUrl{
     
-//    NSURL *url = [NSURL URLWithString:mediaUrl];
+    NSURL *url = [NSURL URLWithString:mediaUrl];
     
     //Allow landscape orientation
     delegate.shouldAllowRotation = TRUE;
     
     //Get player from data source
-    AVPlayer *player = [delegate.moviePlayer objectForKey:mediaUrl];
-    // AVPlayer *player = [AVPlayer playerWithURL:url];
+//    AVPlayer *player = [delegate.moviePlayer objectForKey:mediaUrl];
+     AVPlayer *player = [AVPlayer playerWithURL:url];
     [player setMuted:NO];
     
-    delegate.currentVideoUrl = mediaUrl;
+//    delegate.currentVideoUrl = mediaUrl;
     
     
     //Create player view controller
-    //_playerViewController = [[AVPlayerViewController alloc] init];
-    delegate.playerViewController.player = nil;
-    delegate.playerViewController.player = player;
+    self.playerViewController = [[AVPlayerViewController alloc] init];
+    self.playerViewController.player = nil;
+    self.playerViewController.player = player;
     
     //Assign the thumbimage in player view controller
     //It shows untill the player gets ready
-    thumbImage = [[UIImageView alloc] initWithFrame:delegate.playerViewController.view.frame];
+    thumbImage = [[UIImageView alloc] initWithFrame:self.playerViewController.view.frame];
     if (thumbImg != nil) {
         [thumbImage setImage:thumbImg];
     }
@@ -438,12 +438,12 @@ NSInteger viewCount;
         [thumbImage setImageWithURL:[NSURL URLWithString:thumbUrl]];
     }
     
-    if (delegate.playerViewController.player.currentItem.playbackBufferEmpty) {
+    if (self.playerViewController.player.currentItem.playbackBufferEmpty) {
         NSLog(@"Buffer Empty");
     }
     
     thumbImage.contentMode = UIViewContentModeScaleAspectFit;
-    thumbImage.center = delegate.playerViewController.view.center;
+    thumbImage.center = self.playerViewController.view.center;
     thumbImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   //  [delegate.playerViewController.view insertSubview:thumbImage atIndex:0];FIXME
     
@@ -456,7 +456,7 @@ NSInteger viewCount;
     
     //Launch the player
 //    [controller presentViewController:delegate.playerViewController animated:YES completion:NULL];
-    [controller presentViewController:delegate.playerViewController animated:YES completion:^{
+    [controller presentViewController:self.playerViewController animated:YES completion:^{
         if ((player.rate != 0) && (player.error == nil)) {
             // player is playing
         }
@@ -1603,6 +1603,16 @@ NSInteger viewCount;
         //  dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
         if(player != nil){
             [player pause];
+            
+//            if([Util getBoolFromDefaults:@"isVolumeMuted"]) {
+//                [player setMuted:YES];
+//            }
+//            else {
+//                [player setMuted:NO];
+//            }
+        }
+        else {
+            NSLog(@"Player Nil");
         }
         //  });
     }

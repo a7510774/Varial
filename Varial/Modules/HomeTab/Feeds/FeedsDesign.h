@@ -29,7 +29,7 @@
 @property (strong) NSMutableArray *feeds;
 @property (strong) NSString *bigVideoUrl, *currentVideoUrl;
 @property (nonatomic) UITableView *feedTable;
-//@property (nonatomic) AVPlayerViewController *playerViewController;
+@property (nonatomic) AVPlayerViewController *playerViewController;
 @property (nonatomic, strong) UIViewController *viewController;
 @property (nonatomic) BOOL isNoNeedProfileRedirection, isNoNeedNameRedirection, myBoolIsVideoViewedInBigScreen, gBoolIsFromFeeds, isVolumeMuted, isVolumeClicked, gIsFromChannel;
 

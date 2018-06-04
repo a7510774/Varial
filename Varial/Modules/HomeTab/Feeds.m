@@ -63,8 +63,11 @@ BOOL needToShowFeedIcon,isShareAvailable;
     
     feedsDesign = [[FeedsDesign alloc] init];
     
-    _feedsTable.rowHeight = UITableViewAutomaticDimension;
+   // _feedsTable.rowHeight = UITableViewAutomaticDimension;
     
+    _feedsTable.estimatedRowHeight = 999;
+   _feedsTable.rowHeight = 999;
+
     [self scrollViewDidScroll:_feedsTable];
     
     // Notification for View Count Increase
@@ -95,8 +98,13 @@ BOOL needToShowFeedIcon,isShareAvailable;
         }
     });
     
+    
     [self setFeedType];
-    [self getFeedValuesFromSelectedType];
+    
+    if (!feedsDesign.myBoolIsVideoViewedInBigScreen) {
+        [self getFeedValuesFromSelectedType];
+    }
+    feedsDesign.myBoolIsVideoViewedInBigScreen = NO;
     
     NSLog(@"viewDidAppear Videos");
     [feedsDesign checkWhichVideoToEnable:_feedsTable];
@@ -594,36 +602,41 @@ BOOL needToShowFeedIcon,isShareAvailable;
     return 0;
 }
 
--(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //minimum size of your cell, it should be single line of label if you are not clear min. then return UITableViewAutomaticDimension;
-    
-    if (tableView == _feedsTable) {
-        // return [self cellHeight:[feeds objectAtIndex:indexPath.row]];
-        return 240;
-    }
-    else if(tableView == _feedsTypesTable)
-    {
-        return  45.0f;
-    }
-    return UITableViewAutomaticDimension;
-}
+//-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    //minimum size of your cell, it should be single line of label if you are not clear min. then return UITableViewAutomaticDimension;
+//
+////    if (tableView == _feedsTable) {
+////        // return [self cellHeight:[feeds objectAtIndex:indexPath.row]];
+////        return 240;
+////    }
+////    else if(tableView == _feedsTypesTable)
+////    {
+////        return  45.0f;
+////    }
+////    return UITableViewAutomaticDimension;
+//
+//    return 500;
+//}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView == _feedsTable) {
-        NSDictionary *feedItem = [feeds objectAtIndex:indexPath.row];
-        if ([[feedItem objectForKey:@"is_ad"] boolValue]) {
-            CGSize imageSize = [Util getAspectRatio:[feedItem valueForKey:@"media_dimension"] ofParentWidth:[[UIScreen mainScreen] bounds].size.width];
-            return imageSize.height + 5.f;
-        }
-        return UITableViewAutomaticDimension;
-    }
-    else if(tableView == _feedsTypesTable)
-    {
-        return  45.0f;
-    }
-    return UITableViewAutomaticDimension;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (tableView == _feedsTable) {
+//        NSDictionary *feedItem = [feeds objectAtIndex:indexPath.row];
+//        if ([[feedItem objectForKey:@"is_ad"] boolValue]) {
+//            CGSize imageSize = [Util getAspectRatio:[feedItem valueForKey:@"media_dimension"] ofParentWidth:[[UIScreen mainScreen] bounds].size.width];
+//            return imageSize.height + 5.f;
+//        }
+//        return UITableViewAutomaticDimension;
+//    }
+//    else if(tableView == _feedsTypesTable)
+//    {
+//        return  45.0f;
+//    }
+//    return UITableViewAutomaticDimension;
+//
+//   // return 500;
+//
+//}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -887,6 +900,39 @@ BOOL needToShowFeedIcon,isShareAvailable;
     else{
     }
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(tableView == _feedsTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = @(cell.frame.size.height);
+        
+        [cellHeightsDictionary setObject:height forKey:key];
+        
+    }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(tableView == _feedsTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
+        return UITableViewAutomaticDimension;
+    }
+}
+
 
 #pragma mark - Attributed Label delegate
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result {
@@ -1756,14 +1802,31 @@ BOOL needToShowFeedIcon,isShareAvailable;
         NSLog(@"alterTheMediaList reloadData");
         // [_feedsTable reloadDataWithAnimation];
         
-        [_feedsTable reloadData];
         
-        double delayInSeconds = 0.0;
+       // CGPoint offset = _feedsTable.contentOffset;
+       // [_feedsTable reloadData];
+        //[_feedsTable layoutIfNeeded];// Force layout so things are updated before resetting the contentOffset.
+        //[_feedsTable setContentOffset:offset];
+
+        //[_feedsTable reloadData];
+        
+        
+        double delayInSeconds = 0.5;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             //code to be executed on the main queue after delay
-            [feedsDesign checkWhichVideoToEnable:_feedsTable];
+            //[feedsDesign checkWhichVideoToEnable:_feedsTable];
+            
+            [_feedsTable reloadData];
         });
+        
+        
+//        double delayInSeconds = 0.0;
+//        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+//        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//            //code to be executed on the main queue after delay
+//            [feedsDesign checkWhichVideoToEnable:_feedsTable];
+//        });
     }
     
 }

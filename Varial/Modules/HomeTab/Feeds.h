@@ -50,7 +50,7 @@
     NSArray *reportType;
     BOOL clearData;
     UIRefreshControl *refreshControl;
-    
+    NSMutableDictionary * cellHeightsDictionary;
     NSDictionary *currentAdInfo;
 }
 
