@@ -13,6 +13,10 @@
 #import "LikedUsersList.h"
 #import "InviteFriends.h"
 #import "UITableView+TableViewAnimations.h"
+#import "JPVideoPlayerCache.h"
+#import "JPVideoPlayer.h"
+#import "UIView+WebVideoCache.h"
+#import "JPVideoPlayerControlViews.h"
 
 @interface SmallVideoDetailViewController ()
 {
@@ -60,7 +64,12 @@ NSInteger myViewCount;
     
 }
 
--(void) viewWillAppear:(BOOL)animated{
+-(void) viewWillAppear:(BOOL)animated {
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+    FeedCell *aCell = [self.myTblViewFeedsTable cellForRowAtIndexPath:path];
+    [aCell.videoView jp_resume];
+    
     _myBoolIsVideoPlayInBigScreen = NO;
     if(_player != nil) {
         [_player play];
@@ -114,8 +123,13 @@ NSInteger myViewCount;
         [self.player pause];
         [self.videoLayer removeFromSuperlayer];
         self.player = nil;
+        
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        FeedCell *aCell = [self.myTblViewFeedsTable cellForRowAtIndexPath:path];
+        [aCell.videoView jp_stopPlay];
     }
     
+   
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -289,13 +303,37 @@ NSInteger myViewCount;
                     
                     //Add click event
                     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPostDetailsAtFirstIndex:)];
-                    [currentImage setUserInteractionEnabled:YES];
-                    [currentImage addGestureRecognizer:tap];
+                   
                     
                     //                    NSLog(@"before inline %@", NSStringFromCGRect(cell.videoView.frame));
                     //                    [self playInlineVideo:cell Url:[[medias objectAtIndex:loop] valueForKey:@"media_url"]];
-                    [self playInlineVideo:fcell withSize:mediaSize andUrl:[[medias objectAtIndex:loop] valueForKey:@"media_url"]];
+//                    [self playInlineVideo:fcell withSize:mediaSize andUrl:[[medias objectAtIndex:loop] valueForKey:@"media_url"]];
                     
+                     NSString *strVideoUrlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",_gMediaBaseUrl,[[medias objectAtIndex:loop] valueForKey:@"media_url"]]];
+                    
+                    NSURL *url = [NSURL URLWithString:strVideoUrlString];
+                    
+                    
+//                     UIView *playerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, mediaSize.width, mediaSize.height)];
+                    [fcell.mainPreview setFrame:CGRectMake(0, 0, mediaSize.width, mediaSize.height)];
+                    [fcell.mainPreview jp_playVideoWithURL:url
+                            bufferingIndicator:nil
+                                   controlView:nil
+                                  progressView:nil
+                       configurationCompletion:nil];
+                    
+                    [fcell.videoView setHidden:NO];
+//                    [fcell.mainPreview addSubview:playerView];
+                    fcell.mainPreview.backgroundColor = UIColor.blueColor;
+//                    playerView.backgroundColor = UIColor.redColor;
+                   
+                    UIImageView *currentImage = [[UIImageView alloc] init];
+                    currentImage =  fcell.mainPreview;
+                    [currentImage setUserInteractionEnabled:YES];
+                    [currentImage addGestureRecognizer:tap];
+                    
+                    
+                    [fcell.playVideoFullscreen addTarget:self action:@selector(PlayVideoFullScreenPressed:) forControlEvents:UIControlEventTouchUpInside];
                 }
                 if(loop == 1){
                     [fcell.mainPreview setHidden:NO];
@@ -309,6 +347,10 @@ NSInteger myViewCount;
 
 #pragma mark Private Functions
 
+-(void)PlayVideoFullScreenPressed:(UIButton*)sender {
+    UITapGestureRecognizer *tap;
+    [self showPostDetailsAtFirstIndex:tap];
+}
 //MARK :- Private Functions
 - (void) showPostDetailsAtFirstIndex:(UITapGestureRecognizer *)tapRecognizer {
     //Convert view to imageview
@@ -341,7 +383,7 @@ NSInteger myViewCount;
                              if (expectedSize > 0 && receivedSize > 0) {
                                  CGFloat progress = (CGFloat)receivedSize / expectedSize;
                                  progress = progress < 0 ? 0 : progress > 1 ? 1 : progress;
-                                 downloadProgress.hidden = NO;
+                                 downloadProgress.hidden = YES;
                                  [downloadProgress setValue:progress];
                              }
                          }
@@ -1394,15 +1436,15 @@ NSInteger myViewCount;
     UIImage * aImgMute = [UIImage imageNamed:@"icon_mute"];
     UIImage * aImgUnMute = [UIImage imageNamed:@"icon_unmute"];
     
-//    NSIndexPath *myIP = [NSIndexPath indexPathForRow:sender.tag inSection:0];
-//    FeedCell *cell = (FeedCell*)[_myTblViewFeedsTable cellForRowAtIndexPath:myIP];
+    NSIndexPath *myIP = [NSIndexPath indexPathForRow:sender.tag inSection:0];
+    FeedCell *fcell = (FeedCell*)[_myTblViewFeedsTable cellForRowAtIndexPath:myIP];
     
     if (myBoolIsMutePressed) {
         myBoolIsMutePressed = false;
         userInfo = @{@"IsMuted": @"false"};
         [btn setImage:aImgUnMute forState:UIControlStateNormal];
         [self.player setMuted:NO];
-        
+        [fcell.videoView setJp_muted:NO];
     }
     
     else {
@@ -1410,6 +1452,7 @@ NSInteger myViewCount;
         userInfo = @{@"IsMuted": @"true"};
         [btn setImage:aImgMute forState:UIControlStateNormal];
         [self.player setMuted:YES];
+        [fcell.videoView setJp_muted:true];
     }
     
     [[NSNotificationCenter defaultCenter]
@@ -1500,7 +1543,13 @@ NSInteger myViewCount;
         //        }
     }
 }
-
+- (BOOL)shouldDownloadVideoForURL:(NSURL *)videoURL {
+    return true;
+}
+- (BOOL)shouldAutoReplayForURL:(NSURL *)videoURL {
+    
+    return true;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

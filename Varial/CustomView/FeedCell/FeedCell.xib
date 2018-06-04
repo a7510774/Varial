@@ -267,6 +267,10 @@
                                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-Fs-55I">
                                                 <rect key="frame" x="0.0" y="0.0" width="880" height="199.5"/>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3y-xu-rcc">
+                                                <rect key="frame" x="127" y="85" width="46" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </button>
                                             <imageView userInteractionEnabled="NO" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-G6-4C1" userLabel="subPreview">
                                                 <rect key="frame" x="750" y="120" width="130" height="80"/>
                                                 <constraints>
@@ -342,16 +346,21 @@
                                         <accessibility key="accessibilityConfiguration" identifier="$Media$"/>
                                         <constraints>
                                             <constraint firstItem="mT1-Lg-SuX" firstAttribute="top" secondItem="sRM-Gl-lfn" secondAttribute="top" id="5zH-qw-NFS"/>
+                                            <constraint firstItem="w3y-xu-rcc" firstAttribute="top" secondItem="xgD-9I-smd" secondAttribute="top" id="9Cu-3F-vQ5"/>
                                             <constraint firstItem="78t-hQ-IFA" firstAttribute="centerX" secondItem="UeC-G6-4C1" secondAttribute="centerX" id="CLL-Cl-9VR"/>
                                             <constraint firstItem="xgD-9I-smd" firstAttribute="top" secondItem="sRM-Gl-lfn" secondAttribute="top" id="CxB-aD-xvx"/>
                                             <constraint firstAttribute="bottom" secondItem="xgD-9I-smd" secondAttribute="bottom" id="Eqg-7X-q1g"/>
                                             <constraint firstItem="UeC-G6-4C1" firstAttribute="trailing" secondItem="xgD-9I-smd" secondAttribute="trailing" id="F7y-vo-Vxs"/>
+                                            <constraint firstItem="w3y-xu-rcc" firstAttribute="width" secondItem="xgD-9I-smd" secondAttribute="width" id="FiC-9d-DCM"/>
                                             <constraint firstItem="78t-hQ-IFA" firstAttribute="centerY" secondItem="UeC-G6-4C1" secondAttribute="centerY" id="Isb-HP-bO4"/>
+                                            <constraint firstItem="w3y-xu-rcc" firstAttribute="leading" secondItem="xgD-9I-smd" secondAttribute="leading" id="JIG-mq-gha"/>
+                                            <constraint firstItem="w3y-xu-rcc" firstAttribute="bottom" secondItem="xgD-9I-smd" secondAttribute="bottom" id="NSU-W4-MjY"/>
                                             <constraint firstItem="2qE-sI-b8G" firstAttribute="centerY" secondItem="sRM-Gl-lfn" secondAttribute="centerY" constant="-3.5" id="OwS-x2-tt7"/>
                                             <constraint firstItem="xRS-Fs-55I" firstAttribute="width" secondItem="xgD-9I-smd" secondAttribute="width" id="TPY-5m-712"/>
                                             <constraint firstItem="mT1-Lg-SuX" firstAttribute="leading" secondItem="sRM-Gl-lfn" secondAttribute="leading" id="Txp-sY-hlh"/>
                                             <constraint firstItem="xRS-Fs-55I" firstAttribute="top" secondItem="xgD-9I-smd" secondAttribute="top" id="Vjf-mZ-VAh"/>
                                             <constraint firstItem="fgc-3V-7F6" firstAttribute="centerX" secondItem="sRM-Gl-lfn" secondAttribute="centerX" id="cIo-VO-ZCH"/>
+                                            <constraint firstItem="w3y-xu-rcc" firstAttribute="height" secondItem="xgD-9I-smd" secondAttribute="height" id="cYe-cc-zZp"/>
                                             <constraint firstItem="2qE-sI-b8G" firstAttribute="centerX" secondItem="sRM-Gl-lfn" secondAttribute="centerX" id="dwy-p2-UMB"/>
                                             <constraint firstAttribute="trailing" secondItem="xgD-9I-smd" secondAttribute="trailing" id="jab-fA-FXa"/>
                                             <constraint firstItem="xRS-Fs-55I" firstAttribute="height" secondItem="xgD-9I-smd" secondAttribute="height" id="m3j-L3-91f"/>
@@ -360,6 +369,7 @@
                                             <constraint firstItem="oen-l8-vXy" firstAttribute="top" secondItem="mT1-Lg-SuX" secondAttribute="bottom" id="t2u-1F-MzG"/>
                                             <constraint firstItem="UeC-G6-4C1" firstAttribute="bottom" secondItem="xgD-9I-smd" secondAttribute="bottom" id="uwN-Ah-ifh"/>
                                             <constraint firstItem="xRS-Fs-55I" firstAttribute="leading" secondItem="xgD-9I-smd" secondAttribute="leading" id="vuR-Qs-e00"/>
+                                            <constraint firstItem="w3y-xu-rcc" firstAttribute="trailing" secondItem="xgD-9I-smd" secondAttribute="trailing" id="yLQ-Oq-3gz"/>
                                             <constraint firstItem="fgc-3V-7F6" firstAttribute="centerY" secondItem="sRM-Gl-lfn" secondAttribute="centerY" constant="-4" id="zPJ-iv-XVQ"/>
                                         </constraints>
                                     </view>
@@ -635,6 +645,7 @@
                 <outlet property="name" destination="d8a-HM-Oll" id="dhk-4V-6JX"/>
                 <outlet property="optionsView" destination="dEA-3p-BQS" id="N1t-AW-u5G"/>
                 <outlet property="playIcon" destination="fgc-3V-7F6" id="ID0-45-A5D"/>
+                <outlet property="playVideoFullscreen" destination="w3y-xu-rcc" id="D31-rr-Wx7"/>
                 <outlet property="privacyImage" destination="q62-el-rmc" id="qRw-Wc-ahD"/>
                 <outlet property="profileImage" destination="0sh-Gv-ea5" id="q3n-KO-tBJ"/>
                 <outlet property="reportButton" destination="yZ7-tC-Wf0" id="PS9-rT-NUY"/>

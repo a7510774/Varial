@@ -448,7 +448,7 @@
 - (void)jp_gotoPortraitAnimated:(BOOL)flag
                      completion:(dispatch_block_t)completion{
     if (self.jp_viewInterfaceOrientation != JPVideoPlayViewInterfaceOrientationLandscape) {
-        return;
+      //  return;
     }
 
     self.helper.viewInterfaceOrientation = JPVideoPlayViewInterfaceOrientationPortrait;

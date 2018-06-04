@@ -490,9 +490,9 @@ static const CGFloat kJPVideoPlayerControlBarLandscapeUpOffset = 12;
                          blurImage:(UIImage *)blurImage {
     self = [super initWithFrame:CGRectZero];
     if(self){
-        _controlBar = controlBar;
-        _blurImage = blurImage;
-        [self _setup];
+//        _controlBar = controlBar;
+//        _blurImage = blurImage;
+//        [self _setup];
     }
     return self;
 }
