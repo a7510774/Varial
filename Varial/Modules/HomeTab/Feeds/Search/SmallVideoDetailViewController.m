@@ -68,7 +68,8 @@ NSInteger myViewCount;
     
     NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
     FeedCell *aCell = [self.myTblViewFeedsTable cellForRowAtIndexPath:path];
-    [aCell.videoView jp_resume];
+    [aCell.mainPreview setJp_muted:NO];
+//    [aCell.videoView jp_resume];
     
     _myBoolIsVideoPlayInBigScreen = NO;
     if(_player != nil) {
@@ -114,7 +115,10 @@ NSInteger myViewCount;
 
     if(_myBoolIsVideoPlayInBigScreen) {
         
-        [self.player pause];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        FeedCell *aCell = [self.myTblViewFeedsTable cellForRowAtIndexPath:path];
+        [aCell.mainPreview setJp_muted:YES];
+//        [self.player pause];
         
     } else {
         [self.player setMuted:YES];
@@ -127,25 +131,26 @@ NSInteger myViewCount;
         
         NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
         FeedCell *aCell = [self.myTblViewFeedsTable cellForRowAtIndexPath:path];
+//        [aCell.mainPreview setJp_muted:YES];
         [aCell.videoView jp_stopPlay];
     }
 }
 
--(void)viewDidDisappear:(BOOL)animated {
-    
-    if(_myBoolIsVideoPlayInBigScreen) {
-        
-        [self.player pause];
-    } else {
-        [self.player setMuted:YES];
-        [self.player.currentItem cancelPendingSeeks];
-        [self.player.currentItem.asset cancelLoading];
-        
-        [self.player pause];
-        [self.videoLayer removeFromSuperlayer];
-        self.player = nil;
-    }
-}
+//-(void)viewDidDisappear:(BOOL)animated {
+//
+//    if(_myBoolIsVideoPlayInBigScreen) {
+//
+//        [self.player pause];
+//    } else {
+//        [self.player setMuted:YES];
+//        [self.player.currentItem cancelPendingSeeks];
+//        [self.player.currentItem.asset cancelLoading];
+//
+//        [self.player pause];
+//        [self.videoLayer removeFromSuperlayer];
+//        self.player = nil;
+//    }
+//}
 
 //MARK-: TableView Delegate and DataSource
 

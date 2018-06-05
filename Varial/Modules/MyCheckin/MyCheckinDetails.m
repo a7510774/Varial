@@ -201,7 +201,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if(tableView == _profileTable) {
+    if(tableView == self.feedsTable) {
         
         NSNumber *key = @(indexPath.row);
         NSNumber *height = [cellHeightsDictionary objectForKey:key];
@@ -220,7 +220,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if(tableView == _profileTable) {
+    if(tableView == self.feedsTable) {
         
         NSNumber *key = @(indexPath.row);
         NSNumber *height = @(cell.frame.size.height);
@@ -233,7 +233,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(tableView == _profileTable) {
+    if(tableView == self.feedsTable) {
         
         NSNumber *key = @(indexPath.row);
         NSNumber *height = [cellHeightsDictionary objectForKey:key];

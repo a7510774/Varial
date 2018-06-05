@@ -124,6 +124,9 @@
     [self.profileView.btnFollow addTarget:self action:@selector(followingBtntapped) forControlEvents:UIControlEventTouchUpInside];
     [HELPER roundCornerForView:self.profileView.btnFollow withRadius:5.0];
     
+    self.profileTable.estimatedRowHeight = 999;
+    self.profileTable.rowHeight = 999;
+    
    // _profileTable.frame = CGRectMake(_profileTable.frame.origin.x,_collectionView.frame.size.height+_collectionView.frame.origin.y , _profileTable.frame.size.width, _profileTable.frame.size.height);
 }
 //- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -1332,23 +1335,6 @@
 //    [self goToSharedPersonProfile:path isSharedPersonName:NO];
 //}
 
--(void)goToSharedPersonProfile:(NSIndexPath *)indexpath isSharedPersonName:(BOOL)isSharedPerson{
-    if ([feedList count] > indexpath.row) {
-        if (![[[feedList objectAtIndex:indexpath.row] objectForKey:@"is_local"] isEqualToString:@"true"]) {
-            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-            FriendProfile *profile = [storyBoard instantiateViewControllerWithIdentifier:@"FriendProfile"];
-            if (isSharedPerson) {
-                profile.friendId = [feedList objectAtIndex:indexpath.row][@"share_details"][@"player_id"];
-                profile.friendName = [feedList objectAtIndex:indexpath.row][@"share_details"][@"name"];
-            } else {
-                profile.friendId = [feedList objectAtIndex:indexpath.row][@"post_owner_id"];
-                profile.friendName = [feedList objectAtIndex:indexpath.row][@"name"];
-            }
-            [self.navigationController pushViewController:profile animated:YES];
-        }
-    }
-}
-
 //Add click event to table row
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -1382,23 +1368,6 @@
 //    }
 }
 
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath{
-//    [feedsDesign stopTheVideo:cell];
-//    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [feedsDesign playVideoConditionally];
-//    });
-}
-
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [feedsDesign stopAllVideos];
-//    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [feedsDesign playVideoConditionally];
-//    });
-    
-}
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [feedsDesign stopAllVideos];
 }
@@ -1408,6 +1377,23 @@
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [feedsDesign checkWhichVideoToEnable:_profileTable];
+}
+
+-(void)goToSharedPersonProfile:(NSIndexPath *)indexpath isSharedPersonName:(BOOL)isSharedPerson{
+    if ([feedList count] > indexpath.row) {
+        if (![[[feedList objectAtIndex:indexpath.row] objectForKey:@"is_local"] isEqualToString:@"true"]) {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+            FriendProfile *profile = [storyBoard instantiateViewControllerWithIdentifier:@"FriendProfile"];
+            if (isSharedPerson) {
+                profile.friendId = [feedList objectAtIndex:indexpath.row][@"share_details"][@"player_id"];
+                profile.friendName = [feedList objectAtIndex:indexpath.row][@"share_details"][@"name"];
+            } else {
+                profile.friendId = [feedList objectAtIndex:indexpath.row][@"post_owner_id"];
+                profile.friendName = [feedList objectAtIndex:indexpath.row][@"name"];
+            }
+            [self.navigationController pushViewController:profile animated:YES];
+        }
+    }
 }
 
 #pragma argu - KLCPointpopup delegate

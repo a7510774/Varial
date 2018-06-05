@@ -167,7 +167,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(tableView == _profileTable) {
+    if(tableView == self.myTblView) {
         
         NSNumber *key = @(indexPath.row);
         NSNumber *height = [cellHeightsDictionary objectForKey:key];

@@ -71,7 +71,8 @@ BOOL isRefresh = FALSE, canDonate = FALSE;
     [self.profileTable registerNib:[UINib nibWithNibName:@"MessagesCell" bundle:nil] forCellReuseIdentifier:@"MessagesCell"];
     [self.profileTable registerNib:[UINib nibWithNibName:@"FriendInviteCell" bundle:nil] forCellReuseIdentifier:@"FriendInviteCell"];
     
-    
+    self.profileTable.estimatedRowHeight = 999;
+    self.profileTable.rowHeight = 999;
     
 //    [_profileTable setHidden:NO];
     
@@ -1006,14 +1007,6 @@ BOOL isRefresh = FALSE, canDonate = FALSE;
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath{
 //    [feedsDesign stopTheVideo:cell];
-//    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [feedsDesign playVideoConditionally];
-//    });
-    
-}
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [feedsDesign stopAllVideos];
 //    
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [feedsDesign playVideoConditionally];
