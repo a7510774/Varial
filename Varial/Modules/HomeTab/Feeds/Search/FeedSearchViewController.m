@@ -26,12 +26,17 @@
     NSString *mediaBaseUrl;
     UIImageView *thumbImage;
     BOOL isSelectVideoCell;
-     FeedsDesign *feedsDesign;
     
+    BOOL isSelectOtherVideoCategory;
+
+    
+   //  FeedsDesign *feedsDesign;
 }
 @property(nonatomic, strong)NSMutableArray *myAryInfo, *myAryFilterInfo, *ChannelList;
 @property(nonatomic, strong)NSMutableArray *otherVideosList;
 @property(nonatomic)BOOL isSelectVideoCell;
+
+@property(nonatomic, strong)NSIndexPath *oldVideoIndexPathVideoPlay;
 
 @end
 
@@ -51,6 +56,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     
+    isSelectOtherVideoCategory = NO;
     self.myTblView.hidden = YES;
     self.myInfoTblView.hidden = NO;
     self.myLblRecentSearch.text = channelStr;
@@ -79,7 +85,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     
-    [feedsDesign muteAllVideos];
+   // [feedsDesign muteAllVideos];
 //     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)didReceiveMemoryWarning {
@@ -91,7 +97,8 @@
 
 - (void)setUpUI {
     
-    feedsDesign = [[FeedsDesign alloc] init];
+   // feedsDesign = [[FeedsDesign alloc] init];
+    
     delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     self.navigationController.navigationBar.hidden = YES;
     self.navigationController.navigationBar.translucent = NO;
@@ -198,13 +205,13 @@
             
             [aCell.collctionView registerNib:[UINib nibWithNibName:NSStringFromClass([PopularFeedsCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PopularFeedsCollectionViewCell class])];
             
-            
             [aCell.collctionView reloadData];
             
             [_myInfoTblView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
             
             return aCell;
         }
+        
         else if (indexPath.section == 1) {
             
             OtherVideosTableViewCell *aCell = [tableView dequeueReusableCellWithIdentifier: NSStringFromClass([OtherVideosTableViewCell class])];
@@ -223,27 +230,23 @@
             
             aCell.frame = tableView.bounds;
             [aCell layoutIfNeeded];
+            
           //  [aCell.collctionView reloadData];
             aCell.collectionViewHeight.constant =  aCell.collctionView.collectionViewLayout.collectionViewContentSize.height + 210;
-            
-            
             __weak FeedSearchViewController *feedRefreshSelf = self;
             
             [aCell.collctionView addInfiniteScrollingWithActionHandler:^{
                 [feedRefreshSelf insertRowAtBottomForMedia];
             }];
-            [aCell.collctionView.infiniteScrollingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
             
+            [aCell.collctionView.infiniteScrollingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
             [_myInfoTblView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
             
             return aCell;
         }
-       
     }
         SearchHistoryTableViewCell *aCell = [tableView dequeueReusableCellWithIdentifier: NSStringFromClass([SearchHistoryTableViewCell class])];
-        
         aCell.myLblTitle.text = self.myAryInfo[indexPath.row][@"name"];
-        
         return aCell;
 }
 
@@ -550,20 +553,14 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     PopularFeedsCollectionViewCell *aCell= [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([PopularFeedsCollectionViewCell class]) forIndexPath:indexPath];
     
     NSDictionary *data ;
-    
     NSString *urlString;
-    
-    
     
     if (collectionView.tag == 0) {
         
         data = [_ChannelList objectAtIndex:indexPath.row];
-        
-        
         
         if ([data objectForKey:@"media_url"] != nil)  {
             
@@ -571,20 +568,13 @@
             
         }//media_url
         
-        NSLog(@"what is this %@", urlString);
-        
-        
+       // NSLog(@"what is this %@", urlString);
         
         aCell.cameraIcon.hidden = YES;
-        
         aCell.playIcon.hidden = NO;
         
         aCell.roundPlayIcon.hidden = YES;
-        
-        
-        
-        
-        
+       
         aCell.imgView.layer.cornerRadius = 6;
         
         aCell.imgView.clipsToBounds = YES;
@@ -599,15 +589,13 @@
         
         data = [_otherVideosList objectAtIndex:indexPath.row];
         
-        
-        
         if ([data objectForKey:@"media_url"] != nil)  {
             
             urlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_image"]]]; //@"media_image"
             
         }//media_url
         
-        NSLog(@"what is this %@", urlString);
+        //NSLog(@"what is this %@", urlString);
         
         NSString *videoUrlString ;
         
@@ -615,103 +603,84 @@
         
         AVPlayer *player = nil;
         
-        BOOL isBigScreen;
-        
-        
-        
-        if (indexPath.row == 0) {
-            
-            
-            
-            isBigScreen = true;
-            
-            
-            
-            intCountRowForIndexpath = 11;
-            
-            intCountBigScreenForIndexpath = 11;
-            
-        }
-        
-        
-        else if  (indexPath.row == intCountRowForIndexpath) {
-            
-            if (intCountBigScreenForIndexpath == 11) {
-                
-                
-                
-                intCountBigScreenForIndexpath = 7;
-                
-                intCountRowForIndexpath = intCountRowForIndexpath + 7;
-                
-            }
-            
-            else if (intCountBigScreenForIndexpath == 7) {
-                
-                
-                
-                intCountBigScreenForIndexpath = 11;
-                
-                intCountRowForIndexpath = intCountRowForIndexpath + 11;
-                
-            }
-            
-            
-            isBigScreen = true;
-            
-        }
-        
-        else {
-            
-            isBigScreen = false;
-            
-        }
-        
-        
-        
-        
-        
-        
-        
+//        BOOL isBigScreen;
+//
+//
+//        if (indexPath.row == 0) {
+//
+//            isBigScreen = true;
+//
+//            intCountRowForIndexpath = 11;
+//            intCountBigScreenForIndexpath = 11;
+//        }
+//
+//
+//        else if  (indexPath.row == intCountRowForIndexpath) {
+//
+//            if (intCountBigScreenForIndexpath == 11) {
+//
+//                intCountBigScreenForIndexpath = 7;
+//                intCountRowForIndexpath = intCountRowForIndexpath + 7;
+//            }
+//
+//            else if (intCountBigScreenForIndexpath == 7) {
+//
+//                intCountBigScreenForIndexpath = 11;
+//                intCountRowForIndexpath = intCountRowForIndexpath + 11;
+//            }
+//
+//
+//            isBigScreen = true;
+//
+//        }
+//
+//        else {
+//
+//            isBigScreen = false;
+//        }
+       
         if (aCell.bounds.size.height > 250) {
             
-            
+            if (indexPath != self.oldVideoIndexPathVideoPlay) {
+                
+                if (self.oldVideoIndexPathVideoPlay != nil) {
+                    
+                    //PopularFeedsCollectionViewCell *oldCell = (PopularFeedsCollectionViewCell*)[collectionView cellForItemAtIndexPath:self.oldVideoIndexPathVideoPlay];
+                    
+                    NSLog(@"stop indexpath row -------------- %ld", (long)indexPath.row);
+                    
+                    NSDictionary *oldData = [_otherVideosList objectAtIndex:self.oldVideoIndexPathVideoPlay.row];
+                    NSString* oldVideoUrlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[oldData objectForKey:@"media_url"]]];
+                    
+                    NSURL *oldUrl = [NSURL URLWithString:oldVideoUrlString];
+                    player = [AVPlayer playerWithURL:oldUrl];
+                    [player pause];
+                }
+                
+                
+                NSLog(@"play indexpath row -------------- %ld", (long)indexPath.row);
+
+                
+            self.oldVideoIndexPathVideoPlay = indexPath;
             
             aCell.videoView.hidden = NO;
-            
             aCell.mainPreview.hidden = NO;
-            
             aCell.imgView.hidden = YES;
             
-            NSLog(@"what is this %@", urlString);
+           // NSLog(@"what is this %@", urlString);
             
             NSString *videoUrlString ;
             
             videoUrlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_url"]]];
             
-            
-            
             NSURL *videoUrl = [[NSURL alloc] initWithString:videoUrlString];
-            
-            
-            
-            
-            
             NSURL *url = [NSURL URLWithString:videoUrlString];
-            
-            
-            
-            
-            
             BOOL isSameVideo = [aCell.videoUrl isEqualToString:videoUrlString];
             
             if (isSameVideo) {
                 
                 NSLog(@"Same video to play");
-                
             }
-            
-            
             
             aCell.videoUrl = videoUrlString;
             
@@ -719,8 +688,7 @@
                 
                 player = [delegate.seachVideoPlayer objectForKey:videoUrlString];
                 
-                NSLog(@"got existing player");
-                
+               // NSLog(@"got existing player");
             }
             
             else {
@@ -730,32 +698,19 @@
                 if(player != nil && player.currentItem != nil)
                     
                 {
-                    
                     [delegate.seachVideoPlayer setValue:player forKey:videoUrlString];
-                    
                     [delegate.videoUrls addObject:videoUrlString];
-                    
-                    
-                    
+                   
                     // Subscribe to the AVPlayerItem's DidPlayToEndTime notification.
                     
                     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:[player currentItem]];
                     
                     //[player addObserver:self forKeyPath:@"status" options:0 context:nil];
-                    
                 }
-                
             }
             
-            
-            
             //        [player setMuted:NO];
-            
-            
-            
             //        dispatch_async( dispatch_get_main_queue(), ^{
-            
-            
             
             // Different video or has no video layer
             
@@ -763,16 +718,11 @@
             
             if (!isSameVideo || [aCell.mainPreview.layer.sublayers count] == 0) {
 
-                NSLog(@"Making an AVPlayerLayer %d %d", isSameVideo, (int)[aCell.imgView.layer.sublayers count]);
-
-
+               // NSLog(@"Making an AVPlayerLayer %d %d", isSameVideo, (int)[aCell.imgView.layer.sublayers count]);
 
                 AVPlayerLayer *videoLayer = [AVPlayerLayer playerLayerWithPlayer:player];
 
-
                 [aCell.mainPreview.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
-
-
 
                 videoLayer.frame = aCell.bounds;//CGRectMake(0, 0, aCell.mainPreview.frame.size.width, aCell.mainPreview.frame.size.height);
 
@@ -781,7 +731,6 @@
                 aCell.mainPreview.frame = aCell.bounds;
 
                 [aCell.mainPreview.layer addSublayer:videoLayer];
-
             }
 
             [aCell.videoView setHidden:YES];
@@ -795,80 +744,74 @@
                 [player play];
 
                 // });
-
             });
             
             aCell.playIcon.hidden = YES;
-            
             aCell.cameraIcon.hidden = YES;
-            
             aCell.roundPlayIcon.hidden = NO;
-            
         }
         
+//            else {
+//
+//                if (self.oldVideoIndexPathVideoPlay != nil) {
+//
+//                    //PopularFeedsCollectionViewCell *oldCell = (PopularFeedsCollectionViewCell*)[collectionView cellForItemAtIndexPath:self.oldVideoIndexPathVideoPlay];
+//
+//                    NSDictionary *oldData = [_ChannelList objectAtIndex:self.oldVideoIndexPathVideoPlay.row];
+//                    NSString* oldVideoUrlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[oldData objectForKey:@"media_url"]]];
+//
+//                    NSURL *oldUrl = [NSURL URLWithString:oldVideoUrlString];
+//                    player = [AVPlayer playerWithURL:oldUrl];
+//                    [player pause];
+//                }
+//            }
+        }
         else {
             
             aCell.videoView.hidden = YES;
-            
             aCell.mainPreview.hidden = YES;
-            
             aCell.imgView.hidden = NO;
-            
             aCell.cameraIcon.hidden = NO;
-            
             aCell.imgView.layer.cornerRadius = 0;
-            
             aCell.roundPlayIcon.hidden = YES;
-            
             aCell.playIcon.hidden = YES;
-            
             [aCell.imgView yy_setImageWithURL:[NSURL URLWithString:urlString] options:YYWebImageOptionProgressiveBlur];
-            
-            
         }
-        
     }
     
-    
-    
-    
-    
+    [aCell layoutIfNeeded];
     return aCell;
-    
-    
-    
-    
-    
 }
 
 
-- (void)collectionView:(UICollectionView *)collectionView
-       willDisplayCell:(UICollectionViewCell *)cell
-    forItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     
-   if ((indexPath.item == self.otherVideosList.count - 1) && isLoadMore == true) {
-        
+    if ((indexPath.item == self.otherVideosList.count - 1) && isLoadMore == true) {
+
         __weak FeedSearchViewController *feedRefreshSelf = self ;
         int64_t delayInSeconds = 0.0;
-        
+
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-          //  [self getVideosList];
-            
+            //  [self getVideosList];
+
         });
     }
-   else if ((indexPath.item == self.otherVideosList.count - 2) && isLoadMore == true) {
-       
-       __weak FeedSearchViewController *feedRefreshSelf = self ;
-       int64_t delayInSeconds = 0.0;
-       
-       dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-       dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-         //  [self getVideosList];
-           
-       });
-   }
-} //((indexPath.item == self.otherVideosList.count - 2) ||
+
+    else if ((indexPath.item == self.otherVideosList.count - 2) && isLoadMore == true) {
+
+        __weak FeedSearchViewController *feedRefreshSelf = self ;
+        int64_t delayInSeconds = 0.0;
+
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            //  [self getVideosList];
+
+        });
+    }
+}
+
+//((indexPath.item == self.otherVideosList.count - 2) ||
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     
     NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:1];
@@ -877,8 +820,27 @@
     CGRect visibleRect = (CGRect){.origin = cell.collctionView.contentOffset, .size = cell.collctionView.bounds.size};
     CGPoint visiblePoint = CGPointMake(CGRectGetMidX(visibleRect), CGRectGetMidY(visibleRect));
     NSIndexPath *visibleIndexPath = [cell.collctionView indexPathForItemAtPoint:visiblePoint];
-    NSLog(@"%@",visibleIndexPath);
+    //NSLog(@"%@",visibleIndexPath);
+    
+    //NSIndexPath *centerCellIndexPath = [cell.collctionView indexPathForItemAtPoint:[self.view convertPoint:[self.view center] toView:cell.collctionView]];
+    
+    [cell.collctionView layoutIfNeeded];
+    for (UICollectionViewCell *cellObj in [cell.collctionView visibleCells]) {
+        
+        NSIndexPath *indexPath = [cell.collctionView indexPathForCell:cellObj];
+        
+//        NSLog(@"");
+//        NSLog(@"centerCellIndexPath -------------------------> %ld",(long)indexPath.row);
+//        NSLog(@"");
+    }
+    
+    //NSLog(@"");
+
+    //NSLog(@"centerCellIndexPath -------------------------> %ld",(long)centerCellIndexPath.row);
+    
+    //NSLog(@"");
 }
+          
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGFloat aCollectionViewCellHeight = self.view.frame.size.width/4;
@@ -911,7 +873,7 @@
     }
     
     if (ret) {
-        NSLog(@"test show");
+       // NSLog(@"test show");
         
         if (isLoadMore == true) {
             
@@ -921,7 +883,7 @@
     }
     
     else {
-        NSLog(@"test Hidden");
+       // NSLog(@"test Hidden");
     }
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView
@@ -937,6 +899,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    isSelectOtherVideoCategory = YES;
+
     NSMutableDictionary *data = [NSMutableDictionary new];
     if (collectionView.tag == 0) {
         data = [[_ChannelList objectAtIndex:indexPath.row] mutableCopy];
@@ -944,6 +908,9 @@
     else {
         data = [[_otherVideosList objectAtIndex:indexPath.row] mutableCopy];
     }
+    
+    
+    
 //    NSString *urlString = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_url"]]];
 //    NSString *thumbUrl = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@",mediaBaseUrl,[data objectForKey:@"media_image"]]];
     
@@ -1123,7 +1090,6 @@
         intCountBigScreen = 11;
     }
     
-    
     else if  (currentIndexpath.row == intCountRow) {
         
         if (intCountBigScreen == 11) {
@@ -1153,9 +1119,8 @@
 
 - (BOOL)playeVideoFromTheCell:(UICollectionViewCell *)cell :(NSURL* )videoUrl{
     
-    if([cell isKindOfClass:[PopularFeedsCollectionViewCell class]])
-    {
-        PopularFeedsCollectionViewCell *feedCell = (PopularFeedsCollectionViewCell* )cell;
+    if([cell isKindOfClass:[PopularFeedsCollectionViewCell class]]) {
+        
         AVPlayer *player = [delegate.seachVideoPlayer objectForKey:videoUrl];
         if (player != nil) {
             
@@ -1195,7 +1160,8 @@
 
 // Will be called when AVPlayer finishes playing playerItem
 -(void)itemDidFinishPlaying:(NSNotification *) notification {
-    NSLog(@"itemDidFinishPlaying");
+    
+   // NSLog(@"Search Video ----------------------- > itemDidFinishPlaying");
     
     //    dispatch_async(dispatch_get_main_queue(), ^{
     //
@@ -1211,7 +1177,14 @@
     [player setMuted: YES];
     
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
-        [player play];
+        
+        if (isSelectOtherVideoCategory) {
+            
+            [player pause];
+        }
+        else {
+            [player play];
+        }
     });
     
 //    if (delegate.currentVideoUrl != nil && [videoUrl isEqualToString:delegate.currentVideoUrl]) {
@@ -1283,7 +1256,7 @@
     }
     
     if (delegate.playerViewController.player.currentItem.playbackBufferEmpty) {
-        NSLog(@"Buffer Empty");
+       // NSLog(@"Buffer Empty");
     }
     
     thumbImage.contentMode = UIViewContentModeScaleAspectFit;
