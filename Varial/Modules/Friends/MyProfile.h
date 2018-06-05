@@ -58,6 +58,7 @@
     UIImagePickerController *controller;
     UIRefreshControl *refreshControl;
     BOOL profileLoading,feedsLoading,isFromProfileUpdate;
+    NSMutableDictionary * cellHeightsDictionary;
 }
 @property (nonatomic) NSUInteger needToReload;
 @property (weak, nonatomic) IBOutlet ProfileView *profileView;

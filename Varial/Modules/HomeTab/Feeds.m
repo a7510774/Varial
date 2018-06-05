@@ -86,28 +86,31 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"Feeds viewDidAppear %d", animated);
-    [super viewDidAppear:animated];
-    
-    [self designTheView];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if([feeds count] == 0)
-        {
-            [Util addEmptyMessageToTable:self.feedsTable withMessage:PLEASE_LOADING withColor:UIColorFromHexCode(BG_TEXT_COLOR)];
-        }
-    });
-    
-    
-    [self setFeedType];
-    
     if (!feedsDesign.myBoolIsVideoViewedInBigScreen) {
+        
+        [super viewDidAppear:animated];
+        
+        [self designTheView];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if([feeds count] == 0)
+            {
+                [Util addEmptyMessageToTable:self.feedsTable withMessage:PLEASE_LOADING withColor:UIColorFromHexCode(BG_TEXT_COLOR)];
+            }
+        });
+        
+        [self setFeedType];
         [self getFeedValuesFromSelectedType];
+        [feedsDesign checkWhichVideoToEnable:_feedsTable];
+    }
+    
+    else {
+        [feedsDesign checkWhichVideoToEnable:_feedsTable];
     }
     feedsDesign.myBoolIsVideoViewedInBigScreen = NO;
     
     NSLog(@"viewDidAppear Videos");
-    [feedsDesign checkWhichVideoToEnable:_feedsTable];
+    
 }
 
 -(void)PlayVideoOnAppForeground
@@ -181,33 +184,36 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 - (void)viewWillAppear:(BOOL)animated{
     //Check for name and image update
-    BOOL isNameChanged = [[[NSUserDefaults standardUserDefaults] valueForKey:@"isNameChanged"] boolValue];
-    BOOL isImageChanged = [[[NSUserDefaults standardUserDefaults] valueForKey:@"isImageChanged"] boolValue];
-    if (isNameChanged || isImageChanged) {
-        [self resetNamesInAllList];
+    if (!feedsDesign.myBoolIsVideoViewedInBigScreen) {
+        BOOL isNameChanged = [[[NSUserDefaults standardUserDefaults] valueForKey:@"isNameChanged"] boolValue];
+        BOOL isImageChanged = [[[NSUserDefaults standardUserDefaults] valueForKey:@"isImageChanged"] boolValue];
+        if (isNameChanged || isImageChanged) {
+            [self resetNamesInAllList];
+        }
+        
+        //Check for update has made in the feed
+        if (selectedPostIndex != -1) {
+            [self updateTheFeedDetails];
+        }
+        
+        newFeedsTimer = [NSTimer scheduledTimerWithTimeInterval:180 target:self selector:@selector(refreshFeedList) userInfo:nil repeats: YES];
+        [Util setStatusBar];
+        appDelegate.shouldAllowRotation = FALSE;
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(PlayVideoOnAppForeground)
+                                                    name:UIApplicationWillEnterForegroundNotification
+                                                  object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(PlayVideoOnAppForeground)
+                                                    name:UIApplicationDidBecomeActiveNotification
+                                                  object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(StopVideoOnAppBackground)
+                                                    name:UIApplicationWillResignActiveNotification
+                                                  object:nil];
     }
-    
-    //Check for update has made in the feed
-    if (selectedPostIndex != -1) {
-        [self updateTheFeedDetails];
-    }
-    
-    newFeedsTimer = [NSTimer scheduledTimerWithTimeInterval:180 target:self selector:@selector(refreshFeedList) userInfo:nil repeats: YES];
-    [Util setStatusBar];
-    appDelegate.shouldAllowRotation = FALSE;
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(PlayVideoOnAppForeground)
-                                                name:UIApplicationWillEnterForegroundNotification
-                                              object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(PlayVideoOnAppForeground)
-                                                name:UIApplicationDidBecomeActiveNotification
-                                              object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(StopVideoOnAppBackground)
-                                                name:UIApplicationWillResignActiveNotification
-                                              object:nil];
+    //feedsDesign.myBoolIsVideoViewedInBigScreen = NO;
     
 }
 
@@ -302,6 +308,8 @@ BOOL needToShowFeedIcon,isShareAvailable;
         
         // Reload Table View
         [_feedsTable reloadData];
+        
+        
         
         //        double delayInSeconds = 0.5;
         //        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
@@ -586,6 +594,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
 
 - (IBAction)feedTypes:(id)sender {
     [self showFeedTypes];
+    [feedsDesign stopAllVideos];
 }
 
 #pragma mark - UITableView Delegates
@@ -618,25 +627,24 @@ BOOL needToShowFeedIcon,isShareAvailable;
 //    return 500;
 //}
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (tableView == _feedsTable) {
-//        NSDictionary *feedItem = [feeds objectAtIndex:indexPath.row];
-//        if ([[feedItem objectForKey:@"is_ad"] boolValue]) {
-//            CGSize imageSize = [Util getAspectRatio:[feedItem valueForKey:@"media_dimension"] ofParentWidth:[[UIScreen mainScreen] bounds].size.width];
-//            return imageSize.height + 5.f;
-//        }
-//        return UITableViewAutomaticDimension;
-//    }
-//    else if(tableView == _feedsTypesTable)
-//    {
-//        return  45.0f;
-//    }
-//    return UITableViewAutomaticDimension;
-//
-//   // return 500;
-//
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(tableView == _feedsTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
+        return UITableViewAutomaticDimension;
+    }
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -888,6 +896,7 @@ BOOL needToShowFeedIcon,isShareAvailable;
             // 1. If having local feeds show progress.  2.Assign feed array from selected feed type.
             [self registerForUploadRequest];
             [self getFeedValuesFromSelectedType];
+            [feedsDesign checkWhichVideoToEnable:_feedsTable];
             //  [self insertRowAtTop];
             
             NSLog(@"TableView did select: reloadData");
@@ -1808,25 +1817,14 @@ BOOL needToShowFeedIcon,isShareAvailable;
         //[_feedsTable layoutIfNeeded];// Force layout so things are updated before resetting the contentOffset.
         //[_feedsTable setContentOffset:offset];
 
-        //[_feedsTable reloadData];
+        [_feedsTable reloadData];
         
-        
-        double delayInSeconds = 0.5;
+        double delayInSeconds = 0.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             //code to be executed on the main queue after delay
-            //[feedsDesign checkWhichVideoToEnable:_feedsTable];
-            
-            [_feedsTable reloadData];
+            [feedsDesign checkWhichVideoToEnable:_feedsTable];
         });
-        
-        
-//        double delayInSeconds = 0.0;
-//        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-//        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//            //code to be executed on the main queue after delay
-//            [feedsDesign checkWhichVideoToEnable:_feedsTable];
-//        });
     }
     
 }

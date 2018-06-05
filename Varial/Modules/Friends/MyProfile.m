@@ -1249,25 +1249,76 @@
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //minimum size of your cell, it should be single line of label if you are not clear min. then return UITableViewAutomaticDimension;
-    if (tableView == _boardTable) {
-        return 90.0f;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
     }
-    else{
+    else {
         return UITableViewAutomaticDimension;
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (tableView == _boardTable) {
-        return 90.0f;
+    
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = @(cell.frame.size.height);
+        
+        [cellHeightsDictionary setObject:height forKey:key];
+        
     }
-    else{
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
         return UITableViewAutomaticDimension;
     }
 }
+
+//-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    //minimum size of your cell, it should be single line of label if you are not clear min. then return UITableViewAutomaticDimension;
+//    if (tableView == _boardTable) {
+//        return 90.0f;
+//    }
+//    else{
+//        return UITableViewAutomaticDimension;
+//    }
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (tableView == _boardTable) {
+//        return 90.0f;
+//    }
+//    else{
+//        return UITableViewAutomaticDimension;
+//    }
+//}
 
 //-(void)doActionForSharedPerson:(id)sender{
 //    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:_profileTable];

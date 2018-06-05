@@ -44,6 +44,8 @@
 - (void)setBadge;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *myConstraintTabBarHeight;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *myConstraintHeaderviewTop;
+
 
 @end
 

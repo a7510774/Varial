@@ -45,6 +45,7 @@
     NSArray *reportType;
     BOOL profileLoading, feedsLoading;
     UIRefreshControl *refreshControl;
+    NSMutableDictionary * cellHeightsDictionary;
 }
 
 @property(nonatomic,strong) MLKMenuPopover *reportPopover;

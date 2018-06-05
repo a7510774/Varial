@@ -79,7 +79,7 @@ NSInteger myViewCount;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         //code to be executed on the main queue after delay
-        [self checkWhichVideoToEnable:_myTblViewFeedsTable];
+        //[self checkWhichVideoToEnable:_myTblViewFeedsTable];
     });
 }
 
@@ -115,6 +115,7 @@ NSInteger myViewCount;
     if(_myBoolIsVideoPlayInBigScreen) {
         
         [self.player pause];
+        
     } else {
         [self.player setMuted:YES];
         [self.player.currentItem cancelPendingSeeks];
@@ -128,8 +129,6 @@ NSInteger myViewCount;
         FeedCell *aCell = [self.myTblViewFeedsTable cellForRowAtIndexPath:path];
         [aCell.videoView jp_stopPlay];
     }
-    
-   
 }
 
 -(void)viewDidDisappear:(BOOL)animated {

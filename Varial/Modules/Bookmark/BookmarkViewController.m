@@ -132,14 +132,55 @@
     return feedList.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    return UITableViewAutomaticDimension;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(tableView == self.myTblView) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
+        return UITableViewAutomaticDimension;
+    }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(tableView == self.myTblView) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = @(cell.frame.size.height);
+        
+        [cellHeightsDictionary setObject:height forKey:key];
+        
+    }
+}
 
-    return UITableViewAutomaticDimension;
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
+        return UITableViewAutomaticDimension;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

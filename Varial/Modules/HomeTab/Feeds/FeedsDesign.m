@@ -533,6 +533,8 @@ NSInteger viewCount;
 // Design the Image, Video, and text Container
 - (void)designTheContainerView:(FeedCell *)cell forFeedData:(NSMutableDictionary *)currentFeed mediaBase:(NSString *)mediaBaseUrl forDelegate:(UIViewController *)viewController tableView:(UITableView *)tableview {
     
+    cell.playVideoFullscreen.hidden = YES;
+    
     // Build Common feed data
     [self buildCommonDataInFeedList:cell forFeedData:currentFeed];
     

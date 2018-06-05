@@ -920,15 +920,66 @@ BOOL isRefresh = FALSE, canDonate = FALSE;
     }
 }
 
--(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //minimum size of your cell, it should be single line of label if you are not clear min. then return UITableViewAutomaticDimension;
-    return UITableViewAutomaticDimension;
-    
-}
+//-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    //minimum size of your cell, it should be single line of label if you are not clear min. then return UITableViewAutomaticDimension;
+//    return UITableViewAutomaticDimension;
+//
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return UITableViewAutomaticDimension;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewAutomaticDimension;
+    
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
+        return UITableViewAutomaticDimension;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = @(cell.frame.size.height);
+        
+        [cellHeightsDictionary setObject:height forKey:key];
+        
+    }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(tableView == _profileTable) {
+        
+        NSNumber *key = @(indexPath.row);
+        NSNumber *height = [cellHeightsDictionary objectForKey:key];
+        
+        if (height)
+        {
+            return height.doubleValue;
+        }
+        return UITableViewAutomaticDimension;
+    }
+    else {
+        return UITableViewAutomaticDimension;
+    }
 }
 
 //Add click event to table row

@@ -37,6 +37,7 @@
     Menu *menu;
     KLCPopup *menuPopup;
     NSArray *reportType;
+    NSMutableDictionary * cellHeightsDictionary;
 }
 @property(nonatomic)BOOL isFromChannel;
 @property(nonatomic,strong) MLKMenuPopover *reportPopover;

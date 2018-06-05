@@ -12,6 +12,7 @@
 
 {
     int selectedPostIndex;
+    NSMutableDictionary * cellHeightsDictionary;
 }
 @property (strong)  NSString  *gStrSource, *gStrFriendId;
 @property (weak, nonatomic) IBOutlet UITableView *myTblView;

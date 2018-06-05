@@ -112,9 +112,11 @@ NSMutableDictionary *content;
         if (screenSize.height == 812){
             NSLog(@"iPhone X");
             self.myConstraintTabBarHeight.constant = 70.0;
+            self.myConstraintHeaderviewTop.constant = 25.0;
         }
         else {
             self.myConstraintTabBarHeight.constant = 40.0;
+            self.myConstraintHeaderviewTop.constant = 20.0;
         }
     }
     
